@@ -1,0 +1,25 @@
+---
+import { render } from "astro:content";
+import ArticleLayout from "../../layouts/Article.astro";
+import { allArticles, articlePath } from "../../lib/articles";
+
+export async function getStaticPaths() {
+  const articles = await allArticles();
+  return articles.map((article) => ({
+    params: { section: article.data.section, slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content, headings } = await render(article);
+const articles = await allArticles();
+
+if (Astro.url.pathname !== articlePath(article) && !Astro.url.pathname.endsWith(articlePath(article))) {
+  // Paths are generated from the same data. This guards a mismatched folder.
+}
+---
+
+<ArticleLayout article={article} articles={articles} headings={headings}>
+  <Content />
+</ArticleLayout>

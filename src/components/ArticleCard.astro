@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import { articlePath, type Article } from "../lib/articles";
+import { getPhoto } from "../lib/photos";
+
+interface Props {
+  article: Article;
+  size?: "feature" | "portrait" | "landscape";
+  showDek?: boolean;
+  loading?: "eager" | "lazy";
+}
+
+const { article, size = "landscape", showDek = false, loading = "lazy" } = Astro.props;
+const photo = getPhoto(article.data.hero);
+const sizes =
+  size === "feature"
+    ? "(min-width: 900px) 58vw, 100vw"
+    : size === "portrait"
+      ? "(min-width: 900px) 32vw, 100vw"
+      : "(min-width: 1000px) 30vw, (min-width: 640px) 50vw, 100vw";
+---
+
+<a class:list={["card", `card-${size}`]} href={articlePath(article)}>
+  <figure>
+    <Image src={photo.src} alt={photo.alt} widths={[480, 720, 1100, 1600]} sizes={sizes} loading={loading} />
+  </figure>
+  <p class="eyebrow">{article.data.kicker}</p>
+  <h3>{article.data.title}</h3>
+  {showDek && <p class="card-dek">{article.data.dek}</p>}
+</a>

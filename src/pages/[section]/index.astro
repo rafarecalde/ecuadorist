@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import ArticleCard from "../../components/ArticleCard.astro";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import Base from "../../layouts/Base.astro";
+import { isSection, sections, site, type SectionId } from "../../config/site";
+import { allArticles, articlesIn } from "../../lib/articles";
+import { getPhoto } from "../../lib/photos";
+
+export async function getStaticPaths() {
+  return (Object.keys(sections) as SectionId[]).map((section) => ({
+    params: { section },
+  }));
+}
+
+const sectionId = Astro.params.section ?? "";
+if (!isSection(sectionId)) {
+  throw new Error(`Unknown section: ${sectionId}`);
+}
+
+const section = sections[sectionId];
+const articles = articlesIn(await allArticles(), sectionId);
+const photo = getPhoto(section.hero);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: section.title,
+  description: section.description,
+  url: new URL(`/${sectionId}/`, site.url).href,
+  isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
+};
+---
+
+<Base title={section.title} description={section.description} image={photo.src.src} imageAlt={photo.alt} jsonLd={jsonLd}>
+  <header class="page-title">
+    <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true"> / </span> {section.title}</p>
+    <p class="eyebrow">Ecuadorist</p>
+    <h1>{section.title}</h1>
+    <p class="dek">{section.dek}</p>
+  </header>
+  <figure class="page-hero">
+    <Image
+      src={photo.src}
+      alt={photo.alt}
+      widths={[768, 1200, 1800]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <figcaption><PhotoCredit id={photo.id} /></figcaption>
+  </figure>
+  <div class="index-grid">
+    {articles.map((article, index) => <ArticleCard article={article} showDek loading={index < 2 ? "eager" : "lazy"} />)}
+  </div>
+</Base>
