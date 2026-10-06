@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+
+const description = "How Ecuadorist handles privacy. The site is static, with no accounts and no analytics.";
+---
+
+<Base title="Privacy" description={description}>
+  <article class="legal">
+    <p class="eyebrow">The fine print</p>
+    <h1>Privacy</h1>
+    <p>
+      Ecuadorist is a static website. It does not ask you to create an account, and it does not run its own analytics, newsletter, or comment system. We do not sell personal information, because the site does not collect a profile of you.
+    </p>
+    <h2>What the host can see</h2>
+    <p>
+      The site is published with GitHub Pages. Like any web host, GitHub may process technical logs, such as IP address and browser type, under its own privacy terms, in order to serve the pages. Fonts are self-hosted with the site, so reading an article does not call Google Fonts.
+    </p>
+    <h2>Links that leave the site</h2>
+    <p>
+      Some chapters link to airlines, tour sellers, insurers, banks, and official government pages. Those sites are responsible for their own cookies and privacy practices. Sponsored links are described on the <a href="/affiliate-disclosure/">affiliate disclosure</a>.
+    </p>
+    <h2>Photographs</h2>
+    <p>
+      Images are stored with the site and credited to their creators. The credits page links back to the original files on Wikimedia Commons.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      This site has no user accounts to correct or delete. Questions about a chapter are best checked against the official source named in it.
+    </p>
+  </article>
+</Base>

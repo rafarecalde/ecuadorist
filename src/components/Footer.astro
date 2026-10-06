@@ -1,0 +1,37 @@
+---
+import { sections } from "../config/site";
+---
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <a class="wordmark" href="/">Ecuadorist</a>
+      <p>An English-language guide to Ecuador for travelers, nomads, and people thinking of staying.</p>
+    </div>
+    <div>
+      <h2>The guide</h2>
+      <ul>
+        {
+          Object.entries(sections).map(([id, section]) => (
+            <li>
+              <a href={`/${id}/`}>{section.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h2>The fine print</h2>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/credits/">Photo credits</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© {new Date().getFullYear()} Ecuadorist</span>
+    <span>Photographs remain with their creators.</span>
+  </div>
+</footer>

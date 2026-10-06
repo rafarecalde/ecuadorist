@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import { allArticles, articlePath } from "../lib/articles";
+import { getPhoto, photoIds } from "../lib/photos";
+
+const articles = await allArticles();
+const usage = new Map<string, { href: string; title: string }[]>();
+
+for (const article of articles) {
+  const list = usage.get(article.data.hero) ?? [];
+  list.push({ href: articlePath(article), title: article.data.title });
+  usage.set(article.data.hero, list);
+}
+
+const description = "Photographers and licenses for every image on Ecuadorist, all from Wikimedia Commons.";
+---
+
+<Base title="Photo credits" description={description}>
+  <article class="credits">
+    <p class="eyebrow">Colophon</p>
+    <h1>Photo credits</h1>
+    <p class="dek">
+      Every photograph is from Wikimedia Commons, under a license that allows publication here. Non-commercial licenses were not used. Titles link to the original file.
+    </p>
+    <ul class="credit-list">
+      {
+        photoIds.map((id) => {
+          const photo = getPhoto(id);
+          const used = usage.get(id) ?? [];
+          return (
+            <li>
+              <Image src={photo.src} alt={photo.alt} widths={[480, 800]} sizes="(min-width: 800px) 16rem, 100vw" />
+              <div>
+                <h2>
+                  <a href={photo.sourceUrl}>{photo.alt}</a>
+                </h2>
+                <p>
+                  {photo.author}. {photo.license}.{" "}
+                  <a href={photo.licenseUrl}>License</a>.
+                </p>
+                {used.length > 0 && (
+                  <p>
+                    Used in{" "}
+                    {used.map((item, index) => (
+                      <>
+                        {index > 0 && ", "}
+                        <a href={item.href}>{item.title}</a>
+                      </>
+                    ))}
+                    .
+                  </p>
+                )}
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </article>
+</Base>

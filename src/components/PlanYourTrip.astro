@@ -1,0 +1,32 @@
+---
+import PartnerCard from "./PartnerCard.astro";
+import type { AffiliateId } from "../config/affiliates";
+
+interface Props {
+  ids: AffiliateId[];
+  note?: string;
+}
+
+const { ids, note } = Astro.props;
+---
+
+<section class="plan" aria-labelledby="plan-title">
+  <div class="plan-inner">
+    <p class="eyebrow">Plan your trip</p>
+    <h2 id="plan-title">{note ?? "Before you go"}</h2>
+    {
+      ids.length === 0 ? (
+        <p class="plan-lead">
+          For this subject, start with the official sources in the chapter. A booking site will not answer it.
+        </p>
+      ) : (
+        <p class="plan-lead">A short, practical list. Nothing here is required.</p>
+      )
+    }
+    {ids.map((id) => <PartnerCard id={id} />)}
+    <p class="plan-note">
+      “A partner” is a sponsored link. “A resource” goes to that company’s own homepage. UIO Transfers belongs to the owner of this site.
+      <a href="/affiliate-disclosure/">Affiliate disclosure</a>.
+    </p>
+  </div>
+</section>

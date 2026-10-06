@@ -1,0 +1,35 @@
+---
+import { getAffiliate, linkRel, type AffiliateId } from "../config/affiliates";
+
+interface Props {
+  id: AffiliateId;
+}
+
+const link = getAffiliate(Astro.props.id);
+const rel = linkRel(link);
+---
+
+<article class="partner">
+  <p class="eyebrow">{link.label}</p>
+  <div>
+    <h3>{link.name}</h3>
+    <p>{link.blurb}</p>
+  </div>
+  <a class="partner-go" href={link.href} target="_blank" rel={rel}>
+    View
+    <span class="sr-only"> {link.name}, opens in a new tab</span>
+  </a>
+</article>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>

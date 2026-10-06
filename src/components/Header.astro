@@ -1,0 +1,71 @@
+---
+import { sections } from "../config/site";
+
+const path = Astro.url.pathname;
+const links = [
+  ...Object.entries(sections).map(([id, section]) => ({
+    href: `/${id}/`,
+    label: section.title,
+  })),
+  { href: "/about/", label: "About" },
+];
+
+function current(href: string) {
+  if (href === "/about/") return path.startsWith("/about/");
+  return path === href || path.startsWith(href);
+}
+---
+
+<a class="skip" href="#content">Skip to content</a>
+<header class="mast">
+  <a class="wordmark" href="/">Ecuadorist</a>
+  <nav class="nav-desktop" aria-label="Primary">
+    {
+      links.map((link) => (
+        <a href={link.href} aria-current={current(link.href) ? "page" : undefined}>
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+  <button class="menu-btn" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-panel">
+    Menu
+  </button>
+</header>
+<div class="nav-panel" id="nav-panel" data-nav-panel>
+  <nav aria-label="Mobile">
+    {
+      links.map((link) => (
+        <a href={link.href} aria-current={current(link.href) ? "page" : undefined}>
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="nav-legal">
+    <a href="/affiliate-disclosure/">Affiliate disclosure</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/credits/">Credits</a>
+  </div>
+</div>
+
+<script>
+  const button = document.querySelector("[data-nav-toggle]");
+  const panel = document.querySelector("[data-nav-panel]");
+
+  const setOpen = (open: boolean) => {
+    panel?.classList.toggle("is-open", open);
+    button?.setAttribute("aria-expanded", open ? "true" : "false");
+    button && (button.textContent = open ? "Close" : "Menu");
+    document.body.classList.toggle("nav-open", open);
+  };
+
+  button?.addEventListener("click", () => {
+    const open = button.getAttribute("aria-expanded") === "true";
+    setOpen(!open);
+  });
+
+  panel?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+</script>

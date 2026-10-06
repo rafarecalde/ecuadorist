@@ -1,0 +1,174 @@
+---
+import { Image } from "astro:assets";
+import Base from "./Base.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import PhotoCredit from "../components/PhotoCredit.astro";
+import PlanYourTrip from "../components/PlanYourTrip.astro";
+import { sections, site } from "../config/site";
+import {
+  articlePath,
+  formatDate,
+  isoDate,
+  readingMinutes,
+  relatedArticles,
+  sectionOf,
+  tripIds,
+  type Article,
+} from "../lib/articles";
+import { getPhoto } from "../lib/photos";
+
+interface Props {
+  article: Article;
+  articles: Article[];
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { article, articles, headings } = Astro.props;
+const section = sectionOf(article);
+const sectionMeta = sections[section];
+const photo = getPhoto(article.data.hero);
+const minutes = readingMinutes(article.body);
+const related = relatedArticles(articles, article);
+const trips = tripIds(article);
+const toc = headings.filter((heading) => heading.depth === 2);
+const url = new URL(articlePath(article), site.url).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: article.data.title,
+  description: article.data.description,
+  image: [new URL(photo.src.src, site.url).href],
+  datePublished: isoDate(article.data.published),
+  dateModified: isoDate(article.data.updated),
+  inLanguage: "en",
+  articleSection: sectionMeta.title,
+  author: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": url,
+  },
+};
+
+const crumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: sectionMeta.title, item: new URL(`/${section}/`, site.url).href },
+    { "@type": "ListItem", position: 3, name: article.data.title, item: url },
+  ],
+};
+---
+
+<Base
+  title={article.data.title}
+  description={article.data.description}
+  image={photo.src.src}
+  imageAlt={photo.alt}
+  ogType="article"
+  published={isoDate(article.data.published)}
+  updated={isoDate(article.data.updated)}
+  section={sectionMeta.title}
+  jsonLd={[jsonLd, crumbs]}
+>
+  <header class="article-title">
+    <p class="crumbs">
+      <a href="/">Home</a>
+      <span aria-hidden="true"> / </span>
+      <a href={`/${section}/`}>{sectionMeta.title}</a>
+    </p>
+    <p class="eyebrow">{article.data.kicker}</p>
+    <h1>{article.data.title}</h1>
+    <p class="dek">{article.data.dek}</p>
+    <p class="meta">
+      {formatDate(article.data.published)}
+      {minutes && <span> · {minutes} minute read</span>}
+      {
+        isoDate(article.data.updated) !== isoDate(article.data.published) && (
+          <span> · Updated {formatDate(article.data.updated)}</span>
+        )
+      }
+    </p>
+  </header>
+  <figure class="article-hero">
+    <Image
+      src={photo.src}
+      alt={photo.alt}
+      widths={[640, 960, 1400, 1800]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <figcaption><PhotoCredit id={photo.id} /></figcaption>
+  </figure>
+  <div class="article-layout">
+    {
+      toc.length > 0 && (
+        <aside class="toc" aria-label="Contents">
+          <p class="eyebrow">In this chapter</p>
+          <ol>
+            {toc.map((heading) => (
+              <li>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      )
+    }
+    <div>
+      {
+        toc.length > 0 && (
+          <details class="toc-collapse">
+            <summary>In this chapter</summary>
+            <ol>
+              {toc.map((heading) => (
+                <li>
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                </li>
+              ))}
+            </ol>
+          </details>
+        )
+      }
+      {
+        article.data.disclaimer && (
+          <aside class="disclaimer">
+            <strong>Not legal advice</strong>
+            <p>
+              Visa categories, income tests, and permitted stays change. Confirm every requirement with Ecuador’s
+              Ministerio de Relaciones Exteriores y Movilidad Humana, a consulate, or a licensed attorney before you
+              book a move. This chapter is an overview.
+            </p>
+          </aside>
+        )
+      }
+      <div class="prose">
+        <slot />
+      </div>
+    </div>
+  </div>
+  <PlanYourTrip ids={trips} note={article.data.tripNote} />
+  {
+    related.length > 0 && (
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title">Continue</h2>
+        <div class="place-grid">
+          {related.map((item) => (
+            <ArticleCard article={item} showDek />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Base>

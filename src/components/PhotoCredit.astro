@@ -1,0 +1,13 @@
+---
+import { getPhoto } from "../lib/photos";
+
+interface Props {
+  id: string;
+}
+
+const photo = getPhoto(Astro.props.id);
+---
+
+<span>
+  Photograph by <a href={photo.sourceUrl}>{photo.author}</a>, {photo.license}.
+</span>

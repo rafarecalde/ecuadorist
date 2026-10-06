@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+import { affiliates } from "../config/affiliates";
+
+const description =
+  "How Ecuadorist handles partner links, including which ones are sponsored and which are plain brand links.";
+
+const tracked = Object.values(affiliates).filter((item) => item.sponsored);
+const plain = Object.values(affiliates).filter((item) => !item.sponsored && item.id !== "uio");
+---
+
+<Base title="Affiliate disclosure" description={description}>
+  <article class="legal">
+    <p class="eyebrow">The fine print</p>
+    <h1>Affiliate disclosure</h1>
+    <p>
+      Some links on Ecuadorist are commercial. If you use a sponsored link and later buy something, the partner may pay this site a commission. You do not pay extra for that. Recommendations are chosen because they are useful to a trip, not because a commission exists.
+    </p>
+    <h2>Sponsored links</h2>
+    <p>
+      These open in a new tab with <code>rel="sponsored"</code>. They are labeled “A partner” on the page.
+    </p>
+    <ul>
+      {
+        tracked.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="sponsored noopener">
+              {item.name}
+            </a>
+            <span> — {item.category}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <h2>The owner’s company</h2>
+    <p>
+      <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a> is the site owner’s airport-transfer business in Quito. Links to it are ordinary links. They are not sponsored placements and they are not labeled as a partner.
+    </p>
+    <h2>Plain brand links</h2>
+    <p>
+      A few names do not yet have a tracked partner address. Those cards are labeled “A resource” and go to the company’s own homepage. We do not invent affiliate codes. Booking.com, when it appears, is the homepage only, never a search-results URL. A future tracked Booking.com link, if one is added, will point at a specific property.
+    </p>
+    <ul>
+      {
+        plain.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="noopener">
+              {item.name}
+            </a>
+            <span> — {item.category}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <h2>Editorial rule</h2>
+    <p>
+      Chapters on food and rooms name real places and skip prices, hours, phone numbers, and street addresses. A partner card is never a substitute for checking that a kitchen or a hotel is still open.
+    </p>
+  </article>
+</Base>
