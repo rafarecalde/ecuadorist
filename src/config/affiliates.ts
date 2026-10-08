@@ -1,9 +1,11 @@
 /**
  * Central affiliate configuration.
  *
- * Tracked partner links are marked sponsored and must keep rel="sponsored noopener".
+ * Tracked partner links are marked sponsored and must keep
+ * rel="sponsored nofollow noopener".
  * Placeholder entries are plain links to a brand homepage. Never invent an
  * affiliate id, tracking code, or Booking.com search URL.
+ * GetYourGuide uses location or search pages only, never guessed activity ids.
  * UIO Transfers is the site owner's airport company and is not a sponsored link.
  */
 
@@ -11,7 +13,7 @@ export type Affiliate = {
   id: string;
   name: string;
   href: string;
-  /** Paid tracked link. Renders rel="sponsored noopener". */
+  /** Paid tracked link. Renders rel="sponsored nofollow noopener". */
   sponsored: boolean;
   /** True when href is a homepage fallback, not a tracked partner URL. */
   placeholder: boolean;
@@ -20,6 +22,25 @@ export type Affiliate = {
   /** Short label on the card. */
   label: string;
 };
+
+export const GETYOURGUIDE_PARTNER_ID = "XMZLWQZ";
+
+/** Location or search path on getyourguide.com, with the partner query attached. */
+export function getYourGuideUrl(
+  path: string,
+  query?: Readonly<Record<string, string>>,
+): string {
+  const slug = path.replace(/^\/+|\/+$/g, "");
+  const url = new URL(`https://www.getyourguide.com/${slug}/`);
+  if (query) {
+    for (const [key, value] of Object.entries(query)) {
+      url.searchParams.set(key, value);
+    }
+  }
+  url.searchParams.set("partner_id", GETYOURGUIDE_PARTNER_ID);
+  url.searchParams.set("utm_medium", "online_publisher");
+  return url.toString();
+}
 
 export const affiliates = {
   airalo: {
@@ -102,16 +123,125 @@ export const affiliates = {
     label: "The owner’s company",
     blurb: "A private car from Mariscal Sucre Airport. Not a third-party ad.",
   },
-  // TODO: replace href with a tracked affiliate URL. Do not invent an affiliate id.
   getyourguide: {
     id: "getyourguide",
     name: "GetYourGuide",
-    href: "https://www.getyourguide.com/",
-    sponsored: false,
-    placeholder: true,
+    href: getYourGuideUrl("ecuador-l169092"),
+    sponsored: true,
+    placeholder: false,
     category: "Days out",
-    label: "A resource",
-    blurb: "Guided days, on the company’s own site.",
+    label: "A partner",
+    blurb: "Guided days across Ecuador, when the trail wants a plan.",
+  },
+  "gyg-quito": {
+    id: "gyg-quito",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("quito-l2774"),
+    sponsored: true,
+    placeholder: false,
+    category: "Quito",
+    label: "A partner",
+    blurb: "Quito city tours, from the old town outward.",
+  },
+  "gyg-mitad": {
+    id: "gyg-mitad",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("s", { q: "Mitad del Mundo" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Mitad del Mundo",
+    label: "A partner",
+    blurb: "The equator monument, as a short day from the city.",
+  },
+  "gyg-otavalo": {
+    id: "gyg-otavalo",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("otavalo-l2259"),
+    sponsored: true,
+    placeholder: false,
+    category: "Otavalo",
+    label: "A partner",
+    blurb: "Otavalo, the market, and the lakes.",
+  },
+  "gyg-mindo": {
+    id: "gyg-mindo",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("mindo-valley-l129663"),
+    sponsored: true,
+    placeholder: false,
+    category: "Mindo",
+    label: "A partner",
+    blurb: "A day in the Mindo cloud forest.",
+  },
+  "gyg-cotopaxi": {
+    id: "gyg-cotopaxi",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("cotopaxi-province-l143089"),
+    sponsored: true,
+    placeholder: false,
+    category: "Cotopaxi",
+    label: "A partner",
+    blurb: "Cotopaxi from Quito, without driving yourself.",
+  },
+  "gyg-quilotoa": {
+    id: "gyg-quilotoa",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("s", { q: "Quilotoa" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Quilotoa",
+    label: "A partner",
+    blurb: "Quilotoa crater tours from the highlands.",
+  },
+  "gyg-banos": {
+    id: "gyg-banos",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("banos-de-agua-santa-l2262"),
+    sponsored: true,
+    placeholder: false,
+    category: "Baños",
+    label: "A partner",
+    blurb: "Baños, the waterfalls, and a day from Quito.",
+  },
+  "gyg-cuenca": {
+    id: "gyg-cuenca",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("cuenca-ecuador-l368"),
+    sponsored: true,
+    placeholder: false,
+    category: "Cuenca",
+    label: "A partner",
+    blurb: "Cuenca and the ruins nearby.",
+  },
+  "gyg-galapagos": {
+    id: "gyg-galapagos",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("galapagos-islands-l396"),
+    sponsored: true,
+    placeholder: false,
+    category: "Galápagos",
+    label: "A partner",
+    blurb: "Galápagos day tours, once you are on the islands.",
+  },
+  "gyg-tena": {
+    id: "gyg-tena",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("tena-ecuador-l2688"),
+    sponsored: true,
+    placeholder: false,
+    category: "Amazon",
+    label: "A partner",
+    blurb: "Shorter Amazon trips from Tena.",
+  },
+  "gyg-cuyabeno": {
+    id: "gyg-cuyabeno",
+    name: "GetYourGuide",
+    href: getYourGuideUrl("nueva-loja-l5279"),
+    sponsored: true,
+    placeholder: false,
+    category: "Cuyabeno",
+    label: "A partner",
+    blurb: "Cuyabeno, by way of Lago Agrio.",
   },
   // TODO: replace href with a tracked affiliate URL. Do not invent an affiliate id.
   viator: {
@@ -183,6 +313,6 @@ export function getAffiliate(id: AffiliateId): Affiliate {
 }
 
 /** Affiliate (tracked) links only. Placeholders and UIO Transfers stay unsponsored. */
-export function linkRel(link: Affiliate): "sponsored noopener" | "noopener" {
-  return link.sponsored ? "sponsored noopener" : "noopener";
+export function linkRel(link: Affiliate): "sponsored nofollow noopener" | "noopener" {
+  return link.sponsored ? "sponsored nofollow noopener" : "noopener";
 }

@@ -16,6 +16,8 @@ trip:
   - airalo
   - uio
   - klook-quito
+  - gyg-quito
+  - gyg-mitad
 ---
 
 Quito sits near 2,850 meters, about 9,350 feet, in a long Andean valley. The historic center has been a UNESCO World Heritage Site since 1978. The rest of the city is offices, parks, and traffic. Both are the point.

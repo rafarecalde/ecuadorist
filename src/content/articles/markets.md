@@ -14,6 +14,7 @@ related:
   - quito
 trip:
   - klook-otavalo
+  - gyg-otavalo
 tripNote: "The northern valley"
 ---
 

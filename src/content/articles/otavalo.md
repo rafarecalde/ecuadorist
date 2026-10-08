@@ -16,6 +16,7 @@ trip:
   - airalo
   - klook-otavalo
   - car
+  - gyg-otavalo
 ---
 
 Otavalo, in Imbabura province, is known for one thing that happens to be true: one of the largest indigenous markets in South America. The Otavaleño traders who run it have been selling textiles far beyond the valley for decades. Saturday is the day. Stalls also appear through the week, in a smaller form.

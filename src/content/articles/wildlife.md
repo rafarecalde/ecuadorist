@@ -15,6 +15,7 @@ related:
 trip:
   - klook-galapagos
   - klook
+  - gyg-galapagos
 tripNote: "Go with a naturalist"
 ---
 
