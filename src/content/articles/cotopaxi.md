@@ -17,6 +17,7 @@ trip:
   - klook-cotopaxi
   - car
   - gyg-cotopaxi
+  - viator-cotopaxi
 ---
 
 Cotopaxi is 5,897 meters, a classic cone south of Quito, and one of the highest active volcanoes on earth. The 2015 eruption closed the park and reminded the valley that the postcard is also a mountain. It is open again. It is still active.

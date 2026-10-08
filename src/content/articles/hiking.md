@@ -16,6 +16,7 @@ trip:
   - klook
   - car
   - getyourguide
+  - viator
 tripNote: "A day with a guide"
 ---
 

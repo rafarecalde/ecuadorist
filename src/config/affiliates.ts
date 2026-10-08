@@ -6,6 +6,8 @@
  * Placeholder entries are plain links to a brand homepage. Never invent an
  * affiliate id, tracking code, or Booking.com search URL.
  * GetYourGuide uses location or search pages only, never guessed activity ids.
+ * Viator links append pid, mcid, and medium. Quito is a destination page;
+ * other places are searches. Never guess a Viator product code.
  * UIO Transfers is the site owner's airport company and is not a sponsored link.
  */
 
@@ -39,6 +41,25 @@ export function getYourGuideUrl(
   }
   url.searchParams.set("partner_id", GETYOURGUIDE_PARTNER_ID);
   url.searchParams.set("utm_medium", "online_publisher");
+  return url.toString();
+}
+
+export const VIATOR_PID = "P00324546";
+export const VIATOR_MCID = "42383";
+export const VIATOR_MEDIUM = "link";
+
+/** Destination path or searchResults/all, with Viator’s three tracking params. */
+export function viatorUrl(path: string, query?: Readonly<Record<string, string>>): string {
+  const slug = path.replace(/^\/+|\/+$/g, "");
+  const url = new URL(`https://www.viator.com/${slug}`);
+  if (query) {
+    for (const [key, value] of Object.entries(query)) {
+      url.searchParams.set(key, value);
+    }
+  }
+  url.searchParams.set("pid", VIATOR_PID);
+  url.searchParams.set("mcid", VIATOR_MCID);
+  url.searchParams.set("medium", VIATOR_MEDIUM);
   return url.toString();
 }
 
@@ -243,16 +264,125 @@ export const affiliates = {
     label: "A partner",
     blurb: "Cuyabeno, by way of Lago Agrio.",
   },
-  // TODO: replace href with a tracked affiliate URL. Do not invent an affiliate id.
   viator: {
     id: "viator",
     name: "Viator",
-    href: "https://www.viator.com/",
-    sponsored: false,
-    placeholder: true,
+    href: viatorUrl("searchResults/all", { text: "Ecuador" }),
+    sponsored: true,
+    placeholder: false,
     category: "Days out",
-    label: "A resource",
-    blurb: "Another place to look for a guide.",
+    label: "A partner",
+    blurb: "Guided days across Ecuador, from another desk.",
+  },
+  "viator-quito": {
+    id: "viator-quito",
+    name: "Viator",
+    href: viatorUrl("Quito/d4427-ttd"),
+    sponsored: true,
+    placeholder: false,
+    category: "Quito",
+    label: "A partner",
+    blurb: "Quito tours, from the old town outward.",
+  },
+  "viator-mitad": {
+    id: "viator-mitad",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Mitad del Mundo" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Mitad del Mundo",
+    label: "A partner",
+    blurb: "The equator monument, as a short day from the city.",
+  },
+  "viator-otavalo": {
+    id: "viator-otavalo",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Otavalo" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Otavalo",
+    label: "A partner",
+    blurb: "Otavalo, the market, and the lakes.",
+  },
+  "viator-mindo": {
+    id: "viator-mindo",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Mindo" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Mindo",
+    label: "A partner",
+    blurb: "A day in the Mindo cloud forest.",
+  },
+  "viator-cotopaxi": {
+    id: "viator-cotopaxi",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Cotopaxi" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Cotopaxi",
+    label: "A partner",
+    blurb: "Cotopaxi from Quito, without driving yourself.",
+  },
+  "viator-quilotoa": {
+    id: "viator-quilotoa",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Quilotoa" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Quilotoa",
+    label: "A partner",
+    blurb: "Quilotoa crater tours from the highlands.",
+  },
+  "viator-banos": {
+    id: "viator-banos",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Banos" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Baños",
+    label: "A partner",
+    blurb: "Baños, the waterfalls, and a day from Quito.",
+  },
+  "viator-cuenca": {
+    id: "viator-cuenca",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Cuenca" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Cuenca",
+    label: "A partner",
+    blurb: "Cuenca and the ruins nearby.",
+  },
+  "viator-galapagos": {
+    id: "viator-galapagos",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Galapagos" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Galápagos",
+    label: "A partner",
+    blurb: "Galápagos day tours, once you are on the islands.",
+  },
+  "viator-tena": {
+    id: "viator-tena",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Tena" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Amazon",
+    label: "A partner",
+    blurb: "Shorter Amazon trips from Tena.",
+  },
+  "viator-cuyabeno": {
+    id: "viator-cuyabeno",
+    name: "Viator",
+    href: viatorUrl("searchResults/all", { text: "Cuyabeno" }),
+    sponsored: true,
+    placeholder: false,
+    category: "Cuyabeno",
+    label: "A partner",
+    blurb: "Cuyabeno, by way of Lago Agrio.",
   },
   // TODO: replace href with a tracked affiliate URL to a specific property page.
   // Never use a Booking.com search URL.

@@ -21,7 +21,7 @@ npm run preview
 - Affiliate links in `src/config/affiliates.ts`
 - `public/CNAME` set to `ecuadorist.com`
 
-Partner links use `rel="sponsored nofollow noopener"`. GetYourGuide links use partner ID `XMZLWQZ` on location or search pages, never guessed activity IDs, and the site does not load a GetYourGuide widget. Placeholder brands (Viator, Booking.com, SafetyWing, Wise, and an expat health insurer) point at the company’s own homepage until a real tracked URL is added. Do not invent affiliate IDs. Booking.com must stay a specific property page, never a search URL. UIO Transfers is the owner’s airport company and is not a sponsored link.
+Partner links use `rel="sponsored nofollow noopener"`. GetYourGuide links use partner ID `XMZLWQZ` on location or search pages, never guessed activity IDs, and the site does not load a GetYourGuide widget. Viator links append `pid=P00324546`, `mcid=42383`, and `medium=link`. Quito uses the destination page; other places use a search. Placeholder brands (Booking.com, SafetyWing, Wise, and an expat health insurer) point at the company’s own homepage until a real tracked URL is added. Do not invent affiliate IDs. Booking.com must stay a specific property page, never a search URL. UIO Transfers is the owner’s airport company and is not a sponsored link.
 
 The visa chapter is an overview, not legal advice.
 

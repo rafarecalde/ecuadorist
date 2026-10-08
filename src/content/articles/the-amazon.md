@@ -16,7 +16,9 @@ trip:
   - airalo
   - klook
   - gyg-tena
+  - viator-tena
   - gyg-cuyabeno
+  - viator-cuyabeno
 ---
 
 East of the Andes, Ecuador drops into the Amazon basin. Ecuadorians call it the Oriente. It is a small slice of the forest and one of the most biodiverse places on the continent. It is also oil country. Both facts belong in the same paragraph.
