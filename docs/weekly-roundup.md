@@ -1,5 +1,7 @@
 # Weekly roundup
 
+<!-- A push to main publishes the site through GitHub Pages. -->
+
 The living layer of the site is three files plus one new issue. A Monday update should take a few minutes.
 
 ## 1. New issue
