@@ -15,6 +15,7 @@ related:
 trip:
   - klook-otavalo
   - gyg-otavalo
+  - viator-otavalo
 tripNote: "The northern valley"
 ---
 

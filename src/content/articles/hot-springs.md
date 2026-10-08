@@ -16,6 +16,7 @@ trip:
   - car
   - klook
   - gyg-banos
+  - viator-banos
 tripNote: "The road east"
 ---
 

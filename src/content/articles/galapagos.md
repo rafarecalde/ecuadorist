@@ -16,6 +16,7 @@ trip:
   - airalo
   - klook-galapagos
   - gyg-galapagos
+  - viator-galapagos
 ---
 
 The Galápagos sit about a thousand kilometers west of the mainland. They are a province of Ecuador and a national park. Charles Darwin landed in 1835. The wildlife has not become tame for visitors. The rules exist so it stays that way.

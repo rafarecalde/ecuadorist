@@ -17,6 +17,7 @@ trip:
   - car
   - klook
   - gyg-cuenca
+  - viator-cuenca
 ---
 
 Cuenca, officially Santa Ana de los Ríos de Cuenca, sits near 2,500 meters in the southern sierra. Its historic center joined the UNESCO list in 1999. Travelers come for the architecture. A large number of foreign residents came and stayed.

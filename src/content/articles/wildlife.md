@@ -16,6 +16,7 @@ trip:
   - klook-galapagos
   - klook
   - gyg-galapagos
+  - viator-galapagos
 tripNote: "Go with a naturalist"
 ---
 

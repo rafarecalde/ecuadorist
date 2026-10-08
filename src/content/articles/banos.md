@@ -17,6 +17,7 @@ trip:
   - car
   - klook
   - gyg-banos
+  - viator-banos
 ---
 
 Baños de Agua Santa sits in a green gorge where the sierra starts to fall toward the Amazon. Tungurahua, the volcano above town, was very active from 1999 into the 2010s. It is quieter now. It is not extinct. The town’s name, “baths of holy water,” comes from the hot springs at its edge.
