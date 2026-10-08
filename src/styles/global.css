@@ -1124,26 +1124,28 @@ figure.card-portrait {
 .status {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem 1.4rem;
-  padding: 0.7rem var(--pad);
+  align-items: center;
+  gap: 0.35rem 1.15rem;
+  padding: 0.5rem var(--pad);
   background: var(--forest);
   color: #efe8da;
-  font-size: 0.78rem;
-  line-height: 1.45;
+  font-size: 0.74rem;
+  line-height: 1.35;
 }
 
 .status p {
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.45rem;
+  flex-wrap: nowrap;
+  gap: 0.35rem;
   align-items: baseline;
+  white-space: nowrap;
 }
 
-.status span {
-  letter-spacing: 0.16em;
+.status-kicker {
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   color: var(--gold-bright);
 }
 
@@ -1252,28 +1254,54 @@ figure.card-portrait {
 
 .week-grid {
   display: grid;
-  gap: 1.6rem;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  align-items: start;
 }
 
 .week-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+}
+
+.week-card > a {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
 }
 
-.week-card img {
-  width: 100%;
+.week-card figure {
+  position: relative;
+  margin: 0;
   aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ivory-deep);
+}
+
+.week-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .week-card h3 {
-  font-size: 2rem;
-  margin: 0.7rem 0 0.3rem;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+  margin: 0.75rem 0 0.3rem;
 }
 
 .week-card p {
   margin: 0;
   color: var(--ink-soft);
+}
+
+.week-card .photo-credit {
+  margin-top: 0.45rem;
 }
 
 .coming {
@@ -1360,19 +1388,34 @@ figure.card-portrait {
 
 .issue-list {
   padding: 0.5rem var(--pad) 4rem;
-  max-width: 52rem;
+  max-width: 76rem;
+  margin-inline: auto;
 }
 
 .issue-item {
-  padding: 2.2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 1.8rem 0;
   border-top: 1px solid var(--line);
 }
 
-.issue-item img {
-  width: 100%;
+.issue-photo {
+  position: relative;
+  margin: 0;
   aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ivory-deep);
+}
+
+.issue-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
   object-fit: cover;
-  margin-bottom: 0.9rem;
 }
 
 .issue-item h2 {
@@ -1446,14 +1489,39 @@ figure.card-portrait {
   }
 
   .week-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.4rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .issue-item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 1.25rem 2rem;
+    align-items: center;
   }
 
   .issue-index ul,
   .event-index ul {
     grid-template-columns: 1fr 1fr;
     gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .status {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .status::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .status {
+    flex-wrap: nowrap;
+    gap: 0.4rem 1rem;
   }
 }
 

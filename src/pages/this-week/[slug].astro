@@ -73,12 +73,14 @@ const jsonLd = {
         const itemPhoto = getPhoto(item.photo);
         return (
           <article class="issue-item">
-            <Image
-              src={itemPhoto.src}
-              alt={itemPhoto.alt}
-              widths={[720, 1100, 1600]}
-              sizes="(min-width: 800px) 46rem, 100vw"
-            />
+            <figure class="issue-photo">
+              <Image
+                src={itemPhoto.src}
+                alt={itemPhoto.alt}
+                widths={[720, 1100, 1400]}
+                sizes="(min-width: 800px) 34rem, 100vw"
+              />
+            </figure>
             <div>
               <h2>{item.headline}</h2>
               <p>{item.text}</p>

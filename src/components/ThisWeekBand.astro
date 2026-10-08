@@ -11,6 +11,13 @@ interface Props {
 }
 
 const { date, href, items } = Astro.props;
+
+function oneLine(text: string) {
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let line = sentences[0] ?? text;
+  if (/\b[A-Z][a-z]?\.$/.test(line) && sentences[1]) line = `${line} ${sentences[1]}`;
+  return line;
+}
 ---
 
 <section class="band week-band" aria-labelledby="week-title">
@@ -24,16 +31,18 @@ const { date, href, items } = Astro.props;
       items.map((item) => {
         const photo = getPhoto(item.photo);
         return (
-          <a class="week-card" href={href}>
-            <Image src={photo.src} alt={photo.alt} widths={[640, 960, 1200]} sizes="(min-width: 800px) 30vw, 100vw" />
-            <div>
+          <article class="week-card">
+            <a href={href}>
+              <figure>
+                <Image src={photo.src} alt={photo.alt} widths={[640, 960, 1200]} sizes="(min-width: 800px) 30vw, 100vw" />
+              </figure>
               <h3>{item.headline}</h3>
-              <p>{item.text.split(". ")[0]}.</p>
-              <p class="photo-credit is-ink">
-                <PhotoCredit id={photo.id} />
-              </p>
-            </div>
-          </a>
+              <p>{oneLine(item.text)}</p>
+            </a>
+            <p class="photo-credit is-ink">
+              <PhotoCredit id={photo.id} />
+            </p>
+          </article>
         );
       })
     }
