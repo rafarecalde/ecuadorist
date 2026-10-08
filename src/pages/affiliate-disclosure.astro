@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { affiliates } from "../config/affiliates";
+import { affiliates, linkRel } from "../config/affiliates";
 
 const description =
   "How Ecuadorist handles partner links, including which ones are sponsored and which are plain brand links.";
@@ -18,13 +18,13 @@ const plain = Object.values(affiliates).filter((item) => !item.sponsored && item
     </p>
     <h2>Sponsored links</h2>
     <p>
-      These open in a new tab with <code>rel="sponsored"</code>. They are labeled “A partner” on the page.
+      These open in a new tab with <code>rel="sponsored nofollow noopener"</code>. They are labeled “A partner” on the page.
     </p>
     <ul>
       {
         tracked.map((item) => (
           <li>
-            <a href={item.href} target="_blank" rel="sponsored noopener">
+            <a href={item.href} target="_blank" rel={linkRel(item)}>
               {item.name}
             </a>
             <span> — {item.category}</span>

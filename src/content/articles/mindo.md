@@ -16,6 +16,7 @@ trip:
   - airalo
   - car
   - klook
+  - gyg-mindo
 ---
 
 Mindo is a small town on the western slope of the Andes, roughly two hours from Quito when the road behaves. It sits in cloud forest: wet, green, and louder with birds than with traffic. For a lot of visitors it is the first time Ecuador feels tropical without feeling like the Amazon.

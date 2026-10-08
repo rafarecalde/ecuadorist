@@ -15,6 +15,7 @@ related:
 trip:
   - car
   - klook
+  - gyg-banos
 tripNote: "The road east"
 ---
 

@@ -16,6 +16,7 @@ trip:
   - airalo
   - car
   - klook
+  - gyg-quilotoa
 ---
 
 Quilotoa is a crater lake in the western Andes, a few hours south of Quito by way of Latacunga. Minerals give the water its opaque turquoise. The rim sits near 3,900 meters. The first five minutes are the view. The next decision is whether to go down.
