@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import StatusStrip from "../../components/StatusStrip.astro";
+import WeekendBand from "../../components/WeekendBand.astro";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import TrackedLink from "../../components/TrackedLink.astro";
+import { site } from "../../config/site";
+import { weekendFor } from "../../data/weekend";
+import { allIssues, formatLongDate, issuePath, type Issue } from "../../lib/issues";
+import { getPhoto } from "../../lib/photos";
+
+export async function getStaticPaths() {
+  const issues = await allIssues();
+  return issues.map((issue) => ({
+    params: { slug: issue.id },
+    props: { issue },
+  }));
+}
+
+interface Props {
+  issue: Issue;
+}
+
+const { issue } = Astro.props;
+const photo = getPhoto(issue.data.hero);
+const weekend = weekendFor(issue.id);
+const url = new URL(issuePath(issue), site.url).href;
+const image = new URL(photo.src.src, site.url).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: issue.data.title,
+  description: issue.data.description,
+  datePublished: issue.data.date,
+  dateModified: issue.data.date,
+  image: [image],
+  inLanguage: "en",
+  articleSection: "This Week",
+  mainEntityOfPage: url,
+  author: { "@type": "Organization", name: site.name, url: site.url },
+  publisher: { "@type": "Organization", name: site.name, url: site.url },
+};
+---
+
+<Base
+  title={issue.data.title}
+  description={issue.data.description}
+  image={photo.src.src}
+  imageAlt={photo.alt}
+  ogType="article"
+  published={issue.data.date}
+  updated={issue.data.date}
+  section="This Week"
+  jsonLd={jsonLd}
+>
+  <StatusStrip />
+  <header class="page-title">
+    <p class="crumbs">
+      <a href="/">Home</a>
+      <span aria-hidden="true"> / </span>
+      <a href="/this-week/">This Week</a>
+    </p>
+    <p class="eyebrow">{formatLongDate(issue.data.date)}</p>
+    <h1>{issue.data.title}</h1>
+    <p class="dek">{issue.data.dek}</p>
+  </header>
+  {weekend && <WeekendBand weekend={weekend} />}
+  <div class="issue-list">
+    {
+      issue.data.items.map((item) => {
+        const itemPhoto = getPhoto(item.photo);
+        return (
+          <article class="issue-item">
+            <Image
+              src={itemPhoto.src}
+              alt={itemPhoto.alt}
+              widths={[720, 1100, 1600]}
+              sizes="(min-width: 800px) 46rem, 100vw"
+            />
+            <div>
+              <h2>{item.headline}</h2>
+              <p>{item.text}</p>
+              <p class="take">{item.take}</p>
+              <p class="issue-meta">
+                {item.sources.map((source, index) => (
+                  <>
+                    {index > 0 && " · "}
+                    <a href={source.url} target="_blank" rel="noopener">
+                      {source.name}
+                    </a>
+                  </>
+                ))}
+                {item.guide && (
+                  <>
+                    {" · "}
+                    <a href={item.guide.href}>{item.guide.label}</a>
+                  </>
+                )}
+                {item.partners.map((id) => (
+                  <>
+                    {" · "}
+                    <TrackedLink id={id} />
+                  </>
+                ))}
+              </p>
+              <p class="photo-credit is-ink">
+                <PhotoCredit id={itemPhoto.id} />
+              </p>
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</Base>

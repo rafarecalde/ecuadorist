@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import TrackedLink from "../../components/TrackedLink.astro";
+import { site } from "../../config/site";
+import { festivals, type Festival } from "../../data/events";
+import { getPhoto } from "../../lib/photos";
+
+export function getStaticPaths() {
+  return festivals.map((festival) => ({
+    params: { slug: festival.id },
+    props: { festival },
+  }));
+}
+
+interface Props {
+  festival: Festival;
+}
+
+const { festival } = Astro.props;
+const photo = getPhoto(festival.hero);
+const url = new URL(`/events/${festival.id}/`, site.url).href;
+const image = new URL(photo.src.src, site.url).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: festival.title,
+  description: festival.dek,
+  startDate: festival.nextStart,
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  image: [image],
+  url,
+  location: {
+    "@type": "Place",
+    name: festival.where,
+    address: { "@type": "PostalAddress", addressCountry: "EC" },
+  },
+  organizer: { "@type": "Organization", name: site.name, url: site.url },
+};
+---
+
+<Base title={festival.title} description={festival.dek} image={photo.src.src} imageAlt={photo.alt} jsonLd={jsonLd}>
+  <header class="page-title">
+    <p class="crumbs">
+      <a href="/">Home</a>
+      <span aria-hidden="true"> / </span>
+      <a href="/events/">Events</a>
+    </p>
+    <p class="eyebrow">{festival.kicker}</p>
+    <h1>{festival.title}</h1>
+    <p class="dek">{festival.when}</p>
+  </header>
+  <figure class="event-hero">
+    <Image src={photo.src} alt={photo.alt} widths={[768, 1200, 1800]} sizes="100vw" />
+    <figcaption class="photo-credit is-ink"><PhotoCredit id={photo.id} /></figcaption>
+  </figure>
+  <article class="event-body">
+    <p class="date-note">{festival.dateNote}</p>
+    <h2>What it is</h2>
+    <p>{festival.what}</p>
+    <h2>Where</h2>
+    <p>{festival.where}</p>
+    <h2>Before you go</h2>
+    <ul>
+      {festival.tips.map((tip) => <li>{tip}</li>)}
+    </ul>
+    <p class="issue-meta">
+      {
+        festival.guides.map((guide, index) => (
+          <>
+            {index > 0 && " · "}
+            <a href={guide.href}>{guide.label}</a>
+          </>
+        ))
+      }
+      {
+        festival.partners.map((id) => (
+          <>
+            {" · "}
+            <TrackedLink id={id} />
+          </>
+        ))
+      }
+    </p>
+  </article>
+</Base>

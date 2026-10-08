@@ -1,0 +1,66 @@
+---
+import { travelStatus } from "../data/status";
+---
+
+<aside class="status" aria-label="Know before you go">
+  <p>
+    <span>Advisory</span>
+    <a href={travelStatus.advisory.href} target="_blank" rel="noopener">
+      {travelStatus.advisory.level} · {travelStatus.advisory.label}
+    </a>
+    <em>as of {travelStatus.advisory.asOf}</em>
+  </p>
+  <p>
+    <span>Volcanoes</span>
+    <a href={travelStatus.volcanoes.href} target="_blank" rel="noopener">{travelStatus.volcanoes.label}</a>
+  </p>
+  <p>
+    <span>Next long weekend</span>
+    {travelStatus.longWeekend.dates} · {travelStatus.longWeekend.name}
+  </p>
+  <p>
+    <span>Currency</span>
+    {travelStatus.currency}
+  </p>
+  <p>
+    <span>Now</span>
+    <span data-quito-weather>Quito weather</span>
+  </p>
+</aside>
+
+<script>
+  const nodes = document.querySelectorAll("[data-quito-weather]");
+  if (nodes.length) {
+    const label = (code: number) => {
+      if (code === 0) return "Clear";
+      if (code <= 3) return "Cloudy";
+      if (code === 45 || code === 48) return "Fog";
+      if (code <= 57) return "Drizzle";
+      if (code <= 67) return "Rain";
+      if (code <= 77) return "Snow";
+      if (code <= 82) return "Showers";
+      if (code >= 95) return "Storms";
+      return "Mixed";
+    };
+
+    fetch(
+      "https://api.open-meteo.com/v1/forecast?latitude=-0.18&longitude=-78.47&current=temperature_2m,weather_code&timezone=America/Guayaquil",
+    )
+      .then((response) => {
+        if (!response.ok) throw new Error("weather");
+        return response.json();
+      })
+      .then((data) => {
+        const current = data.current;
+        const text = `Quito ${Math.round(current.temperature_2m)}° · ${label(current.weather_code)}`;
+        nodes.forEach((node) => {
+          node.textContent = text;
+        });
+      })
+      .catch(() => {
+        nodes.forEach((node) => {
+          node.textContent = "Quito weather unavailable";
+        });
+      });
+  }
+</script>

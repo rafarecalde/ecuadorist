@@ -21,6 +21,16 @@ import quitoPlaza from "../assets/photos/quito-plaza.jpg";
 import saquisili from "../assets/photos/saquisili.jpg";
 import vilcabamba from "../assets/photos/vilcabamba.jpg";
 import yasuni from "../assets/photos/yasuni.jpg";
+import uioAirport from "../assets/photos/uio-airport.jpg";
+import sangay from "../assets/photos/sangay.jpg";
+import santoDomingo from "../assets/photos/santo-domingo.jpg";
+import puenteRoto from "../assets/photos/puente-roto.jpg";
+import quitoNight from "../assets/photos/quito-night.jpg";
+import guaguas from "../assets/photos/guaguas.jpg";
+import intiRaymi from "../assets/photos/inti-raymi.jpg";
+import carnaval from "../assets/photos/carnaval.jpg";
+import viernesSanto from "../assets/photos/viernes-santo.jpg";
+import malecon from "../assets/photos/malecon.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -50,6 +60,16 @@ const files = {
   saquisili,
   vilcabamba,
   yasuni,
+  "uio-airport": uioAirport,
+  sangay,
+  "santo-domingo": santoDomingo,
+  "puente-roto": puenteRoto,
+  "quito-night": quitoNight,
+  guaguas,
+  "inti-raymi": intiRaymi,
+  carnaval,
+  "viernes-santo": viernesSanto,
+  malecon,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -73,6 +93,16 @@ const alts: Record<PhotoId, string> = {
   saquisili: "Shoppers and produce at the Thursday market in Saquisilí",
   vilcabamba: "The green valley of Vilcabamba in southern Ecuador",
   yasuni: "A blue-throated piping guan in Yasuní National Park",
+  "uio-airport": "The terminal at Mariscal Sucre International Airport, Quito",
+  sangay: "Sangay volcano seen from Macas",
+  "santo-domingo": "The Church of Santo Domingo in Quito’s old town",
+  "puente-roto": "Puente Roto over the Tomebamba in Cuenca, seen from above",
+  "quito-night": "San Francisco church and the historic center of Quito at night",
+  guaguas: "Guaguas de pan, the bread baked in Ecuador for Día de los Difuntos",
+  "inti-raymi": "Inti Raymi dancers in Otavalo",
+  carnaval: "A Carnaval parade in Ambato",
+  "viernes-santo": "A Good Friday procession in Calderón, in the Quito metropolitan district",
+  malecon: "Malecón 2000 along the river in Guayaquil",
 };
 
 export type PhotoId = keyof typeof files;

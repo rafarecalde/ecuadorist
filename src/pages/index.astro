@@ -1,11 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import ArticleCard from "../components/ArticleCard.astro";
+import ComingUp from "../components/ComingUp.astro";
 import PhotoCredit from "../components/PhotoCredit.astro";
 import PlanYourTrip from "../components/PlanYourTrip.astro";
+import StatusStrip from "../components/StatusStrip.astro";
+import ThisWeekBand from "../components/ThisWeekBand.astro";
+import WeekendBand from "../components/WeekendBand.astro";
 import Base from "../layouts/Base.astro";
+import { upcomingFestivals } from "../data/events";
+import { currentWeekend } from "../data/weekend";
 import { site } from "../config/site";
 import { allArticles, findArticle } from "../lib/articles";
+import { allIssues, issuePath, latestIssue, todayIso } from "../lib/issues";
 import { getPhoto } from "../lib/photos";
 
 const articles = await allArticles();
@@ -20,6 +27,11 @@ const retire = ["cost-of-living", "best-cities", "visas", "healthcare", "banking
 );
 const eat = ["ecuadorian-food", "eating-in-quito", "where-to-stay"].map((id) => findArticle(articles, id));
 const doing = ["hiking", "wildlife", "markets", "hot-springs"].map((id) => findArticle(articles, id));
+
+const issues = await allIssues();
+const issue = latestIssue(issues);
+const weekend = currentWeekend();
+const coming = upcomingFestivals(todayIso(), 3);
 
 const hero = getPhoto("cotopaxi");
 const wildlife = getPhoto("booby");
@@ -38,7 +50,11 @@ const jsonLd = {
 ---
 
 <Base title={site.name} description={site.description} image={hero.src.src} imageAlt={hero.alt} jsonLd={jsonLd}>
-  <section class="hero" aria-label="Cover">
+  <StatusStrip />
+  <WeekendBand weekend={weekend} issueHref={issuePath(issue)} />
+  <ThisWeekBand date={issue.data.date} href={issuePath(issue)} items={issue.data.items.slice(0, 3)} />
+  <ComingUp events={coming} />
+  <section class="hero hero-home" aria-label="Cover">
     <Image
       class="hero-img"
       src={hero.src}

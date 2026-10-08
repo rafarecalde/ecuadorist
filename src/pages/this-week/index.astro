@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import StatusStrip from "../../components/StatusStrip.astro";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import { allIssues, formatLongDate, issuePath } from "../../lib/issues";
+import { getPhoto } from "../../lib/photos";
+
+const issues = await allIssues();
+const description = "A weekly briefing for Ecuador: flights, weather, festivals, and what is worth doing in the next few days.";
+---
+
+<Base title="This Week in Ecuador" description={description}>
+  <StatusStrip />
+  <header class="page-title">
+    <p class="eyebrow">The briefing</p>
+    <h1>This Week in Ecuador</h1>
+    <p class="dek">One issue each Monday. Five to seven items, then it is done.</p>
+  </header>
+  <section class="band issue-index">
+    <ul>
+      {
+        issues.map((issue) => {
+          const photo = getPhoto(issue.data.hero);
+          return (
+            <li>
+              <a href={issuePath(issue)}>
+                <Image src={photo.src} alt={photo.alt} widths={[640, 960, 1400]} sizes="(min-width: 800px) 42vw, 100vw" />
+                <span>
+                  <em>{formatLongDate(issue.data.date)}</em>
+                  <strong>{issue.data.title}</strong>
+                  <small>{issue.data.dek}</small>
+                  <span class="photo-credit is-ink">
+                    <PhotoCredit id={photo.id} />
+                  </span>
+                </span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Base>
