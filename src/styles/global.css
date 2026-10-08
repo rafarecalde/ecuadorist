@@ -229,11 +229,15 @@ h2, h3 {
     letter-spacing: 0.34em;
   }
 
-  .nav-desktop {
-    display: flex;
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
+.nav-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-width: 68rem;
+  gap: 0.85rem 1.15rem;
+}
 
   .menu-btn,
   .nav-panel {
@@ -1110,6 +1114,414 @@ figure.card-portrait {
 
   .toc-collapse {
     display: none;
+  }
+}
+
+.hero-home {
+  min-height: min(62svh, 34rem);
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.15rem;
+  padding: 0.5rem var(--pad);
+  background: var(--forest);
+  color: #efe8da;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.status p {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.35rem;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.status-kicker {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: var(--gold-bright);
+}
+
+.status a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(198, 165, 106, 0.7);
+}
+
+.status em {
+  font-style: italic;
+  font-family: var(--serif);
+  letter-spacing: 0;
+  color: rgba(239, 232, 218, 0.72);
+}
+
+.photo-credit.is-ink,
+.photo-credit.is-ink a {
+  color: var(--muted);
+}
+
+.weekend {
+  padding: 2.4rem var(--pad) 0.5rem;
+}
+
+.weekend-head h2 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  margin: 0.2rem 0 0.35rem;
+}
+
+.weekend-head .dek {
+  margin: 0 0 1.2rem;
+}
+
+.weekend-grid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.weekend-card {
+  position: relative;
+  min-height: 18rem;
+  overflow: hidden;
+  color: #f6f1e7;
+  display: flex;
+  align-items: flex-end;
+  background: var(--forest);
+}
+
+.weekend-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weekend-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 18, 14, 0.82), rgba(12, 18, 14, 0.05) 58%);
+}
+
+.weekend-copy {
+  position: relative;
+  z-index: 1;
+  padding: 1.2rem 1.15rem 1rem;
+}
+
+.weekend-copy h3 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 0.15rem 0 0.35rem;
+  color: #f6f1e7;
+}
+
+.weekend-copy p {
+  margin: 0;
+  max-width: 28rem;
+}
+
+.weekend-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-top: 0.55rem !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.weekend-links a {
+  color: #f6f1e7;
+}
+
+.weekend-copy .photo-credit {
+  margin-top: 0.55rem;
+}
+
+.weekend-more {
+  margin: 1rem 0 0;
+}
+
+.week-band {
+  padding-top: 3.2rem;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+
+.week-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+}
+
+.week-card > a {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.week-card figure {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ivory-deep);
+}
+
+.week-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.week-card h3 {
+  font-size: clamp(1.7rem, 2vw, 2rem);
+  margin: 0.75rem 0 0.3rem;
+}
+
+.week-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.week-card .photo-credit {
+  margin-top: 0.45rem;
+}
+
+.coming {
+  padding-top: 1rem;
+}
+
+.coming ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coming li + li {
+  border-top: 1px solid var(--line);
+}
+
+.coming a {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.85rem 0;
+}
+
+.coming img {
+  width: 7.5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.coming em,
+.issue-index em,
+.event-index em {
+  display: block;
+  font-style: normal;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.coming strong,
+.issue-index strong,
+.event-index strong {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.coming small,
+.issue-index small,
+.event-index small {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.issue-index ul,
+.event-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.issue-index a,
+.event-index a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.issue-index img,
+.event-index img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+
+.issue-list {
+  padding: 0.5rem var(--pad) 4rem;
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+.issue-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.issue-photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ivory-deep);
+}
+
+.issue-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+
+.issue-item h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0 0 0.45rem;
+}
+
+.issue-item p {
+  margin: 0 0 0.7rem;
+}
+
+.take {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--forest);
+}
+
+.take::before {
+  content: "Ecuadorist take. ";
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.issue-meta {
+  font-size: 0.95rem;
+}
+
+.event-hero {
+  margin: 1.4rem 0 0;
+}
+
+.event-hero img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: cover;
+}
+
+.event-hero figcaption {
+  padding: 0.6rem var(--pad) 0;
+}
+
+.event-body {
+  max-width: var(--measure);
+  padding: 1.4rem var(--pad) 4rem;
+}
+
+.event-body h2 {
+  font-size: 2rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
+.date-note {
+  color: var(--ink-soft);
+}
+
+@media (min-width: 800px) {
+  .weekend-grid {
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-template-rows: 22rem 22rem;
+  }
+
+  .weekend-card:first-child {
+    grid-row: 1 / span 2;
+    min-height: 100%;
+  }
+
+  .week-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .issue-item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 1.25rem 2rem;
+    align-items: center;
+  }
+
+  .issue-index ul,
+  .event-index ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .status {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .status::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .status {
+    flex-wrap: nowrap;
+    gap: 0.4rem 1rem;
   }
 }
 

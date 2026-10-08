@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import { festivals } from "../../data/events";
+import { getPhoto } from "../../lib/photos";
+
+const description = "The dates worth planning around in Ecuador: the Day of the Dead, Quito, Cuenca, Carnaval, Holy Week, and Inti Raymi.";
+const ordered = [...festivals].sort((a, b) => a.nextStart.localeCompare(b.nextStart));
+---
+
+<Base title="Festivals and events" description={description}>
+  <header class="page-title">
+    <p class="eyebrow">The calendar</p>
+    <h1>Festivals</h1>
+    <p class="dek">Six dates that move the country. The next occurrence is on each page, and the pages stay at the same address.</p>
+  </header>
+  <section class="band event-index">
+    <ul>
+      {
+        ordered.map((event) => {
+          const photo = getPhoto(event.hero);
+          return (
+            <li>
+              <a href={`/events/${event.id}/`}>
+                <Image src={photo.src} alt={photo.alt} widths={[640, 1000, 1400]} sizes="(min-width: 800px) 50vw, 100vw" />
+                <span>
+                  <em>{event.when}</em>
+                  <strong>{event.title}</strong>
+                  <small>{event.dek}</small>
+                </span>
+                <span class="photo-credit is-ink">
+                  <PhotoCredit id={photo.id} />
+                </span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Base>

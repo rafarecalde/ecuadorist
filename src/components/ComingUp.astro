@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import { getPhoto } from "../lib/photos";
+import type { Festival } from "../data/events";
+
+interface Props {
+  events: Festival[];
+}
+
+const { events } = Astro.props;
+---
+
+<section class="band coming" aria-labelledby="coming-title">
+  <div class="section-head">
+    <p class="eyebrow">Coming up</p>
+    <h2 id="coming-title">The next dates</h2>
+  </div>
+  <ol>
+    {
+      events.map((event) => {
+        const photo = getPhoto(event.hero);
+        return (
+          <li>
+            <a href={`/events/${event.id}/`}>
+              <Image src={photo.src} alt="" widths={[480, 800]} sizes="8rem" />
+              <span>
+                <em>{event.when}</em>
+                <strong>{event.title}</strong>
+                <small>{event.dek}</small>
+              </span>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ol>
+  <p class="meta" style="padding-left: 0">
+    <a class="text-link" href="/events/">All festivals</a>
+  </p>
+</section>

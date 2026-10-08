@@ -1,16 +1,43 @@
 ---
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
+import { festivals } from "../data/events";
+import { weekends } from "../data/weekend";
 import { allArticles, articlePath } from "../lib/articles";
+import { allIssues, issuePath } from "../lib/issues";
 import { getPhoto, photoIds } from "../lib/photos";
 
 const articles = await allArticles();
+const issues = await allIssues();
 const usage = new Map<string, { href: string; title: string }[]>();
 
+function addUse(id: string, href: string, title: string) {
+  const list = usage.get(id) ?? [];
+  if (!list.some((item) => item.href === href)) {
+    list.push({ href, title });
+  }
+  usage.set(id, list);
+}
+
 for (const article of articles) {
-  const list = usage.get(article.data.hero) ?? [];
-  list.push({ href: articlePath(article), title: article.data.title });
-  usage.set(article.data.hero, list);
+  addUse(article.data.hero, articlePath(article), article.data.title);
+}
+
+for (const issue of issues) {
+  addUse(issue.data.hero, issuePath(issue), issue.data.title);
+  for (const item of issue.data.items) {
+    addUse(item.photo, issuePath(issue), issue.data.title);
+  }
+}
+
+for (const festival of festivals) {
+  addUse(festival.hero, `/events/${festival.id}/`, festival.title);
+}
+
+for (const weekend of Object.values(weekends)) {
+  for (const item of weekend.items) {
+    addUse(item.photo, `/this-week/${weekend.id}/`, "This Week in Ecuador");
+  }
 }
 
 const description = "Photographers and licenses for every image on Ecuadorist, all from Wikimedia Commons.";
