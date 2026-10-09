@@ -5,17 +5,15 @@ section: retire
 kicker: "Cities"
 dek: "Cuenca is the famous answer. It is not the only climate."
 published: 2026-05-27
-updated: 2026-10-01
+updated: 2026-10-09
 hero: cuenca-cathedral
-order: 2
+order: 9
 related:
   - cuenca
   - cost-of-living
   - healthcare
-trip:
-  - wise
-  - health
-tripNote: "If a city becomes a plan"
+  - moving-money
+trip: []
 ---
 
 People move for a walkable center, a doctor, and weather they can live in. Ecuador has several versions of that. Altitude is the filter most newcomers underestimate.
@@ -38,4 +36,4 @@ Salinas, Manta, and the beach towns suit people who want heat and the Pacific. H
 
 ## How to choose
 
-Spend a month in the town, not a long weekend. Walk to a pharmacy. Try the clinic’s front desk. Read a lease. The [cost](/retire/cost-of-living/), [healthcare](/retire/healthcare/), and [visa](/retire/visas/) chapters are the rest of the decision. The visa chapter is an overview, not advice.
+Spend a month in the town, not a long weekend. Walk to a pharmacy. Try the clinic’s front desk. Read a lease. The rest of the decision is the [cost in Quito and Cuenca](/retire/cost-of-living/), [health cover](/retire/healthcare/), the [visa overview](/retire/visas/), and [how dollars move](/retire/moving-money/). The visa chapter is an overview, not advice.

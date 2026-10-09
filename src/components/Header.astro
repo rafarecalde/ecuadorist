@@ -2,10 +2,14 @@
 import { sections } from "../config/site";
 
 const path = Astro.url.pathname;
+const navLabel: Partial<Record<string, string>> = {
+  retire: "Retiring",
+};
+
 const links = [
   ...Object.entries(sections).map(([id, section]) => ({
     href: `/${id}/`,
-    label: section.title,
+    label: navLabel[id] ?? section.title,
   })),
   { href: "/book/", label: "Plan & book" },
   { href: "/this-week/", label: "This Week" },
