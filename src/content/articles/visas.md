@@ -6,7 +6,7 @@ kicker: "Paperwork"
 dek: "The categories that matter, and the official pages that outrank this one."
 published: 2026-06-03
 updated: 2026-10-09
-hero: quito-basilica
+hero: quito-plaza
 order: 8
 disclaimer: true
 related:
