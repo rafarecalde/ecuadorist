@@ -1,0 +1,20 @@
+---
+import { bookPages, bookPath } from "../data/book";
+---
+
+<section class="book-strip" aria-labelledby="book-strip-title">
+  <div class="book-strip-head">
+    <p class="eyebrow">Plan &amp; book</p>
+    <h2 id="book-strip-title">Ready when you are.</h2>
+    <a class="text-link" href="/book/">All eight pages</a>
+  </div>
+  <ul class="book-strip-list">
+    {
+      bookPages.map((page) => (
+        <li>
+          <a href={bookPath(page)}>{page.strip}</a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -31,6 +31,7 @@ import intiRaymi from "../assets/photos/inti-raymi.jpg";
 import carnaval from "../assets/photos/carnaval.jpg";
 import viernesSanto from "../assets/photos/viernes-santo.jpg";
 import malecon from "../assets/photos/malecon.jpg";
+import mitad from "../assets/photos/mitad.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -70,6 +71,7 @@ const files = {
   carnaval,
   "viernes-santo": viernesSanto,
   malecon,
+  mitad,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -103,6 +105,7 @@ const alts: Record<PhotoId, string> = {
   carnaval: "A Carnaval parade in Ambato",
   "viernes-santo": "A Good Friday procession in Calderón, in the Quito metropolitan district",
   malecon: "Malecón 2000 along the river in Guayaquil",
+  mitad: "The Mitad del Mundo monument north of Quito",
 };
 
 export type PhotoId = keyof typeof files;

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
+import { bookPages, bookPath } from "../data/book";
 import { festivals } from "../data/events";
 import { weekends } from "../data/weekend";
 import { allArticles, articlePath } from "../lib/articles";
@@ -32,6 +33,14 @@ for (const issue of issues) {
 
 for (const festival of festivals) {
   addUse(festival.hero, `/events/${festival.id}/`, festival.title);
+}
+
+for (const page of bookPages) {
+  addUse(page.hero, bookPath(page), page.title);
+  addUse(page.hero, "/book/", "Plan & book");
+  for (const pick of page.picks) {
+    addUse(pick.photo, bookPath(page), page.title);
+  }
 }
 
 for (const weekend of Object.values(weekends)) {

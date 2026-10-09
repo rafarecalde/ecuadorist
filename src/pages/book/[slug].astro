@@ -1,0 +1,188 @@
+---
+import { Image } from "astro:assets";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import Base from "../../layouts/Base.astro";
+import { bookPages, findBook } from "../../data/book";
+import { getPhoto } from "../../lib/photos";
+
+export function getStaticPaths() {
+  return bookPages.map((page) => ({ params: { slug: page.slug } }));
+}
+
+const page = findBook(Astro.params.slug);
+if (!page) {
+  throw new Error(`Unknown book page: ${Astro.params.slug}`);
+}
+
+const hero = getPhoto(page.hero);
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: page.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+---
+
+<Base title={page.title} description={page.description} image={hero.src.src} imageAlt={hero.alt} jsonLd={faqLd}>
+  <section class="hero book-hero" aria-label={page.title}>
+    <Image
+      class="hero-img"
+      src={hero.src}
+      alt={hero.alt}
+      widths={[768, 1200, 1800]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="hero-scrim"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.title}</h1>
+      <p class="lede">{page.intro}</p>
+      <p class="photo-credit"><PhotoCredit id={hero.id} /></p>
+    </div>
+  </section>
+
+  <section class="band book-picks" aria-labelledby="picks-title">
+    <div class="section-head">
+      <p class="eyebrow">Listings</p>
+      <h2 id="picks-title">Ways to book</h2>
+    </div>
+    <ul class="pick-grid">
+      {
+        page.picks.map((pick) => {
+          const photo = getPhoto(pick.photo);
+          return (
+            <li class="book-pick">
+              <figure>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  widths={[480, 800, 1100]}
+                  sizes="(min-width: 800px) 40vw, 100vw"
+                />
+              </figure>
+              <div class="book-pick-body">
+                <p class="eyebrow">{pick.partner}</p>
+                <h3>{pick.title}</h3>
+                <p>{pick.suits}</p>
+                {pick.duration && <p class="book-meta">{pick.duration}</p>}
+                <p class="book-included">{pick.included}</p>
+                <p class="photo-credit is-ink">
+                  <PhotoCredit id={photo.id} />
+                </p>
+                <a class="book-go" href={pick.href} target="_blank" rel="sponsored nofollow noopener">
+                  See prices
+                </a>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <p class="book-disclosure">
+      Buttons above are paid partner links. <a href="/affiliate-disclosure/">How that works</a>.
+    </p>
+  </section>
+
+  {
+    page.tripTips && (
+      <section class="band trip-tips" aria-labelledby="tips-title">
+        <div class="section-head">
+          <p class="eyebrow">On the ground</p>
+          <h2 id="tips-title">Trip tips</h2>
+        </div>
+        <ol class="route">
+          {page.tripTips.route.map((stop) => (
+            <li>{stop}</li>
+          ))}
+        </ol>
+        <p class="route-note">{page.tripTips.routeNote}</p>
+        <div class="tips-grid">
+          <div>
+            <h3>When</h3>
+            <p>{page.tripTips.when}</p>
+          </div>
+          <div>
+            <h3>Weather</h3>
+            <p>{page.tripTips.weather}</p>
+          </div>
+          <div>
+            <h3>Stops</h3>
+            <p>{page.tripTips.stops}</p>
+          </div>
+          <div>
+            <h3>Altitude and what to bring</h3>
+            <p>{page.tripTips.altitude}</p>
+          </div>
+        </div>
+        <p class="sources">
+          Sources:{" "}
+          {page.tripTips.sources.map((source, index) => (
+            <>
+              {index > 0 && " · "}
+              <a href={source.href} target="_blank" rel="noopener">
+                {source.name}
+              </a>
+            </>
+          ))}
+          . Rewritten here. Fees, hours, and roads change.
+        </p>
+      </section>
+    )
+  }
+
+  <section class="band book-know" aria-labelledby="know-title">
+    <div class="section-head">
+      <p class="eyebrow">Before you go</p>
+      <h2 id="know-title">Good to know</h2>
+    </div>
+    <ul class="know-list">
+      {page.know.map((item) => <li>{item}</li>)}
+    </ul>
+    {
+      page.transfer && (
+        <p class="book-note">
+          Landing at Mariscal Sucre and would rather not start in a city taxi?{" "}
+          <a href="https://uiotransfers.com" target="_blank" rel="noopener">
+            UIO Transfers
+          </a>{" "}
+          is a private car from the airport. It is the owner’s company, not a third-party ad.
+        </p>
+      )
+    }
+    {
+      page.guide && (
+        <p class="book-note">
+          <a class="text-link" href={page.guide.href}>
+            {page.guide.label}
+          </a>
+        </p>
+      )
+    }
+  </section>
+
+  <section class="band book-faq" aria-labelledby="faq-title">
+    <div class="section-head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Before you click</h2>
+    </div>
+    {
+      page.faqs.map((faq) => (
+        <details>
+          <summary>{faq.q}</summary>
+          <p>{faq.a}</p>
+        </details>
+      ))
+    }
+    <p class="book-note">
+      <a class="text-link" href="/book/">All plan &amp; book pages</a>
+    </p>
+  </section>
+</Base>

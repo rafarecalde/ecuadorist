@@ -38,4 +38,6 @@ Cacao grows on this slope. Several makers in and around Mindo run chocolate tast
 
 Mindo works as a day from [Quito](/visit/quito/) and works better overnight. Lodges in the forest are the point if birds are the reason you came. Rubber boots are not a costume. The cloud sits on the ridge most afternoons, and the trail will be mud.
 
+A booked day from the capital is on [Mindo cloud forest day trips from Quito](/book/mindo-tours-from-quito/).
+
 The road continues down toward the coast. Mindo is the hinge between the capital and the Pacific, not a resort on either.

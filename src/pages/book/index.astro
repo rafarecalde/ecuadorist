@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import PhotoCredit from "../../components/PhotoCredit.astro";
+import Base from "../../layouts/Base.astro";
+import { bookPages, bookPath } from "../../data/book";
+import { getPhoto } from "../../lib/photos";
+
+const description =
+  "Eight short pages for booking Cotopaxi, Quilotoa, Otavalo, Mindo, Galápagos days from Santa Cruz, Quito and Mitad del Mundo, an Ecuador eSIM, and a car at Quito airport.";
+---
+
+<Base title="Plan & book" description={description}>
+  <header class="page-title">
+    <p class="eyebrow">Book</p>
+    <h1>Plan &amp; book</h1>
+    <p class="dek">
+      Eight pages for the searches with a date attached: the volcano, the crater, the Saturday market, the cloud forest, a day on Santa Cruz, the city, a phone line, and a car at the airport.
+    </p>
+  </header>
+  <section class="band book-hub" aria-label="Pages">
+    <ul class="hub-grid">
+      {
+        bookPages.map((page, index) => {
+          const photo = getPhoto(page.hero);
+          return (
+            <li class="hub-card">
+              <a href={bookPath(page)}>
+                <figure>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    widths={[480, 800, 1200]}
+                    sizes="(min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw"
+                    loading={index < 2 ? "eager" : "lazy"}
+                  />
+                </figure>
+                <p class="eyebrow">{page.eyebrow}</p>
+                <h2>{page.title}</h2>
+                <p>{page.dek}</p>
+              </a>
+              <p class="photo-credit is-ink">
+                <PhotoCredit id={photo.id} />
+              </p>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Base>
