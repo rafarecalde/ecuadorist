@@ -74,9 +74,13 @@ const faqLd = {
                 <p>{pick.suits}</p>
                 {pick.duration && <p class="book-meta">{pick.duration}</p>}
                 <p class="book-included">{pick.included}</p>
-                <p class="photo-credit is-ink">
-                  <PhotoCredit id={photo.id} />
-                </p>
+                {
+                  pick.photo !== page.hero && (
+                    <p class="photo-credit is-ink">
+                      <PhotoCredit id={photo.id} />
+                    </p>
+                  )
+                }
                 <a class="book-go" href={pick.href} target="_blank" rel="sponsored nofollow noopener">
                   See prices
                 </a>

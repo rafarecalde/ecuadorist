@@ -1530,8 +1530,8 @@ figure.card-portrait {
 }
 
 .hero.book-hero h1 {
-  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
-  max-width: 14ch;
+  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+  max-width: 16em;
 }
 
 .book-hub {
