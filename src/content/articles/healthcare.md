@@ -6,7 +6,7 @@ kicker: "Health"
 dek: "Three kinds of cover. The price lives on the insurer’s page."
 published: 2026-06-10
 updated: 2026-10-09
-hero: cuenca
+hero: puente-roto
 order: 2
 related:
   - visas

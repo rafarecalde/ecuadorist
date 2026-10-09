@@ -6,7 +6,7 @@ kicker: "Banking"
 dek: "The currency is already yours. The fee is in the card agreement."
 published: 2026-06-17
 updated: 2026-10-09
-hero: quito-plaza
+hero: saquisili
 order: 4
 related:
   - moving-money
