@@ -24,7 +24,9 @@ const places = ["banos", "otavalo", "mindo", "quilotoa", "the-coast", "the-amazo
   findArticle(articles, id),
 );
 const retire = articlesIn(articles, "retire");
-const eat = ["ecuadorian-food", "eating-in-quito", "where-to-stay"].map((id) => findArticle(articles, id));
+const eat = ["ecuadorian-food", "eating-in-quito", "where-to-stay", "quito-neighborhoods"].map((id) =>
+  findArticle(articles, id),
+);
 const doing = ["hiking", "wildlife", "markets", "hot-springs"].map((id) => findArticle(articles, id));
 
 const issues = await allIssues();

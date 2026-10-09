@@ -60,6 +60,22 @@ const jsonLd = {
   },
 };
 
+const faqLd =
+  article.data.faq.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: article.data.faq.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      }
+    : null;
+
 const crumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -80,7 +96,7 @@ const crumbs = {
   published={isoDate(article.data.published)}
   updated={isoDate(article.data.updated)}
   section={sectionMeta.title}
-  jsonLd={[jsonLd, crumbs]}
+  jsonLd={faqLd ? [jsonLd, crumbs, faqLd] : [jsonLd, crumbs]}
 >
   <header class="article-title">
     <p class="crumbs">
@@ -99,6 +115,7 @@ const crumbs = {
           <span> · Updated {formatDate(article.data.updated)}</span>
         )
       }
+      {article.data.checked && <span> · Last checked: {article.data.checked}</span>}
     </p>
   </header>
   <figure class="article-hero">

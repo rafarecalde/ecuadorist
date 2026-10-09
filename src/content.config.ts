@@ -19,6 +19,8 @@ const articles = defineCollection({
     expatAffiliate: z.array(z.string()).default([]),
     expatNote: z.string().optional(),
     disclaimer: z.boolean().default(false),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    checked: z.string().optional(),
     order: z.number().default(50),
   }),
 });

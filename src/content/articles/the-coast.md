@@ -24,6 +24,8 @@ The coast is a different country from the sierra: lower, hotter, and organized a
 
 Puerto López is the working harbor for humpback whales, which pass offshore roughly from June through September. Boats go out in the morning. The same town is the door to Machalilla National Park.
 
+Read the [by-area safety guide](/visit/is-ecuador-safe/) before you plan the coast. Large parts of it sit inside current US and UK warnings.
+
 Isla de la Plata, in the park, is nicknamed the poor man’s Galápagos. That sells it short and oversells it. You can see boobies and frigates. You should not expect the Galápagos. Los Frailes, a crescent of pale sand inside the park, is the beach people mean when they say the coast is beautiful. Go early. The park controls entry.
 
 ## Towns, loud and quiet

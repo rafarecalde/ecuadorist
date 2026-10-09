@@ -24,6 +24,8 @@ This is not a directory. It is a handful of real properties that have been part 
 
 In the old town of [Quito](/visit/quito/), **Casa Gangotena** on Plaza de San Francisco and **Hotel Plaza Grande** on the main square are the grand colonial stays. **Illa Experience** is the smaller design hotel people name when they want the center without a palace.
 
+In [Quito](/visit/quito/), the decision before the hotel is the neighborhood. The [comparison](/eat/quito-neighborhoods/) is the center, La Mariscal, La Floresta, La Carolina, Guápulo, and Cumbayá. It does not rank rooms.
+
 In [Cuenca](/visit/cuenca/), **Mansión Alcázar** and **Hotel Santa Lucía** are historic houses in the center, the sort of building the city is made of. Apartments, not hotels, are what most people use if the month turns into a [lease](/retire/renting/).
 
 ## Islands, forest, river

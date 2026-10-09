@@ -11,7 +11,7 @@ export const sections = {
     title: "Visit",
     description:
       "Quito, Cuenca, the Galápagos, volcanoes, cloud forest, the Pacific coast, and the Amazon.",
-    dek: "Ten places that explain the country.",
+    dek: "The places, and the practical chapters beside them.",
     hero: "quilotoa",
   },
   retire: {
