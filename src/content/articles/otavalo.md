@@ -39,3 +39,5 @@ Cotacachi, a smaller town nearby, is known for leather workshops. It is also a q
 ## From Quito
 
 Otavalo is a straightforward day from [Quito](/visit/quito/), and a better night. The Saturday bus north is a long one. A car makes Peguche and Cuicocha possible in the same weekend. Go for the valley. The sweaters will still be there.
+
+A guided Saturday is on [Otavalo market day trips from Quito](/book/otavalo-tours-from-quito/).

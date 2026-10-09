@@ -44,3 +44,5 @@ The [wildlife chapter](/do/wildlife/) covers what you are likely to see. Giant t
 ## When to go
 
 December to May is warmer and wetter. June to November is cooler, with the mist called garúa, and often better underwater visibility. Wildlife does not take the season off. Match the months to what you care about, then let a licensed operator tell you which sites are open. Sites close. That is the park working.
+
+Days that start in Puerto Ayora, rather than on a ship, are on [Galápagos day tours from Santa Cruz](/book/galapagos-day-tours-santa-cruz/).

@@ -37,3 +37,5 @@ A car or a day tour from Latacunga or Quito reaches the crater and leaves. That 
 ## Altitude, again
 
 Quilotoa is higher than Quito and higher than Cuenca. If [Cotopaxi](/visit/cotopaxi/) was already a stretch, do not stack this the next morning. Eat something, bring water, and expect the temperature to drop when the cloud arrives. The lake will still be there if you wait for a clear hour.
+
+Booked days from the capital are on [Quilotoa day trips from Quito](/book/quilotoa-tours-from-quito/).

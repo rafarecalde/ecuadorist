@@ -39,3 +39,5 @@ Park rules and any entrance fee should be checked before you go. They change. So
 A guided day is the simple version: someone else watches the weather and the time. A car gives you Limpiopungo at your own pace, and nothing above the refuge. Acclimatize in Quito first. This is a poor plan for the morning after a night flight.
 
 Pair it with [Quilotoa](/visit/quilotoa/) if you have a second day and the lungs for more altitude. They are different landscapes and the same lesson.
+
+Tours from the capital, with the listings we could open, are on [Best Cotopaxi tours from Quito](/book/cotopaxi-tours-from-quito/).

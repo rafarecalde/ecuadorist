@@ -23,7 +23,7 @@ Ecuador’s markets split in two. Some exist for visitors. The better ones exist
 
 ## Otavalo
 
-[Otavalo](/visit/otavalo/) on Saturday is the textile market, Plaza de los Ponchos. It is famous, and it is still worth it if you go early and treat the sellers as professionals. The animal market at the edge of town is an earlier, earthier scene. Bargaining belongs with crafts. It does not belong with a plate of food that already has a price.
+[Otavalo](/visit/otavalo/) on Saturday is the textile market, Plaza de los Ponchos. It is famous, and it is still worth it if you go early and treat the sellers as professionals. The animal market at the edge of town is an earlier, earthier scene. Bargaining belongs with crafts. It does not belong with a plate of food that already has a price. A guided version of that Saturday is on [Otavalo market day trips from Quito](/book/otavalo-tours-from-quito/).
 
 ## Saquisilí
 
