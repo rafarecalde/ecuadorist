@@ -14,7 +14,7 @@ import { sections } from "../config/site";
         {
           Object.entries(sections).map(([id, section]) => (
             <li>
-              <a href={`/${id}/`}>{section.title}</a>
+              <a href={`/${id}/`}>{id === "retire" ? "Retiring in Ecuador" : section.title}</a>
             </li>
           ))
         }

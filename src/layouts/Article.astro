@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Base from "./Base.astro";
 import ArticleCard from "../components/ArticleCard.astro";
 import PhotoCredit from "../components/PhotoCredit.astro";
+import ExpatBand from "../components/ExpatBand.astro";
 import PlanYourTrip from "../components/PlanYourTrip.astro";
 import { sections, site } from "../config/site";
 import {
@@ -158,7 +159,17 @@ const crumbs = {
       </div>
     </div>
   </div>
-  <PlanYourTrip ids={trips} note={article.data.tripNote} />
+  {
+    article.data.expat.length > 0 || article.data.expatAffiliate.length > 0 ? (
+      <ExpatBand
+        ids={article.data.expat}
+        affiliateIds={article.data.expatAffiliate}
+        note={article.data.expatNote}
+      />
+    ) : (
+      <PlanYourTrip ids={trips} note={article.data.tripNote} />
+    )
+  }
   {
     related.length > 0 && (
       <section class="related" aria-labelledby="related-title">

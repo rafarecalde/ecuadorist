@@ -53,3 +53,5 @@ Use ordinary city sense. Crowded streets and bus terminals are where phones disa
 Quito is a base, not the whole trip. [Cotopaxi](/visit/cotopaxi/) is a day. [Mindo](/visit/mindo/) is a night in the cloud forest. [Otavalo](/visit/otavalo/) is a Saturday. The road east toward Papallacta is the way to hot water and, much farther on, the Amazon.
 
 Spanish changes the city. English is easy to find in hotels and some dining rooms, and scarce in markets and offices.
+
+A longer stay is a different book. [Retiring in Ecuador](/retire/) is the practical guide: the city, the cost, and the paperwork.
