@@ -42,4 +42,4 @@ North of the city, Ingapirca is the best-preserved Inca complex in the country, 
 
 Cuenca is the city most often named by people from the United States who [move to Ecuador](/retire/best-cities/). The reasons are practical: a walkable center, private clinics, a mild climate, and a foreign community large enough to be useful and small enough to leave.
 
-It is still an Ecuadorian city. Spanish is the language of leases, clinics, and the market. Read the [renting](/retire/renting/) and [healthcare](/retire/healthcare/) chapters before you treat a pleasant week as a plan.
+It is still an Ecuadorian city. Spanish is the language of leases, clinics, and the market. Read the [renting](/retire/renting/) and [healthcare](/retire/healthcare/) chapters before you treat a pleasant week as a plan. The cost of living here, next to Quito, is in [the retiree’s money chapter](/retire/cost-of-living/).

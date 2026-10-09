@@ -11,14 +11,14 @@ export const sections = {
     title: "Visit",
     description:
       "Quito, Cuenca, the Galápagos, volcanoes, cloud forest, the Pacific coast, and the Amazon.",
-    dek: "Ten places that explain the country.",
+    dek: "The places, and the practical chapters beside them.",
     hero: "quilotoa",
   },
   retire: {
-    title: "Retire & Move",
+    title: "Retiring in Ecuador: the complete 2026 guide",
     description:
-      "Cost of living, cities, visas, healthcare, banking, and renting in Ecuador. An overview, not legal advice.",
-    dek: "The practical life, written without the brochure.",
+      "Retiring in Ecuador: the complete 2026 guide for US retirees and remote workers. Health cover, money, banking, mail, a US phone number, a VPN, and the cost of living in Quito and Cuenca. An overview, not legal advice.",
+    dek: "Ten chapters, and the official pages that outrank them.",
     hero: "cuenca",
   },
   eat: {

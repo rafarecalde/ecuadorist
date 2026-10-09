@@ -27,11 +27,11 @@ Most trips use three islands. Santa Cruz, with Puerto Ayora, is the busiest base
 
 Flights leave Quito and Guayaquil for Baltra, the airport that serves Santa Cruz, or for San Cristóbal. You will want a flight that connects on the same day. Missing it is an expensive kind of quiet.
 
-A cruise moves you between islands with a naturalist guide. A land-based trip means hotels, day boats, and more time in town. Neither is automatically better. Cruises see more remote sites. Land trips let you set the pace. Read [where to stay](/eat/where-to-stay/) before you choose a style.
+A cruise moves you between islands with a naturalist guide. A land-based trip means hotels, day boats, and more time in town. Neither is automatically better. Cruises see more remote sites. Land trips let you set the pace. The [island-hopping guide](/visit/galapagos-without-a-cruise/) is the land version. [Which island](/visit/which-galapagos-island/) is the base. Read [where to stay](/eat/where-to-stay/) before you choose a style.
 
 ## Fees and paperwork
 
-The Galápagos National Park publishes an entrance fee. Its 2026 rate card lists US$200 for foreign tourists over 12. The park sets the figure, and it can change. Confirm it before you buy flights. A separate transit-control card is required for the flight. There is also a biosecurity check: do not bring soil, seeds, or untreated food.
+The Galápagos National Park publishes an entrance fee. Its table lists US$200 for foreign tourists over 12, and the transit card is a separate US$20. Both figures, and the categories that pay less, are in the [cost chapter](/visit/galapagos-trip-cost/). Confirm them before you buy flights. There is also a biosecurity check: do not bring soil, seeds, or untreated food.
 
 The islands are the expensive chapter of an otherwise gentle country. Boats, guides, and imported supplies cost what isolation costs. Budget for the structure of the trip, not for a bargain.
 

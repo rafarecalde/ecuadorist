@@ -432,6 +432,7 @@ h2, h3 {
 .page-title h1,
 .article-title h1 {
   font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
   margin: 0;
 }
 
@@ -1665,22 +1666,25 @@ figure.card-portrait {
   font-size: 0.92rem;
 }
 
-.route {
+.trip-tips .route {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   list-style: none;
   margin: 0 0 0.8rem;
   padding: 0;
+  border: 0;
 }
 
-.route li {
+.trip-tips .route li {
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2.2vw, 2rem);
   line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
 
-.route li:not(:last-child)::after {
+.trip-tips .route li:not(:last-child)::after {
   content: "→";
   margin: 0 0.55rem;
   color: var(--gold);
@@ -1703,14 +1707,118 @@ figure.card-portrait {
   padding: 1rem 1.05rem 1.1rem;
 }
 
-.tips-grid h3 {
+.tips-grid h3,
+.compare h3 {
   font-size: 1.55rem;
   margin: 0 0 0.35rem;
+  color: var(--ink);
 }
 
-.tips-grid p {
+.tips-grid p,
+.prose .compare p,
+.compare p {
   margin: 0;
   color: var(--ink-soft);
+}
+
+.section-lead {
+  max-width: 38rem;
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+}
+
+.prose .facts,
+.prose .compare,
+.prose .route,
+.prose table {
+  margin: 1.15rem 0 1.5rem;
+}
+
+.facts {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.facts p {
+  margin: 0;
+  background: var(--forest);
+  color: #f4efe4;
+  padding: 0.85rem 0.95rem 1rem;
+}
+
+.facts strong {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.facts span {
+  display: block;
+  color: rgba(244, 239, 228, 0.82);
+  font-size: 0.92rem;
+}
+
+.compare {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.1rem 0 1.5rem;
+}
+
+.compare article {
+  background: var(--ivory-deep);
+  padding: 1rem 1.05rem 1.1rem;
+  margin: 0;
+}
+
+.prose .route {
+  list-style: none;
+  margin: 1.15rem 0 1.5rem;
+  padding: 0;
+  border-left: 1px solid var(--gold);
+}
+
+.prose .route li {
+  margin: 0;
+  padding: 0 0 1rem 1rem;
+}
+
+.prose .route strong {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+
+.prose .route span {
+  display: block;
+  color: var(--ink-soft);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose th {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .sources {
@@ -1815,27 +1923,46 @@ figure.card-portrait {
   border-color: var(--gold-bright);
 }
 
+.prose .sources {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 @media (min-width: 700px) {
   .hub-grid,
   .pick-grid,
   .tips-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media (min-width: 1100px) {
-  .hub-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+  .facts.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .facts.cols-2 {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 800px) {
+  .compare.cols-2,
+  .compare.cols-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .band.book-picks,
   .band.trip-tips,
   .band.book-know,
   .band.book-faq {
     padding-top: 3.4rem;
     padding-bottom: 3.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hub-grid,
+  .compare.cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

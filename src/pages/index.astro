@@ -12,7 +12,7 @@ import Base from "../layouts/Base.astro";
 import { upcomingFestivals } from "../data/events";
 import { currentWeekend } from "../data/weekend";
 import { site } from "../config/site";
-import { allArticles, findArticle } from "../lib/articles";
+import { allArticles, articlesIn, findArticle } from "../lib/articles";
 import { allIssues, issuePath, latestIssue, todayIso } from "../lib/issues";
 import { getPhoto } from "../lib/photos";
 
@@ -23,10 +23,10 @@ const cuenca = findArticle(articles, "cuenca");
 const places = ["banos", "otavalo", "mindo", "quilotoa", "the-coast", "the-amazon"].map((id) =>
   findArticle(articles, id),
 );
-const retire = ["cost-of-living", "best-cities", "visas", "healthcare", "banking", "renting"].map((id) =>
+const retire = articlesIn(articles, "retire");
+const eat = ["ecuadorian-food", "eating-in-quito", "where-to-stay", "quito-neighborhoods"].map((id) =>
   findArticle(articles, id),
 );
-const eat = ["ecuadorian-food", "eating-in-quito", "where-to-stay"].map((id) => findArticle(articles, id));
 const doing = ["hiking", "wildlife", "markets", "hot-springs"].map((id) => findArticle(articles, id));
 
 const issues = await allIssues();
@@ -121,9 +121,9 @@ const jsonLd = {
   <section class="band" aria-labelledby="retire-title">
     <div class="split">
       <div>
-        <p class="eyebrow">Retire &amp; Move</p>
+        <p class="eyebrow">Retiring in Ecuador</p>
         <h2 id="retire-title">Thinking of staying</h2>
-        <p class="dek">Dollars, doctors, leases, and visas. The visa chapter is an overview, not legal advice.</p>
+        <p class="dek">The 2026 guide: health cover, money, a US address, and the visa pages that outrank this site.</p>
         <ul class="link-list">
           {
             retire.map((article) => (

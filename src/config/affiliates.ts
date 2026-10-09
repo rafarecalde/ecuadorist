@@ -1,8 +1,8 @@
 /**
  * Central affiliate configuration.
  *
- * Tracked partner links are marked sponsored and must keep
- * rel="sponsored nofollow noopener".
+ * Tracked partner links are marked sponsored and use
+ * rel="sponsored noopener".
  * Placeholder entries are plain links to a brand homepage. Never invent an
  * affiliate id, tracking code, or Booking.com search URL.
  * GetYourGuide uses location or search pages only, never guessed activity ids.
@@ -15,7 +15,7 @@ export type Affiliate = {
   id: string;
   name: string;
   href: string;
-  /** Paid tracked link. Renders rel="sponsored nofollow noopener". */
+  /** Paid tracked link. Renders rel="sponsored noopener". */
   sponsored: boolean;
   /** True when href is a homepage fallback, not a tracked partner URL. */
   placeholder: boolean;
@@ -443,6 +443,6 @@ export function getAffiliate(id: AffiliateId): Affiliate {
 }
 
 /** Affiliate (tracked) links only. Placeholders and UIO Transfers stay unsponsored. */
-export function linkRel(link: Affiliate): "sponsored nofollow noopener" | "noopener" {
-  return link.sponsored ? "sponsored nofollow noopener" : "noopener";
+export function linkRel(link: Affiliate): "sponsored noopener" | "noopener" {
+  return link.sponsored ? "sponsored noopener" : "noopener";
 }

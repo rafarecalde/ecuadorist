@@ -5,9 +5,9 @@ section: retire
 kicker: "A lease"
 dek: "See the apartment. Read the contract. Then talk about a year."
 published: 2026-06-24
-updated: 2026-10-01
+updated: 2026-10-09
 hero: cuicocha
-order: 6
+order: 10
 related:
   - best-cities
   - cost-of-living
@@ -37,4 +37,4 @@ In [Cuenca](/visit/cuenca/), the historic center and the western neighborhoods d
 
 ## Money
 
-We will not quote a rent. It moves, and a single number would be a fiction. Pay through a method you can document. Meet the landlord or the agent at the apartment. The [banking chapter](/retire/banking/) covers how dollars actually move. If someone asks you to send a deposit before you land, the answer is no.
+We will not quote a rent. It moves, and a single number would be a fiction. Pay through a method you can document. Meet the landlord or the agent at the apartment. The [banking chapter](/retire/banking/) and the [transfer chapter](/retire/moving-money/) cover how dollars actually move. A US address for the paperwork you still receive at home is the [mailbox chapter](/retire/us-mailbox/). If someone asks you to send a deposit before you land, the answer is no.

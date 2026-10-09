@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { affiliates, linkRel } from "../config/affiliates";
+import { expatPartners, expatRel } from "../config/expatPartners";
 
 const description =
   "How Ecuadorist handles partner links, including which ones are sponsored and which are plain brand links.";
@@ -18,7 +19,7 @@ const plain = Object.values(affiliates).filter((item) => !item.sponsored && item
     </p>
     <h2>Sponsored links</h2>
     <p>
-      These open in a new tab with <code>rel="sponsored nofollow noopener"</code>. They are labeled “A partner” on the page. GetYourGuide and Viator are the tour partners. A Viator card opens the Quito destination page or a search for the place in the chapter, with the site’s affiliate parameters on the link.
+      These open in a new tab with <code>rel="sponsored noopener"</code>. They are labeled “A partner” on the page. GetYourGuide and Viator are the tour partners. A Viator card opens the Quito destination page or a search for the place in the chapter, with the site’s affiliate parameters on the link.
     </p>
     <ul>
       {
@@ -36,6 +37,22 @@ const plain = Object.values(affiliates).filter((item) => !item.sponsored && item
     <p>
       <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a> is the site owner’s airport-transfer business in Quito. Links to it are ordinary links. They are not sponsored placements and they are not labeled as a partner.
     </p>
+    <h2>Retiring in Ecuador</h2>
+    <p>
+      The retire chapters use a separate list. A tracked link in that list opens with <code>rel="sponsored noopener"</code> and the chapter says so. SafetyWing is tracked. Its rule allows these links in articles and does not allow them as paid ads. Every other name in that list is still the company’s own homepage, with no sponsorship mark, until a tracked address exists.
+    </p>
+    <ul>
+      {
+        Object.values(expatPartners).map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel={expatRel(item)}>
+              {item.name}
+            </a>
+            <span> — {item.tracked ? "tracked" : "homepage only"}</span>
+          </li>
+        ))
+      }
+    </ul>
     <h2>Plain brand links</h2>
     <p>
       A few names do not yet have a tracked partner address. Those cards are labeled “A resource” and go to the company’s own homepage. We do not invent affiliate codes. Booking.com, when it appears, is the homepage only, never a search-results URL. A future tracked Booking.com link, if one is added, will point at a specific property.

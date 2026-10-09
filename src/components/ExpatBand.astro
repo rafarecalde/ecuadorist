@@ -1,0 +1,82 @@
+---
+import { getAffiliate, isAffiliateId } from "../config/affiliates";
+import { expatRel, getExpatPartner, isExpatPartner, type ExpatPartner } from "../config/expatPartners";
+
+interface Props {
+  ids?: string[];
+  affiliateIds?: string[];
+  note?: string;
+}
+
+const { ids = [], affiliateIds = [], note } = Astro.props;
+
+const partners: ExpatPartner[] = ids.map((id) => {
+  if (!isExpatPartner(id)) {
+    throw new Error(`Unknown expat partner “${id}”`);
+  }
+  return getExpatPartner(id);
+});
+
+const extras: ExpatPartner[] = affiliateIds.map((id) => {
+  if (!isAffiliateId(id)) {
+    throw new Error(`Unknown affiliate “${id}” on an expat page`);
+  }
+  const affiliate = getAffiliate(id);
+  return {
+    id: affiliate.id,
+    name: affiliate.name,
+    href: affiliate.href,
+    tracked: affiliate.sponsored,
+    blurb: affiliate.blurb,
+  };
+});
+
+const links = [...partners, ...extras];
+const disclose = links.some((link) => link.tracked);
+const safetywing = links.some((link) => link.id === "safetywing" || link.id === "safetywingComplete");
+---
+
+{
+  links.length > 0 && (
+    <section class="plan" aria-labelledby="expat-title">
+      <div class="plan-inner">
+        <p class="eyebrow">The links</p>
+        <h2 id="expat-title">{note ?? "Where to read the offer"}</h2>
+        <p class="plan-lead">Open the company’s page for the price. Nothing here is required.</p>
+        {links.map((link) => (
+          <article class="partner">
+            <p class="eyebrow">{link.tracked ? "A partner" : "The company’s site"}</p>
+            <div>
+              <h3>{link.name}</h3>
+              <p>{link.blurb}</p>
+            </div>
+            <a class="partner-go" href={link.href} target="_blank" rel={expatRel(link)}>
+              Open
+              <span class="sr-only"> {link.name}, opens in a new tab</span>
+            </a>
+          </article>
+        ))}
+        {disclose && (
+          <p class="plan-note">
+            A partner link may pay this site a commission if you buy. You do not pay extra.
+            {safetywing && " SafetyWing allows these links in articles. It does not allow them as paid ads."}{" "}
+            <a href="/affiliate-disclosure/">Affiliate disclosure</a>.
+          </p>
+        )}
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>

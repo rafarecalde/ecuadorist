@@ -5,9 +5,9 @@ section: retire
 kicker: "Paperwork"
 dek: "The categories that matter, and the official pages that outrank this one."
 published: 2026-06-03
-updated: 2026-10-01
-hero: quito-basilica
-order: 3
+updated: 2026-10-09
+hero: quito-plaza
+order: 8
 disclaimer: true
 related:
   - healthcare
@@ -27,18 +27,22 @@ The US Department of State’s Ecuador page is useful for American travelers. It
 
 ## Residence, in outline
 
-Temporary residence, under the Organic Law of Human Mobility, is described as a two-year stay that may be renewed once. Categories include a pensioner route and a rentier route. The names on the official portal are:
+Three categories on the ministry’s portal matter for a retiree or a remote worker:
 
 - [Visa de residencia temporal jubilado](https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-jubilado), for a pension paid from abroad.
 - [Visa de residencia temporal rentista](https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista), for lawful income such as rents or investments.
-- [Visa nómada](https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista-trabajo-remoto-visa-nomada), a rentista category for remote work for a foreign employer, client, or your own company abroad.
+- [Visa nómada](https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista-trabajo-remoto-visa-nomada), for remote work for a foreign employer, client, or your own company abroad.
 
-The ministry’s pages set the income test at three unified basic salaries, the salario básico unificado. That wage is changed by the government, so the dollar figure moves. Dependents can require additional monthly income. Health insurance that covers you in Ecuador is part of the file. Documents issued abroad generally need an apostille or legalization.
+On those three pages, the income test is three unified basic salaries. For 2026 the Ministry of Labor set that salary at $482. The nomad page also allows a year’s income equal to 36 of those salaries, shown on statements from the three months before you apply, or as that annual total. Each dependent needs another $250 a month, on the same pages.
 
-Professional, work, and investor categories also exist. They are outside the scope of a travel guide.
+Each of those three pages also asks for health insurance, national or foreign, valid for the whole visa. A foreign policy has to say it covers you in Ecuador. That line is why the [healthcare chapter](/retire/healthcare/) sits next to this one. It is not a claim about every visa Ecuador issues.
+
+Documents issued abroad generally need an apostille or legalization. How long the visa lasts, and whether it can be renewed, is on the category page. Professional, work, and investor categories also exist. They are outside a travel guide.
 
 ## What to do with this
 
-If you are visiting, confirm the tourist rules and stop there. If you are [choosing a city](/retire/best-cities/), do not sign a long lease until you know you can stay. If you are comparing insurers, the [healthcare chapter](/retire/healthcare/) is the companion, and it is not a policy recommendation.
+If you are visiting, confirm the tourist rules and stop there. If you are [choosing a city](/retire/best-cities/), do not sign a long lease until you know you can stay. Money from the United States is the [transfer chapter](/retire/moving-money/). A US letter and a US phone number are [mail](/retire/us-mailbox/) and [the phone](/retire/us-phone/).
 
 Start at [gob.ec](https://www.gob.ec/mremh). Bring the apostilles. Leave the Facebook comments where you found them.
+
+<p class="sources">Sources: <a href="https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-jubilado" target="_blank" rel="noopener">pensioner visa</a> · <a href="https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista" target="_blank" rel="noopener">rentista visa</a> · <a href="https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista-trabajo-remoto-visa-nomada" target="_blank" rel="noopener">remote-worker visa</a> · <a href="https://www.trabajo.gob.ec/wp-content/uploads/downloads/2026/01/ACUERDO-MINISTERIAL-MDT-2025-195.pdf" target="_blank" rel="noopener">2026 basic salary, $482</a>. Rewritten here.</p>

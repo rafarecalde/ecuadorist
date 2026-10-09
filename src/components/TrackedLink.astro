@@ -17,7 +17,7 @@ const text = label ?? affiliate?.name;
 if (!url || !text) {
   throw new Error("A tracked link needs an affiliate id or an href and label");
 }
-const rel = affiliate ? linkRel(affiliate) : "sponsored nofollow noopener";
+const rel = affiliate ? linkRel(affiliate) : "sponsored noopener";
 ---
 
 <a class="text-link" href={url} target="_blank" rel={rel}>{text}</a>

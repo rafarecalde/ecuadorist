@@ -38,6 +38,13 @@ const jsonLd = {
     <p class="eyebrow">Ecuadorist</p>
     <h1>{section.title}</h1>
     <p class="dek">{section.dek}</p>
+    {
+      sectionId === "retire" && (
+        <p class="section-lead">
+          The chapters below are for a US retiree or a remote worker. A visa rule, a wage, or a fee belongs to the office that publishes it. This guide points at those pages and does not replace them.
+        </p>
+      )
+    }
   </header>
   <figure class="page-hero">
     <Image
