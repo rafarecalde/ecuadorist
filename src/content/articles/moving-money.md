@@ -6,7 +6,7 @@ kicker: "Transfers"
 dek: "Dollars to dollars. The fee is the line you see before you confirm."
 published: 2026-10-09
 updated: 2026-10-09
-hero: cuenca
+hero: otavalo
 order: 3
 related:
   - banking
