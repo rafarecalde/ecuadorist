@@ -32,6 +32,20 @@ import carnaval from "../assets/photos/carnaval.jpg";
 import viernesSanto from "../assets/photos/viernes-santo.jpg";
 import malecon from "../assets/photos/malecon.jpg";
 import mitad from "../assets/photos/mitad.jpg";
+import teleferiqo from "../assets/photos/teleferiqo.jpg";
+import teleferiqoGondolas from "../assets/photos/teleferiqo-gondolas.jpg";
+import cajas from "../assets/photos/cajas.jpg";
+import cajasRain from "../assets/photos/cajas-rain.jpg";
+import banosSwing from "../assets/photos/banos-swing.jpg";
+import banosTown from "../assets/photos/banos-town.jpg";
+import peguche from "../assets/photos/peguche.jpg";
+import vicuna from "../assets/photos/vicuna.jpg";
+import chimborazoRefuge from "../assets/photos/chimborazo-refuge.jpg";
+import cuyabenoCanoe from "../assets/photos/cuyabeno-canoe.jpg";
+import cuyabenoLagoon from "../assets/photos/cuyabeno-lagoon.jpg";
+import napo from "../assets/photos/napo.jpg";
+import antisana from "../assets/photos/antisana.jpg";
+import papallactaPools from "../assets/photos/papallacta-pools.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -72,6 +86,20 @@ const files = {
   "viernes-santo": viernesSanto,
   malecon,
   mitad,
+  teleferiqo,
+  "teleferiqo-gondolas": teleferiqoGondolas,
+  cajas,
+  "cajas-rain": cajasRain,
+  "banos-swing": banosSwing,
+  "banos-town": banosTown,
+  peguche,
+  vicuna,
+  "chimborazo-refuge": chimborazoRefuge,
+  "cuyabeno-canoe": cuyabenoCanoe,
+  "cuyabeno-lagoon": cuyabenoLagoon,
+  napo,
+  antisana,
+  "papallacta-pools": papallactaPools,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -106,6 +134,20 @@ const alts: Record<PhotoId, string> = {
   "viernes-santo": "A Good Friday procession in Calderón, in the Quito metropolitan district",
   malecon: "Malecón 2000 along the river in Guayaquil",
   mitad: "The Mitad del Mundo monument north of Quito",
+  teleferiqo: "The TelefériQo cable car above Quito, with the city and the volcanoes beyond",
+  "teleferiqo-gondolas": "Gondolas of the TelefériQo climbing the slope of Pichincha above Quito",
+  cajas: "Laguna Toreadora in El Cajas National Park, west of Cuenca",
+  "cajas-rain": "Laguna Toreadora in the rain, from a viewpoint in El Cajas National Park",
+  "banos-swing": "The swing at the Casa del Árbol above Baños, with the valley below",
+  "banos-town": "Baños de Agua Santa in the valley, with Tungurahua behind the town",
+  peguche: "Peguche waterfall in the forest north of Otavalo",
+  vicuna: "A vicuña in the Chimborazo wildlife reserve",
+  "chimborazo-refuge": "The Carrel refuge on Chimborazo, with the summit behind it",
+  "cuyabeno-canoe": "A canoe on the Cuyabeno River in the Ecuadorian Amazon",
+  "cuyabeno-lagoon": "Laguna Grande in the Cuyabeno Wildlife Reserve",
+  napo: "A boat on the Napo River near Coca, on the way toward the Amazon",
+  antisana: "Antisana volcano, southeast of Quito, seen across the páramo",
+  "papallacta-pools": "Thermal pools at Papallacta, in the high valley east of Quito",
 };
 
 export type PhotoId = keyof typeof files;

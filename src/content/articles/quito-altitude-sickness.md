@@ -48,7 +48,7 @@ The CDC’s prevention line is to avoid going from low elevation to above 9,000 
 
 Sleep in the city. Walk the [old town](/visit/quito/) or a flat park. Leave [Cotopaxi](/visit/cotopaxi/) and the cable car for a later day. The José Ribas refuge on Cotopaxi sits near 4,800 meters. Cruz Loma, where the TelefériQo arrives, is 4,050 meters, and the FCDO notes deaths from hypothermia on the way toward Rucu Pichincha. Neither is a first-night plan.
 
-Drink water. Eat. The [ten-day itinerary](/visit/ten-days-in-ecuador/) is built around that first quiet day. The ride in from the airport is [its own chapter](/visit/quito-airport-arrival/), so you are not negotiating a taxi while your head is new.
+Drink water. Eat. The [ten-day itinerary](/visit/ten-days-in-ecuador/) is built around that first quiet day. The ride in from the airport is [its own chapter](/visit/quito-airport-arrival/), so you are not negotiating a taxi while your head is new. A car booked ahead, through <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a>, the owner’s own airport-transfer company, is the version that is settled before you land.
 
 ## When the city is not the problem
 

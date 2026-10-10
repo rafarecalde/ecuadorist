@@ -24,7 +24,7 @@ People move for a walkable center, a doctor, and weather they can live in. Ecuad
 
 ## Quito
 
-[Quito](/visit/quito/) is the capital: culture, direct flights, and the thinnest air of the major cities, near 2,850 meters. Neighborhoods matter. The historic center is beautiful and hilly. La Floresta and the area around Parque La Carolina are more everyday. Cumbayá, in the valley to the east, is warmer, newer, and a commute. Traffic is a genuine part of life here. So is the range of restaurants and hospitals.
+[Quito](/visit/quito/) is the capital: culture, direct flights, and the thinnest air of the major cities, near 2,850 meters. Neighborhoods matter. The historic center is beautiful and hilly. La Floresta and the area around Parque La Carolina are more everyday. Cumbayá, in the valley to the east, is warmer, newer, and a commute. Traffic is a genuine part of life here. So is the range of restaurants and hospitals. The first arrival, into the city or on toward that valley, is simpler when the car is already booked. <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a> is the owner’s own airport-transfer company.
 
 ## Smaller and warmer
 
