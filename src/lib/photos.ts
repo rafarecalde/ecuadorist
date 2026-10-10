@@ -46,6 +46,22 @@ import cuyabenoLagoon from "../assets/photos/cuyabeno-lagoon.jpg";
 import napo from "../assets/photos/napo.jpg";
 import antisana from "../assets/photos/antisana.jpg";
 import papallactaPools from "../assets/photos/papallacta-pools.jpg";
+import plazaGrande from "../assets/photos/plaza-grande.jpg";
+import locroPapa from "../assets/photos/locro-papa.jpg";
+import amazonasMariscal from "../assets/photos/amazonas-mariscal.jpg";
+import plazaFoch from "../assets/photos/plaza-foch.jpg";
+import cuencaCathedralDomes from "../assets/photos/cuenca-cathedral-domes.jpg";
+import calleLarga from "../assets/photos/calle-larga.jpg";
+import plazaFlores from "../assets/photos/plaza-flores.jpg";
+import parqueMadre from "../assets/photos/parque-madre.jpg";
+import santaAna from "../assets/photos/santa-ana.jpg";
+import cevicheCamaron from "../assets/photos/ceviche-camaron.jpg";
+import nueveOctubre from "../assets/photos/nueve-octubre.jpg";
+import lasPenas from "../assets/photos/las-penas.jpg";
+import banosChurch from "../assets/photos/banos-church.jpg";
+import banosTermas from "../assets/photos/banos-termas.jpg";
+import banosStreet from "../assets/photos/banos-street.jpg";
+import banosPark from "../assets/photos/banos-park.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -100,6 +116,22 @@ const files = {
   napo,
   antisana,
   "papallacta-pools": papallactaPools,
+  "plaza-grande": plazaGrande,
+  "locro-papa": locroPapa,
+  "amazonas-mariscal": amazonasMariscal,
+  "plaza-foch": plazaFoch,
+  "cuenca-cathedral-domes": cuencaCathedralDomes,
+  "calle-larga": calleLarga,
+  "plaza-flores": plazaFlores,
+  "parque-madre": parqueMadre,
+  "santa-ana": santaAna,
+  "ceviche-camaron": cevicheCamaron,
+  "nueve-octubre": nueveOctubre,
+  "las-penas": lasPenas,
+  "banos-church": banosChurch,
+  "banos-termas": banosTermas,
+  "banos-street": banosStreet,
+  "banos-park": banosPark,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -148,6 +180,22 @@ const alts: Record<PhotoId, string> = {
   napo: "A boat on the Napo River near Coca, on the way toward the Amazon",
   antisana: "Antisana volcano, southeast of Quito, seen across the páramo",
   "papallacta-pools": "Thermal pools at Papallacta, in the high valley east of Quito",
+  "plaza-grande": "Plaza de la Independencia in Quito, with Hotel Plaza Grande on the left",
+  "locro-papa": "Locro de papa, an Ecuadorian potato soup with avocado",
+  "amazonas-mariscal": "Cyclists on Avenida Amazonas in La Mariscal, Quito",
+  "plaza-foch": "Plaza Foch in La Mariscal, Quito, at dawn",
+  "cuenca-cathedral-domes": "The blue domes of Cuenca’s New Cathedral",
+  "calle-larga": "Calle Larga in Cuenca’s historic center",
+  "plaza-flores": "The flower market at Plaza de las Flores in Cuenca",
+  "parque-madre": "Parque de la Madre in Cuenca",
+  "santa-ana": "Cerro Santa Ana seen from the Malecón 2000 in Guayaquil",
+  "ceviche-camaron": "Ecuadorian shrimp ceviche with tostado, chifles, and popcorn",
+  "nueve-octubre": "Avenida 9 de Octubre in Guayaquil, seen from the Malecón",
+  "las-penas": "A colorful street in the Las Peñas neighborhood of Guayaquil",
+  "banos-church": "The church of the Virgen de Agua Santa in Baños",
+  "banos-termas": "The thermal baths of the Virgen in Baños",
+  "banos-street": "A downtown street in Baños de Agua Santa",
+  "banos-park": "Parque Central in Baños de Agua Santa",
 };
 
 export type PhotoId = keyof typeof files;

@@ -26,7 +26,7 @@ Cuenca, officially Santa Ana de los Ríos de Cuenca, sits near 2,500 meters in t
 
 Parque Calderón is the living room. On one side is the Old Cathedral, El Sagrario. Facing it, the New Cathedral, the Catedral de la Inmaculada Concepción, wears blue domes you can see from the hills. The scale is generous without being grand in the way of a capital.
 
-South of the square the land falls away to the Río Tomebamba. El Barranco, the cliff path, is the walk that makes the city make sense: tiled roofs, laundry lines, and the sound of the river. Cross into the newer streets below and the pace changes.
+South of the square the land falls away to the Río Tomebamba. A table in town is [where to eat in Cuenca](/eat/cuenca-restaurants/). El Barranco, the cliff path, is the walk that makes the city make sense: tiled roofs, laundry lines, and the sound of the river. Cross into the newer streets below and the pace changes.
 
 Flower sellers and the old market halls are part of the same center. Go in the morning.
 

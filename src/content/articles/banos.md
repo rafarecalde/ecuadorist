@@ -34,4 +34,4 @@ The Termas de la Virgen are the public baths in town, fed by volcanic water. The
 
 Baños is also the last comfortable town before the road drops to Puyo and the edge of the Oriente. It is a gateway, not the jungle. The [Amazon chapter](/visit/the-amazon/) starts where this gorge ends.
 
-Rafting on the Pastaza and canopy rides are sold all over town. Choose operators by reputation and equipment, not by the person who meets you at the bus. The town is built for visitors. That is convenient, and it is a reason to keep one evening for the waterfall road after the day-trippers leave.
+Rafting on the Pastaza and canopy rides are sold all over town. Choose operators by reputation and equipment, not by the person who meets you at the bus. The town is built for visitors. That is convenient, and it is a reason to keep one evening for the waterfall road after the day-trippers leave. Dinner in town is [where to eat in Baños](/eat/banos-restaurants/).

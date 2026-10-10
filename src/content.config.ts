@@ -22,6 +22,20 @@ const articles = defineCollection({
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     checked: z.string().optional(),
     order: z.number().default(50),
+    restaurants: z
+      .array(
+        z.object({
+          name: z.string(),
+          neighborhood: z.string(),
+          cuisine: z.string(),
+          price: z.enum(["$", "$$", "$$$"]).optional(),
+          photo: z.string(),
+          text: z.string(),
+          maps: z.string().url(),
+          website: z.string().url().optional(),
+        }),
+      )
+      .default([]),
   }),
 });
 

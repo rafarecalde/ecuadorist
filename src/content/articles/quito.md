@@ -34,7 +34,7 @@ The streets reward a slow loop more than a checklist. Mornings are kinder than l
 
 ## The newer city
 
-North of the old town, La Mariscal and La Floresta are where much of the newer restaurant scene lives. Parque La Carolina is the big green space. Guápulo, on the eastern edge, drops into a gorge and feels like another town.
+North of the old town, La Mariscal and La Floresta are where much of the newer restaurant scene lives. Three dining rooms with a following are in [where to eat in Quito](/eat/quito-restaurants/). Parque La Carolina is the big green space. Guápulo, on the eastern edge, drops into a gorge and feels like another town.
 
 TelefériQo, the cable car, rises to Cruz Loma on Pichincha. The view is the reason to go. The air up there is thinner than in the plaza, and the weather turns quickly.
 

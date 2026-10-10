@@ -24,8 +24,8 @@ export const sections = {
   eat: {
     title: "Eat & Stay",
     description:
-      "Ecuadorian food, a short list of real Quito kitchens, and rooms worth knowing. No invented prices or hours.",
-    dek: "The table, and a few rooms with a reputation.",
+      "Ecuadorian food, restaurant guides for Quito, Cuenca, Guayaquil, and Baños, and rooms worth knowing.",
+    dek: "The table, four cities, and a few rooms with a reputation.",
     hero: "llapingachos",
   },
   do: {

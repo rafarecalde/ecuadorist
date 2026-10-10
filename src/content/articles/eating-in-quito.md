@@ -28,7 +28,7 @@ These names have shaped how people talk about food in the city. Confirm they are
 - **Café Mosaico** is the long-running room associated with the view over the old town.
 - **Casa Gangotena**, the hotel on Plaza de San Francisco, has a dining room equal to the building.
 
-That is a short list on purpose. A longer one would start inventing.
+That is a short list on purpose. A longer one would start inventing. Three rooms, with what to order and how to ask for a table, are in [where to eat in Quito](/eat/quito-restaurants/).
 
 ## Neighborhoods
 

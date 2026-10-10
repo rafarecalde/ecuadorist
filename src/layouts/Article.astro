@@ -16,6 +16,7 @@ import {
   tripIds,
   type Article,
 } from "../lib/articles";
+import RestaurantCards from "../components/RestaurantCards.astro";
 import { getPhoto } from "../lib/photos";
 
 interface Props {
@@ -174,6 +175,7 @@ const crumbs = {
       <div class="prose">
         <slot />
       </div>
+      {article.data.restaurants.length > 0 && <RestaurantCards places={article.data.restaurants} />}
     </div>
   </div>
   {
