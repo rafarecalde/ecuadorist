@@ -20,7 +20,7 @@ restaurants:
     photo: locro-papa
     maps: "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Plaza+Grande+Garc%C3%ADa+Moreno+N5-16+Quito"
     website: "https://www.plazagrandequito.com/cafe-plaza-grande"
-    text: "Café Plaza Grande is the dining room of Hotel Plaza Grande, at García Moreno and Chile, with windows onto Plaza de la Independencia. The national menu reads as a short tour of the country: locro de papa, a Quiteño shrimp ceviche, seco de chivo in the house style, and fritada quiteña. Helados de paila, fruit juice worked with ice in a copper pan, are the dessert they treat as old Quito, sometimes brought by a cucurucho in a purple hood. The room seats 56. Ask the hotel for a table. A form is a request, not a booking, until they confirm it. On weekends and holidays they do not take reservations between 11:00 and 17:00. Those hours are first come."
+    text: "Café Plaza Grande is the dining room of Hotel Plaza Grande, at García Moreno and Chile, with windows onto Plaza de la Independencia. The menu is a short tour of the country: locro de papa, a Quiteño shrimp ceviche, seco de chivo in the house style, and fritada quiteña. Helados de paila, fruit juice worked with ice in a copper pan, are the old Quito dessert, sometimes brought by a cucurucho in a purple hood. The room seats 56. Ask the hotel for a table. A form is a request until they confirm it. On weekends and holidays they take no reservations from 11:00 to 17:00. Those hours are first come."
   - name: "Sher e Punjab"
     neighborhood: "La Mariscal"
     cuisine: "Indian"

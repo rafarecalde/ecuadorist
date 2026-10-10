@@ -1603,7 +1603,8 @@ figure.card-portrait {
 }
 
 .restaurant-band {
-  margin-top: 2.2rem;
+  margin-top: 0.6rem;
+  padding: 0 var(--pad) 1.2rem;
 }
 
 .restaurant-grid {

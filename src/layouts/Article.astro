@@ -175,9 +175,9 @@ const crumbs = {
       <div class="prose">
         <slot />
       </div>
-      {article.data.restaurants.length > 0 && <RestaurantCards places={article.data.restaurants} />}
     </div>
   </div>
+  {article.data.restaurants.length > 0 && <RestaurantCards places={article.data.restaurants} />}
   {
     article.data.expat.length > 0 || article.data.expatAffiliate.length > 0 ? (
       <ExpatBand
