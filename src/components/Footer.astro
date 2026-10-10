@@ -1,5 +1,8 @@
 ---
 import { sections } from "../config/site";
+import { travelStatus } from "../data/status";
+
+const { advisory } = travelStatus;
 ---
 
 <footer class="footer">
@@ -33,6 +36,14 @@ import { sections } from "../config/site";
       </ul>
     </div>
   </div>
+  <p class="footer-advisory">
+    Travel advisory:
+    <a href={advisory.href} target="_blank" rel="noopener">
+      {advisory.level} · {advisory.label}
+    </a>
+    <span>as of {advisory.asOf}</span>
+    <a href="/visit/is-ecuador-safe/">By area</a>
+  </p>
   <div class="footer-base">
     <span>© {new Date().getFullYear()} Ecuadorist</span>
     <span>Photographs remain with their creators.</span>

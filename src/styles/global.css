@@ -785,8 +785,30 @@ figure.card-portrait {
   margin: 0.3rem 0;
 }
 
+.footer-advisory {
+  margin: 2.2rem 0 0;
+  max-width: none;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(239, 232, 218, 0.62);
+}
+
+.footer-advisory a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.footer-advisory span {
+  margin-left: 0.35rem;
+}
+
+.footer-advisory a + a {
+  margin-left: 0.75rem;
+}
+
 .footer-base {
-  margin-top: 2.5rem;
+  margin-top: 1.1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(239, 232, 218, 0.18);
   display: flex;
