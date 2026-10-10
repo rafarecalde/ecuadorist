@@ -46,6 +46,38 @@ import cuyabenoLagoon from "../assets/photos/cuyabeno-lagoon.jpg";
 import napo from "../assets/photos/napo.jpg";
 import antisana from "../assets/photos/antisana.jpg";
 import papallactaPools from "../assets/photos/papallacta-pools.jpg";
+import plazaGrande from "../assets/photos/plaza-grande.jpg";
+import locroPapa from "../assets/photos/locro-papa.jpg";
+import amazonasMariscal from "../assets/photos/amazonas-mariscal.jpg";
+import plazaFoch from "../assets/photos/plaza-foch.jpg";
+import cuencaCathedralDomes from "../assets/photos/cuenca-cathedral-domes.jpg";
+import calleLarga from "../assets/photos/calle-larga.jpg";
+import plazaFlores from "../assets/photos/plaza-flores.jpg";
+import parqueMadre from "../assets/photos/parque-madre.jpg";
+import santaAna from "../assets/photos/santa-ana.jpg";
+import cevicheCamaron from "../assets/photos/ceviche-camaron.jpg";
+import nueveOctubre from "../assets/photos/nueve-octubre.jpg";
+import lasPenas from "../assets/photos/las-penas.jpg";
+import banosChurch from "../assets/photos/banos-church.jpg";
+import banosTermas from "../assets/photos/banos-termas.jpg";
+import banosStreet from "../assets/photos/banos-street.jpg";
+import banosPark from "../assets/photos/banos-park.jpg";
+import quitoPanecillo from "../assets/photos/quito-panecillo.jpg";
+import quitoHill from "../assets/photos/quito-hill.jpg";
+import guayaquilSkyline from "../assets/photos/guayaquil-skyline.jpg";
+import nigiri from "../assets/photos/nigiri.jpg";
+import pastaAmatriciana from "../assets/photos/pasta-amatriciana.jpg";
+import tunaFoie from "../assets/photos/tuna-foie.jpg";
+import duckFoie from "../assets/photos/duck-foie.jpg";
+import foiePras from "../assets/photos/foie-pras.jpg";
+import magret from "../assets/photos/magret.jpg";
+import cevichePeru from "../assets/photos/ceviche-peru.jpg";
+import sushiPlatter from "../assets/photos/sushi-platter.jpg";
+import oystersIce from "../assets/photos/oysters-ice.jpg";
+import carpaccioDanieli from "../assets/photos/carpaccio-danieli.jpg";
+import carpaccioSonoma from "../assets/photos/carpaccio-sonoma.jpg";
+import tiramisu from "../assets/photos/tiramisu.jpg";
+import duckConfit from "../assets/photos/duck-confit.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -100,6 +132,38 @@ const files = {
   napo,
   antisana,
   "papallacta-pools": papallactaPools,
+  "plaza-grande": plazaGrande,
+  "locro-papa": locroPapa,
+  "amazonas-mariscal": amazonasMariscal,
+  "plaza-foch": plazaFoch,
+  "cuenca-cathedral-domes": cuencaCathedralDomes,
+  "calle-larga": calleLarga,
+  "plaza-flores": plazaFlores,
+  "parque-madre": parqueMadre,
+  "santa-ana": santaAna,
+  "ceviche-camaron": cevicheCamaron,
+  "nueve-octubre": nueveOctubre,
+  "las-penas": lasPenas,
+  "banos-church": banosChurch,
+  "banos-termas": banosTermas,
+  "banos-street": banosStreet,
+  "banos-park": banosPark,
+  "quito-panecillo": quitoPanecillo,
+  "quito-hill": quitoHill,
+  "guayaquil-skyline": guayaquilSkyline,
+  nigiri,
+  "pasta-amatriciana": pastaAmatriciana,
+  "tuna-foie": tunaFoie,
+  "duck-foie": duckFoie,
+  "foie-pras": foiePras,
+  magret,
+  "ceviche-peru": cevichePeru,
+  "sushi-platter": sushiPlatter,
+  "oysters-ice": oystersIce,
+  "carpaccio-danieli": carpaccioDanieli,
+  "carpaccio-sonoma": carpaccioSonoma,
+  tiramisu,
+  "duck-confit": duckConfit,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -148,6 +212,38 @@ const alts: Record<PhotoId, string> = {
   napo: "A boat on the Napo River near Coca, on the way toward the Amazon",
   antisana: "Antisana volcano, southeast of Quito, seen across the páramo",
   "papallacta-pools": "Thermal pools at Papallacta, in the high valley east of Quito",
+  "plaza-grande": "Plaza de la Independencia in Quito, with Hotel Plaza Grande on the left",
+  "locro-papa": "Locro de papa, an Ecuadorian potato soup with avocado",
+  "amazonas-mariscal": "Cyclists on Avenida Amazonas in La Mariscal, Quito",
+  "plaza-foch": "Plaza Foch in La Mariscal, Quito, at dawn",
+  "cuenca-cathedral-domes": "The blue domes of Cuenca’s New Cathedral",
+  "calle-larga": "Calle Larga in Cuenca’s historic center",
+  "plaza-flores": "The flower market at Plaza de las Flores in Cuenca",
+  "parque-madre": "Parque de la Madre in Cuenca",
+  "santa-ana": "Cerro Santa Ana seen from the Malecón 2000 in Guayaquil",
+  "ceviche-camaron": "Ecuadorian shrimp ceviche with tostado, chifles, and popcorn",
+  "nueve-octubre": "Avenida 9 de Octubre in Guayaquil, seen from the Malecón",
+  "las-penas": "A colorful street in the Las Peñas neighborhood of Guayaquil",
+  "banos-church": "The church of the Virgen de Agua Santa in Baños",
+  "banos-termas": "The thermal baths of the Virgen in Baños",
+  "banos-street": "A downtown street in Baños de Agua Santa",
+  "banos-park": "Parque Central in Baños de Agua Santa",
+  "quito-panecillo": "Quito seen from El Panecillo, with the historic center and the Basilica in the haze",
+  "quito-hill": "The Virgen del Panecillo above Quito, with the city spread out below",
+  "guayaquil-skyline": "The Guayaquil skyline across the Guayas River",
+  nigiri: "Nigiri sushi on a wooden board",
+  "pasta-amatriciana": "Tagliatelle all’amatriciana in a restaurant pan",
+  "tuna-foie": "A plated tuna course with seared foie gras",
+  "duck-foie": "A composed duck foie gras course",
+  "foie-pras": "Foie gras in a potato robe, with cabbage and a truffle-scented broth",
+  magret: "Duck breast with greens on a white plate",
+  "ceviche-peru": "A bowl of ceviche with red onion and sweet potato",
+  "sushi-platter": "An assorted sushi platter",
+  "oysters-ice": "Oysters on ice",
+  "carpaccio-danieli": "Beef carpaccio dressed with olive oil and cheese",
+  "carpaccio-sonoma": "Beef carpaccio on a dark plate, with greens and shaved cheese",
+  tiramisu: "A slice of tiramisu",
+  "duck-confit": "Duck confit with roasted vegetables and a dark sauce",
 };
 
 export type PhotoId = keyof typeof files;

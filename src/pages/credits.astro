@@ -22,6 +22,9 @@ function addUse(id: string, href: string, title: string) {
 
 for (const article of articles) {
   addUse(article.data.hero, articlePath(article), article.data.title);
+  for (const place of article.data.restaurants) {
+    addUse(place.photo, articlePath(article), article.data.title);
+  }
 }
 
 for (const issue of issues) {

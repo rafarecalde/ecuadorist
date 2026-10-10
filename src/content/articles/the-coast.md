@@ -36,4 +36,4 @@ The rainy months on the coast run roughly from December into April. Midyear is d
 
 ## Eating, briefly
 
-This is the coast of [ceviche and encebollado](/eat/ecuadorian-food/). Eat the lunch. The [Galápagos](/visit/galapagos/) are a flight from Guayaquil if the islands are the second half of the trip. Do not try to do the coast and the islands in a single rushed weekend. The country is small. It is not that small.
+This is the coast of [ceviche and encebollado](/eat/ecuadorian-food/). Eat the lunch. Guayaquil’s tables are in [where to eat in Guayaquil](/eat/guayaquil-restaurants/). The [Galápagos](/visit/galapagos/) are a flight from Guayaquil if the islands are the second half of the trip. Do not try to do the coast and the islands in a single rushed weekend. The country is small. It is not that small.
