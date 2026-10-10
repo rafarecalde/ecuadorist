@@ -170,6 +170,22 @@ const faqLd = {
         </p>
       )
     }
+    {
+      page.reads && page.reads.length > 0 && (
+        <p class="book-note">
+          Also on this site:{" "}
+          {page.reads.map((item, index) => (
+            <>
+              {index > 0 && " · "}
+              <a class="text-link" href={item.href}>
+                {item.label}
+              </a>
+            </>
+          ))}
+          .
+        </p>
+      )
+    }
   </section>
 
   <section class="band book-faq" aria-labelledby="faq-title">

@@ -38,6 +38,8 @@ export type BookPage = {
   transfer: boolean;
   tripTips?: TripTips;
   guide?: { href: string; label: string };
+  /** Other Ecuadorist chapters, besides the main guide. */
+  reads?: { href: string; label: string }[];
   strip: string;
 };
 
@@ -54,9 +56,9 @@ const viatorQuito = getAffiliate("viator-quito").href;
 export const bookPages: BookPage[] = [
   {
     slug: "cotopaxi-tours-from-quito",
-    title: "Best Cotopaxi tours from Quito",
+    title: "Quito to Cotopaxi day trip: best tours",
     description:
-      "Best Cotopaxi tours from Quito: park and glacier listings we could open, the drive south on the E35, and what 4,864 m asks of you.",
+      "Quito to Cotopaxi day trip: park and glacier listings we could open, the drive south on the E35, and what 4,864 m asks of you.",
     eyebrow: "Avenue of the Volcanoes",
     dek: "A guided day south to the park.",
     hero: "cotopaxi",
@@ -158,9 +160,9 @@ export const bookPages: BookPage[] = [
   },
   {
     slug: "quilotoa-tours-from-quito",
-    title: "Quilotoa day trips from Quito",
+    title: "Quilotoa loop tour from Quito",
     description:
-      "Quilotoa day trips from Quito: crater listings, the road through Latacunga, and a rim at 3,914 m.",
+      "Quilotoa loop tour from Quito: crater listings that return the same day, how that differs from the village loop, the road through Latacunga, and a rim at 3,914 m.",
     eyebrow: "The crater",
     dek: "A long day to the turquoise lake.",
     hero: "quilotoa",
@@ -761,6 +763,801 @@ export const bookPages: BookPage[] = [
       },
     ],
   },
+  {
+    slug: "banos-tours-from-quito",
+    title: "Baños day trip from Quito",
+    description:
+      "Baños day trip from Quito: Pailón del Diablo, the Casa del Árbol swing, and full-day listings we could open. The price stays on the partner’s page.",
+    eyebrow: "The gorge",
+    dek: "A full day down to the waterfalls.",
+    hero: "pailon",
+    intro:
+      "A Baños day trip from Quito is a long drop off the plateau, into a warmer valley under Tungurahua, and back before midnight. These are listings we could open. The price is on the partner’s page.",
+    strip: "Baños",
+    transfer: true,
+    guide: { href: "/visit/banos/", label: "The Baños chapter" },
+    reads: [
+      { href: "/do/hot-springs/", label: "Hot springs" },
+      { href: "/visit/the-amazon/", label: "The Amazon chapter" },
+      { href: "/visit/quilotoa/", label: "Quilotoa" },
+    ],
+    picks: [
+      {
+        title: "Pailón and the swing",
+        suits: "A private day that names the gorge and the Casa del Árbol.",
+        duration: "The listing: a full day",
+        included:
+          "Private transport, pickup and drop-off inside Quito’s urban area (the listing says up to 7 km), a local guide, entrance fees, and a snack. The stops it names are Pailón del Diablo and the swing at the Casa del Árbol.",
+        href: getYourGuideUrl("quito-l504/from-quito-fullday-banos-pailon-del-diablo-waterfall-t496885"),
+        partner: "GetYourGuide",
+        photo: "pailon",
+      },
+      {
+        title: "Waterfalls, private car",
+        suits: "A car of your own, with lunch and the famous stops already named.",
+        duration: "Listing duration: 8–10 hours",
+        included:
+          "The listing includes a bilingual guide, private transport, breakfast, and lunch, and it names the Casa del Árbol, Manto de la Novia, and Pailón del Diablo. Pickup is in Quito.",
+        href: viatorUrl("tours/Quito/Banos-de-Agua-Santa-from-Quito-Day-Tour/d735-110340P6"),
+        partner: "Viator",
+        photo: "banos-swing",
+      },
+      {
+        title: "Town and the pools",
+        suits: "A small-group day that spends time in Baños itself.",
+        duration: "Listing duration: 10 hours",
+        included:
+          "A guide, hotel pickup when that option is selected, and entrance to the Huillacuna museum. The overview also names the thermal pools, the church, and the waterfalls. Offered in English and Spanish.",
+        href: viatorUrl("tours/Quito/Banos-Full-Day-Tour/d735-3074P158"),
+        partner: "Viator",
+        photo: "banos-town",
+      },
+    ],
+    know: [
+      "Pailón del Diablo is at Río Verde, east of town. The path is slick. The Baños chapter is the longer note on the waterfall road.",
+      "The Casa del Árbol swing is a photograph. Clouds decide the view of Tungurahua.",
+      "These days are long. The two Viator listings say 8–10 hours and 10 hours. The GetYourGuide day calls itself a full day.",
+    ],
+    faqs: [
+      {
+        q: "Can you do Baños as a day trip from Quito?",
+        a: "Yes. The listings here start in Quito and return the same day. One private day is 8–10 hours. A small-group day lists 10 hours. A third calls itself a full day and does not print a number of hours.",
+      },
+      {
+        q: "What do the Baños tours from Quito include?",
+        a: "The GetYourGuide day names private transport, a guide, entrance fees, and a snack, with stops at Pailón del Diablo and the swing. One Viator day adds lunch and names Manto de la Novia as well. The 10-hour day names the Huillacuna museum and the thermal pools.",
+      },
+      {
+        q: "Is Baños the Amazon?",
+        a: "No. It is the last comfortable town before the road drops toward Puyo. The Amazon chapter starts where this gorge ends. A lodge week is a different booking.",
+      },
+      {
+        q: "Should you go the morning you land?",
+        a: "Quito is about 2,850 m, and the day is mostly a descent, which is easier than Cotopaxi. It is still a full day on the road. Give yourself a night in the city first if the flight was long.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito", "Avenue of the Volcanoes", "Baños", "Río Verde", "Pailón del Diablo"],
+      routeNote:
+        "The town sits in the Pastaza gorge, under Tungurahua, where the sierra starts to fall toward the Amazon. Pailón del Diablo is the famous fall at Río Verde, east of town along the waterfall road.",
+      when:
+        "Book a morning start. The Viator private day we opened lists a 7:00 a.m. start. You are back in Quito the same night, which is why the day is long.",
+      weather:
+        "The valley is warmer and wetter than Quito. The swing and the volcano disappear in cloud. The path into Pailón is slick after rain.",
+      stops:
+        "Pailón del Diablo, Manto de la Novia on one listing, the Casa del Árbol swing, and the thermal pools in town if the day names them. Rafting and canopy rides are a different purchase.",
+      altitude:
+        "The day drops off the plateau. That is the opposite of a refuge problem. Bring a light rain jacket, shoes that can handle a wet path, and a layer for the ride home, which climbs again.",
+      sources: [
+        { name: "Wikipedia, Pailón del Diablo", href: "https://en.wikipedia.org/wiki/Pail%C3%B3n_del_Diablo" },
+        {
+          name: "GetYourGuide, Baños and Pailón day",
+          href: "https://www.getyourguide.com/quito-l504/from-quito-fullday-banos-pailon-del-diablo-waterfall-t496885/",
+        },
+        {
+          name: "Viator, private Baños day",
+          href: "https://www.viator.com/tours/Quito/Banos-de-Agua-Santa-from-Quito-Day-Tour/d735-110340P6",
+        },
+      ],
+    },
+  },
+  {
+    slug: "cuenca-cajas-tours",
+    title: "Cuenca tours and a Cajas day trip",
+    description:
+      "Cuenca tours and a Cajas National Park day trip: two park listings from the city, plus the city shelves. Hours and prices stay on the page you open.",
+    eyebrow: "The south",
+    dek: "The colonial city, then the lakes above it.",
+    hero: "cajas",
+    intro:
+      "Cuenca tours and a Cajas day trip are booked from the city, not from Quito. The park is a high plateau of lakes a short way west. The price is on the partner’s page.",
+    strip: "Cuenca & Cajas",
+    transfer: true,
+    guide: { href: "/visit/cuenca/", label: "The Cuenca chapter" },
+    reads: [
+      { href: "/do/hiking/", label: "Hiking the Avenue of the Volcanoes" },
+      { href: "/retire/best-cities/", label: "Where to live" },
+      { href: "/visit/quilotoa/", label: "Quilotoa" },
+    ],
+    picks: [
+      {
+        title: "Cajas, full day",
+        suits: "A guided day that walks both the cloud forest and the lakes.",
+        duration: "Listing duration: 7–8 hours",
+        included:
+          "Hotel pickup in Cuenca, a walk at Llaviuco, the interpretation center, a hike on the Toreadora trail the listing calls Route 1, and lunch. Vegetarian and vegan meals are available if you ask.",
+        href: getYourGuideUrl("cuenca-ecuador-l368/cajas-national-park-full-day-tour-from-cuenca-t851468"),
+        partner: "GetYourGuide",
+        photo: "cajas",
+      },
+      {
+        title: "Toreadora, then Llaviuco",
+        suits: "The same two altitudes, with a named operator and a set hike.",
+        duration: "Listing duration: 7 hours 30 minutes",
+        included:
+          "Polylepis Tours picks up in Cuenca. The listing gives about 2.5 hours around Laguna Toreadora, lunch, then about 30 minutes at Laguna Llaviuco, with a bilingual guide. Shared or private.",
+        href: getYourGuideUrl("cuenca-ecuador-l368/cuenca-ec-cajas-national-park-full-day-tour-t276217"),
+        partner: "GetYourGuide",
+        photo: "cajas-rain",
+      },
+      {
+        title: "Cuenca city tours",
+        suits: "The historic center, when the park is the wrong day.",
+        included: "GetYourGuide’s Cuenca destination. Open a listing for the hours and the price.",
+        href: getAffiliate("gyg-cuenca").href,
+        partner: "GetYourGuide",
+        photo: "cuenca",
+      },
+      {
+        title: "Cuenca on Viator",
+        suits: "A second desk for the city and the ruins nearby.",
+        included: "A Viator search for Cuenca. Duration depends on the tour you open.",
+        href: getAffiliate("viator-cuenca").href,
+        partner: "Viator",
+        photo: "cuenca-cathedral",
+      },
+    ],
+    know: [
+      "These park days start in Cuenca. They are not a day trip from Quito.",
+      "El Cajas is about 30 km west of the city, between about 3,100 m and 4,450 m. Weather turns. Take a layer.",
+      "Ingapirca, north of the city, is a cultural day of its own. The hiking chapter puts it next to the park.",
+    ],
+    faqs: [
+      {
+        q: "Can you visit Cajas as a day trip from Cuenca?",
+        a: "Yes. One listing is 7–8 hours and walks Llaviuco and the Toreadora trail. Another is 7 hours 30 minutes, with about 2.5 hours at Toreadora and a shorter walk at Llaviuco. Both pick up in Cuenca.",
+      },
+      {
+        q: "Is Cajas a day trip from Quito?",
+        a: "No. The park sits just west of Cuenca, in the southern sierra. A Quito departure would be an overnight journey, not one of these listings.",
+      },
+      {
+        q: "How high is El Cajas?",
+        a: "The park runs from about 3,100 m to about 4,450 m. Cuenca itself is near 2,500 m, the figure this guide uses for the city. The lakes are a real step up.",
+      },
+      {
+        q: "What if you want the city instead of the park?",
+        a: "The GetYourGuide and Viator buttons open Cuenca destination pages. Hours and price belong to the tour you choose there. The Cuenca chapter is the walk through the center.",
+      },
+    ],
+    tripTips: {
+      route: ["Cuenca", "West about 30 km", "Llaviuco", "Toreadora", "Back to Cuenca"],
+      routeNote:
+        "That line is the park day. The city itself is a separate booking: the historic center, the Tomebamba, and the cathedral. Ingapirca is farther north, in Cañar, and is not on these two park listings.",
+      when:
+        "A morning pickup in Cuenca. Both full-day listings are back the same afternoon, which is the shape of a park day rather than a trek.",
+      weather:
+        "The Cuenca chapter calls the park a high plateau of lakes and cloud, and says the weather is not reliable. Trails are exposed. A dry morning in the city is not a promise at Toreadora.",
+      stops:
+        "Laguna Toreadora on the páramo, Laguna Llaviuco lower down in the forest, and the interpretation center on the longer listing. The city shelves are for the center, not for these lakes.",
+      altitude:
+        "The park’s published range is about 3,100–4,450 m, above Cuenca. Drink water, start slowly, and turn around if a headache shows up. This is not a first-day plan after flying into Quito.",
+      sources: [
+        { name: "Wikipedia, El Cajas", href: "https://en.wikipedia.org/wiki/El_Cajas_National_Park" },
+        {
+          name: "GetYourGuide, Cajas full day",
+          href: "https://www.getyourguide.com/cuenca-ecuador-l368/cajas-national-park-full-day-tour-from-cuenca-t851468/",
+        },
+        {
+          name: "GetYourGuide, Polylepis Cajas day",
+          href: "https://www.getyourguide.com/cuenca-ecuador-l368/cuenca-ec-cajas-national-park-full-day-tour-t276217/",
+        },
+      ],
+    },
+  },
+  {
+    slug: "amazon-lodge-tours-from-quito",
+    title: "Amazon lodge tour from Quito",
+    description:
+      "Amazon lodge tour from Quito: Cuyabeno listings that include the ride from the capital, and a Napo lodge week that flies from Quito. No invented prices.",
+    eyebrow: "The Oriente",
+    dek: "A few nights in a lodge, not a day.",
+    hero: "yasuni",
+    intro:
+      "An Amazon lodge tour from Quito is a few nights on a river, not an afternoon. Cuyabeno and the Napo are different gates. These are listings we could open. The price is on the partner’s page.",
+    strip: "Amazon lodge",
+    transfer: true,
+    guide: { href: "/visit/amazon-cuyabeno-yasuni-tena/", label: "Cuyabeno, Yasuní, or Tena" },
+    reads: [
+      { href: "/visit/the-amazon/", label: "The Amazon chapter" },
+      { href: "/visit/is-ecuador-safe/", label: "Is Ecuador safe?" },
+      { href: "/visit/banos/", label: "Baños" },
+    ],
+    picks: [
+      {
+        title: "Cuyabeno, four days",
+        suits: "A lodge stay that names the bus or the plane from Quito.",
+        duration: "Listing duration: 4 days",
+        included:
+          "The listing includes transport Quito to the Cuyabeno bridge and back, by bus or plane, canoe transfer to the lodge, and the nights on the river. The itinerary visits the Siona community at Tarabeaya.",
+        href: getYourGuideUrl("nueva-loja-l5279/cuyabeno-4-dias-y-3-noches-t534094"),
+        partner: "GetYourGuide",
+        photo: "cuyabeno-canoe",
+      },
+      {
+        title: "Cuyabeno, five days",
+        suits: "A longer lodge week with the shuttle from Quito already in the price line.",
+        duration: "Listing duration: 5 days",
+        included:
+          "The listing includes a shuttle Quito–Lago Agrio–Quito, the boat into the reserve, lodging, meals, and activities as the itinerary states them. The lodge it describes sits on the Cuyabeno River.",
+        href: viatorUrl("tours/Quito/5-Day-Cuyabeno-Amazon-Eco-Lodge-Adventure/d735-11413P81"),
+        partner: "Viator",
+        photo: "cuyabeno-lagoon",
+      },
+      {
+        title: "Napo, three nights",
+        suits: "A lodge on the Napo, reached by a flight the listing includes.",
+        duration: "Listing duration: 3 nights",
+        included:
+          "Round-trip flights Quito–Coca, pickup from a Quito hotel, meals on the itinerary, and a motorized canoe to the lodge. The listing names Yachana Lodge. It is a tour, not a hotel search.",
+        href: viatorUrl(
+          "tours/Quito/3-Night-Ecuadorian-Amazon-Tour-from-Quito-with-Accommodation-at-the-Yachana-Lodge/d735-5891GGHO",
+        ),
+        partner: "Viator",
+        photo: "napo",
+      },
+    ],
+    know: [
+      "Cuyabeno’s usual road goes through Lago Agrio, in Sucumbíos. The comparison guide is the warning for that gate. Read it in the week you book.",
+      "Yasuní is the large park between the Napo and the Curaray, about 250 km from Quito. You do not wander off a lodge program.",
+      "None of these is a day trip. A night bus or a morning flight is part of the booking.",
+    ],
+    faqs: [
+      {
+        q: "Can you book an Amazon lodge from Quito?",
+        a: "Yes. One Cuyabeno listing includes transport from Quito to the bridge and back, by bus or plane. A five-day listing includes a shuttle between Quito and Lago Agrio. A three-night Napo listing includes the flights between Quito and Coca.",
+      },
+      {
+        q: "Is Cuyabeno the same trip as Yasuní?",
+        a: "No. Cuyabeno is a lagoon reserve reached through Lago Agrio. Yasuní is the larger park, reached from Coca on the Napo. The comparison guide is which one matches the warning you are willing to accept.",
+      },
+      {
+        q: "How long is a lodge tour?",
+        a: "The listings here are 4 days, 5 days, and 3 nights. A day in the forest is not one of them.",
+      },
+      {
+        q: "Do you need to think about yellow fever?",
+        a: "The comparison guide quotes the CDC: yellow fever vaccine is recommended for travelers 9 months and older going below 2,300 meters in several eastern provinces, and it is not a recommendation for Quito. That page is not medical advice. Talk to your own doctor.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito", "Lago Agrio or Coca", "A river", "The lodge", "Back to Quito"],
+      routeNote:
+        "Cuyabeno uses the northern gate, through Lago Agrio, then a canoe from the bridge. The Napo listing flies Quito to Coca and continues by motorized canoe. They are not interchangeable roads.",
+      when:
+        "Book the nights, not a morning. The Cuyabeno bus, when that is the ride, is described as the night before or a long daytime haul. The Napo listing starts with an early hotel pickup in Quito for the flight.",
+      weather:
+        "Lowland heat and rain. A rain jacket and repellent matter more than a fleece, once you are off the páramo. The climb back to Quito is the cold part.",
+      stops:
+        "On the Cuyabeno listings: the river, a lagoon, a night walk, and a community visit where the itinerary names one. On the Napo listing: the canoe, a jungle walk, and the lodge program. Yasuní is not a place to leave the group.",
+      altitude:
+        "Quito is about 2,850 m. The lodges are not. The CDC note in the comparison guide is for land below 2,300 m in the eastern provinces. Come back to the capital slowly if you can.",
+      sources: [
+        { name: "Wikipedia, Yasuní", href: "https://en.wikipedia.org/wiki/Yasun%C3%AD_National_Park" },
+        { name: "Wikipedia, Cuyabeno", href: "https://en.wikipedia.org/wiki/Cuyabeno_Wildlife_Reserve" },
+        {
+          name: "GetYourGuide, 4-day Cuyabeno",
+          href: "https://www.getyourguide.com/nueva-loja-l5279/cuyabeno-4-dias-y-3-noches-t534094/",
+        },
+        {
+          name: "Viator, Yachana from Quito",
+          href: "https://www.viator.com/tours/Quito/3-Night-Ecuadorian-Amazon-Tour-from-Quito-with-Accommodation-at-the-Yachana-Lodge/d735-5891GGHO",
+        },
+      ],
+    },
+  },
+  {
+    slug: "chimborazo-day-trip",
+    title: "Chimborazo day trip from Quito or Riobamba",
+    description:
+      "Chimborazo day trip from Quito or Riobamba: refuge listings we could open, a summit of 6,263 m, and why the high parking is already the day.",
+    eyebrow: "The colossus",
+    dek: "The closest ground to the sun. The refuge is the plan.",
+    hero: "chimborazo",
+    intro:
+      "A Chimborazo day trip from Quito or Riobamba is a drive into the reserve, not a summit. The mountain is 6,263 m. These are listings we could open. The price is on the partner’s page.",
+    strip: "Chimborazo",
+    transfer: true,
+    guide: { href: "/do/hiking/", label: "Hiking the Avenue of the Volcanoes" },
+    reads: [
+      { href: "/visit/cotopaxi/", label: "Cotopaxi" },
+      { href: "/visit/banos/", label: "Baños" },
+      { href: "/visit/quito-altitude-sickness/", label: "Quito altitude" },
+    ],
+    picks: [
+      {
+        title: "Private hike from Riobamba",
+        suits: "A day that starts in Riobamba and walks toward the second refuge.",
+        duration: "Listing duration: 9 hours",
+        included:
+          "Pickup from a Riobamba hotel or the bus terminal, a local guide, and a traditional Andean lunch. The listing drives to about 4,800 m and describes a hike of about an hour toward 5,000–5,100 m. A drop in Baños is extra.",
+        href: getYourGuideUrl("riobamba-l2234/riobamba-chimborazo-volcano-private-hiking-tour-t469501"),
+        partner: "GetYourGuide",
+        photo: "chimborazo",
+      },
+      {
+        title: "Hike and a downhill bike",
+        suits: "A long day whose Viator title starts in Quito.",
+        duration: "Listing duration: 12 hours 30 minutes",
+        included:
+          "The page is titled as a hike and downhill bike from Quito, all inclusive, with a start the listing puts in the early morning. Open it for what the bike day actually covers. It is a different shape from a refuge walk.",
+        href: viatorUrl(
+          "tours/Quito/Chimborazo-Tour-from-Banos-Hiking-and-Downhill-Bike-All-Inclusive/d735-152993P4",
+        ),
+        partner: "Viator",
+        photo: "vicuna",
+      },
+      {
+        title: "From Baños, via Riobamba",
+        suits: "You are already in the gorge and want the volcano on the way.",
+        duration: "Listing duration: 6–8 hours",
+        included:
+          "A small-group day from Baños via Riobamba, in a four-wheel-drive, with a guide. The listing caps the group at 15 and mentions vicuñas on the reserve. Pickup is arranged in Baños.",
+        href: viatorUrl("tours/Banos/Chimborazo-Day-Trip-Banos-Riobamba-Ecuador/d22150-114084P5"),
+        partner: "Viator",
+        photo: "chimborazo-refuge",
+      },
+    ],
+    know: [
+      "The summit is a glaciated climb. These listings are refuge and reserve days. Ice wants an accredited guide, which the hiking chapter names as ASEGUIM.",
+      "The Riobamba hike lists a drive of about 1 hour 30 minutes from the city to the volcano, then a car to about 4,800 m.",
+      "Vicuñas live on the reserve. They are not a petting zoo. Stay on the trail the guide uses.",
+    ],
+    faqs: [
+      {
+        q: "Can Chimborazo be a day trip from Quito?",
+        a: "One Viator listing is titled as a day from Quito and runs about 12 hours 30 minutes, with a hike and a downhill bike. The 9-hour private hike starts in Riobamba. The 6–8 hour day starts in Baños. Quito to the refuge and back is the long version.",
+      },
+      {
+        q: "How high do these days go?",
+        a: "The Riobamba listing drives to about 4,800 m and walks toward 5,000–5,100 m. The summit is 6,263 m. That last stretch is a different trip, on ice.",
+      },
+      {
+        q: "Is Chimborazo the highest mountain on earth?",
+        a: "It is the farthest point on the earth’s surface from the planet’s center, because the earth bulges at the equator. It is not the highest above sea level. The height above the sea is 6,263 m.",
+      },
+      {
+        q: "When should you not go?",
+        a: "Not the morning you land in Quito. The altitude chapter is the reason. A headache, nausea, or dizziness is a reason to descend, not to continue toward the refuge.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito or Baños", "Riobamba", "The reserve", "High parking", "A short walk"],
+      routeNote:
+        "Riobamba is the practical base. The private listing times the drive from there at about 1 hour 30 minutes, with a canyon stop on the way. From Quito the day is much longer. From Baños the 6–8 hour listing goes via Riobamba.",
+      when:
+        "A clear morning, and not your first day at altitude. The bike listing’s start is early. The refuge walk is still a full day out of Riobamba.",
+      weather:
+        "Wind and cloud on the páramo. The summit disappears. Turn around when the guide says the weather has changed. A sunny parking lot is not a promise an hour higher.",
+      stops:
+        "The high parking, the walk toward the second refuge on the Riobamba listing, and the vicuñas on the reserve road. The Carrel refuge is the hut in that landscape. It is not a café you should count on.",
+      altitude:
+        "Summit 6,263 m. The listing’s car reaches about 4,800 m, which is already above Cotopaxi’s Limpiopungo and close to the José Rivas refuge. Water, sun protection, a warm layer, and the honesty to go down.",
+      sources: [
+        { name: "Wikipedia, Chimborazo", href: "https://en.wikipedia.org/wiki/Chimborazo" },
+        {
+          name: "GetYourGuide, Riobamba hike",
+          href: "https://www.getyourguide.com/riobamba-l2234/riobamba-chimborazo-volcano-private-hiking-tour-t469501/",
+        },
+        {
+          name: "Viator, day from Baños",
+          href: "https://www.viator.com/tours/Banos/Chimborazo-Day-Trip-Banos-Riobamba-Ecuador/d22150-114084P5",
+        },
+      ],
+    },
+  },
+  {
+    slug: "galapagos-tours-how-to-book",
+    title: "How to book Galápagos tours",
+    description:
+      "How to book Galápagos tours: a cruise, an island-hopping week, and a day boat, as three listings. Park fee and transit card are the only prices printed here.",
+    eyebrow: "The islands",
+    dek: "Cruise, land week, or a day boat.",
+    hero: "bartolome",
+    intro:
+      "Galápagos tour prices live on the operator’s page. The choice before that is the shape: a cruise, island-hopping on land, or a day tour once you are already there. These are listings we could open.",
+    strip: "How to book",
+    transfer: true,
+    guide: { href: "/visit/galapagos-trip-cost/", label: "What a Galápagos trip costs" },
+    reads: [
+      { href: "/visit/galapagos-without-a-cruise/", label: "Galápagos without a cruise" },
+      { href: "/visit/which-galapagos-island/", label: "Which island" },
+      { href: "/visit/galapagos/", label: "The Galápagos chapter" },
+    ],
+    picks: [
+      {
+        title: "A small-ship cruise",
+        suits: "You want the boat to be the hotel, and the sites to change overnight.",
+        duration: "Listing duration: 5 days",
+        included:
+          "A west itinerary on the Monserrat, which the listing caps at 20 travelers, with a naturalist guide and breakfast, lunch, and dinner. It starts from Baltra. The cabin price is on that page.",
+        href: viatorUrl("tours/Santa-Cruz/Monserrat-Galapagos-Cruise-Itinerary-A-5-Days/d50212-306214P3"),
+        partner: "Viator",
+        photo: "bartolome",
+      },
+      {
+        title: "Island-hopping, five days",
+        suits: "A hotel on Santa Cruz, and boats that come back.",
+        duration: "Listing duration: 5 days",
+        included:
+          "The listing includes airport transfers, a hotel on Santa Cruz, a bay tour, Tortuga Bay, an Isabela day, and a Santa Fe boat, with a naturalist guide. It does not include the flight. Do not trust an old park-fee figure printed on a tour page. Use the cost chapter.",
+        href: getYourGuideUrl("puerto-ayora-l148437/galapagos-land-tour-3-islands-5-days-t658983"),
+        partner: "GetYourGuide",
+        photo: "booby",
+      },
+      {
+        title: "A day boat from Santa Cruz",
+        suits: "You already have a bed in Puerto Ayora and want one island offshore.",
+        included:
+          "North Seymour by yacht: a morning bus from the Puerto Ayora pier, about 40 minutes to the Itabaca Channel, about an hour to the island, a trail of about 2.5 hours, and a return the listing puts around 4:30 p.m. More days from the same island are on the Santa Cruz page.",
+        href: getYourGuideUrl("puerto-ayora-l148437/north-seymour-day-tour-t530526"),
+        partner: "GetYourGuide",
+        photo: "iguana",
+      },
+    ],
+    know: [
+      "Flights to Baltra or San Cristóbal leave from Quito and from Guayaquil. A Quito airport pickup is a separate decision from the boat.",
+      "The park’s entry table and the $20 transit card are in the cost chapter. A tour page that still prints an older fee is behind the ordinance.",
+      "A cruise sees more remote sites. A land week sees the towns. A day tour is neither of those. It starts where you already sleep.",
+    ],
+    faqs: [
+      {
+        q: "How do you book a Galápagos tour?",
+        a: "Pick the shape first. A cruise listing, such as the five-day Monserrat itinerary, includes the cabin and the moves between sites. An island-hopping listing includes a hotel and day boats, and usually not the flight. A day tour is booked after you are on an island, or alongside the hotel.",
+      },
+      {
+        q: "What are the official fees?",
+        a: "The Galápagos National Park’s current table lists US $200 for a foreign tourist over 12. The transit control card is US $20. Both are separate from the tour price. Children under 2 are exempt on both pages. Open the fee pages again before you pay.",
+      },
+      {
+        q: "Does the cruise price include the flight from Quito?",
+        a: "Do not assume it. The five-day land tour we opened excludes the national flight. Read the included list on the cruise you choose. The flight is its own quote.",
+      },
+      {
+        q: "Which island should the hotel be on?",
+        a: "Santa Cruz, San Cristóbal, or Isabela. The island chapter is that choice. Baltra serves Santa Cruz. San Cristóbal’s airport is on the island. Isabela is usually a boat, not a jet.",
+      },
+      {
+        q: "Where do the day tours start?",
+        a: "The North Seymour day starts in Puerto Ayora, not in Quito. The Santa Cruz day-tours page is the longer list of that kind of booking.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito or Guayaquil", "Baltra or San Cristóbal", "A town or a ship", "A visitor site"],
+      routeNote:
+        "The flight is the first hop. A cruise continues from the airport to the boat. A land week continues to a hotel, then to day boats. The North Seymour day is a third map: pier, bus, channel, yacht, and back by late afternoon.",
+      when:
+        "Book the shape before the cabin. Cruises and the better land weeks fill. A day boat can be the week you are already in Puerto Ayora. The cost chapter refuses to print a flight price because it goes stale.",
+      weather:
+        "The North Seymour listing, quoted on the Santa Cruz day-tours page, describes the sea as cooler from June through November and warmer from December through May. A cruise itinerary still depends on the park’s daily call.",
+      stops:
+        "On a cruise, the sites named on that boat’s itinerary. On the five-day land tour: Santa Cruz, an Isabela day, and Santa Fe or a similar boat. On the day tour: North Seymour, with a possible stop at Mosquera or Las Bachas.",
+      altitude:
+        "The islands are at sea level, which is the relief after Quito. Bring the documents the transit-card page asks for, a round-trip ticket, and the patience for two airport counters. Sun protection on the water. A licensed guide where the park requires one.",
+      sources: [
+        { name: "Galápagos National Park, entry fee", href: "https://galapagos.gob.ec/tributo-de-ingreso/" },
+        {
+          name: "CGREG, transit card",
+          href: "https://www.gob.ec/cgreg/tramites/emision-tarjeta-control-transito-turistas-transeuntes",
+        },
+        {
+          name: "GetYourGuide, 5-day land tour",
+          href: "https://www.getyourguide.com/puerto-ayora-l148437/galapagos-land-tour-3-islands-5-days-t658983/",
+        },
+        {
+          name: "Viator, Monserrat 5-day cruise",
+          href: "https://www.viator.com/tours/Santa-Cruz/Monserrat-Galapagos-Cruise-Itinerary-A-5-Days/d50212-306214P3",
+        },
+      ],
+    },
+  },
+  {
+    slug: "papallacta-hot-springs-day-trip",
+    title: "Papallacta hot springs day trip from Quito",
+    description:
+      "Papallacta hot springs day trip from Quito: páramo listings and a soak at 3,300 m. The village is east of the city, on the road toward the Amazon.",
+    eyebrow: "The road east",
+    dek: "A high soak, and the volcanoes on the way.",
+    hero: "papallacta",
+    intro:
+      "A Papallacta hot springs day trip from Quito climbs east into the páramo, soaks, and comes back. The village sits at 3,300 m. These are listings we could open. The price is on the partner’s page.",
+    strip: "Papallacta",
+    transfer: true,
+    guide: { href: "/do/hot-springs/", label: "Hot springs" },
+    reads: [
+      { href: "/visit/quito/", label: "Quito" },
+      { href: "/visit/quito-altitude-sickness/", label: "Quito altitude" },
+      { href: "/visit/the-amazon/", label: "The Amazon chapter" },
+    ],
+    picks: [
+      {
+        title: "Páramo, then the pools",
+        suits: "A set day with a hike before the soak.",
+        duration: "Listing duration: 9 hours",
+        included:
+          "Hotel pickup, a drive toward the eastern Andes, a hike on páramo paths in Cayambe-Coca National Park, and time at the Papallacta hot springs. The listing mentions a stop near 4,000 m when the weather allows a view of Cayambe.",
+        href: getYourGuideUrl("quito-l504/quito-full-day-trip-to-papallacta-hot-springs-and-the-area-t823509"),
+        partner: "GetYourGuide",
+        photo: "papallacta",
+      },
+      {
+        title: "Private soak and a walk",
+        suits: "A shorter private day built around the pools.",
+        duration: "Listing duration: 8 hours",
+        included:
+          "A certified guide, private transport, hotel pickup and drop-off in Quito, and the entrance to the Termas spa. The listing describes a walk of about 1.5 hours in the cloud forest of Cayambe-Coca. It asks for a minimum of two people.",
+        href: viatorUrl("tours/Quito/Termas-Papallacta-Hot-Springs-Day-Tour/d735-10512P9"),
+        partner: "Viator",
+        photo: "papallacta-pools",
+      },
+      {
+        title: "Guango and the pass",
+        suits: "Birds and Antisana on the way to the same water.",
+        duration: "Listing duration: 8–10 hours",
+        included:
+          "A private day with hotel pickup, including the airport area, a bilingual naturalist guide, and the Guango cloud-forest reserve. The listing names a stop at the hot-spring complex and Antisana on a clear pass. Read the included list for whether lunch is in the price.",
+        href: viatorUrl(
+          "tours/Quito/Papallacta-Hot-Springs-and-Guango-Cloud-Forest-Reserve-PRIVATE/d735-103137P3",
+        ),
+        partner: "Viator",
+        photo: "antisana",
+      },
+    ],
+    know: [
+      "Papallacta is a village at 3,300 m in Napo, east of Quito. The pools are a resort in that valley. The lagoon is the cold water above them.",
+      "The road continues toward Baeza and, eventually, the Amazon. The pools are a destination. They are not a stop on the way to a lodge the same day.",
+      "One listing climbs toward 4,000 m for a view. That is higher than the village. Do not stack it on the afternoon you land.",
+    ],
+    faqs: [
+      {
+        q: "How long is a Papallacta day trip from Quito?",
+        a: "One listing says 9 hours, with a páramo hike and the springs. A private spa day says 8 hours, with a walk of about 1.5 hours. A Guango and pass day says 8–10 hours.",
+      },
+      {
+        q: "How high is Papallacta?",
+        a: "The village is at 3,300 m. Quito is about 2,850 m, so the day goes up, not down. A viewpoint on one listing is near 4,000 m.",
+      },
+      {
+        q: "Are the pools the same as the lagoon?",
+        a: "No. Laguna de Papallacta is the cold lake in the páramo. The hot springs are the developed pools lower in the valley. A photograph of the lake is not a photograph of the soak.",
+      },
+      {
+        q: "Can you continue to the Amazon the same day?",
+        a: "The hot-springs chapter calls that a long drive and treats the pools as their own destination. A lodge tour is booked as nights, not as the end of this day.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito", "East over the páramo", "The pass", "Papallacta", "Back to Quito"],
+      routeNote:
+        "The road leaves the city toward the eastern cordillera. Antisana, at 5,753 m, sits about 50 km southeast of Quito and shows on a clear pass. The village is the soak. Baeza and the Napo are farther down the same highway.",
+      when:
+        "A morning departure, and not your first afternoon in Quito. The 9-hour listing is the fuller hike. The 8-hour private day is the soak with a shorter walk.",
+      weather:
+        "Páramo cloud and a cold wind at the pass, then warm water. A view of Cayambe or Antisana is a weather event, not a guarantee. Bring a layer for the overlook and a swimsuit for the pools.",
+      stops:
+        "The hot springs, a páramo path in Cayambe-Coca on the longer listing, and Guango if you booked the bird day. Oyacachi, a smaller community pool in the same region, is the alternative in the hot-springs chapter. It is not on these three listings.",
+      altitude:
+        "3,300 m in the village, and near 4,000 m if the day climbs for the view. Drink water, eat, and skip the trip if Quito has already given you a headache. The altitude chapter is the rule for the first 48 hours.",
+      sources: [
+        { name: "Wikipedia, Papallacta", href: "https://en.wikipedia.org/wiki/Papallacta" },
+        { name: "Wikipedia, Antisana", href: "https://en.wikipedia.org/wiki/Antisana" },
+        {
+          name: "GetYourGuide, Papallacta day",
+          href: "https://www.getyourguide.com/quito-l504/quito-full-day-trip-to-papallacta-hot-springs-and-the-area-t823509/",
+        },
+      ],
+    },
+  },
+  {
+    slug: "quito-teleferico-pichincha",
+    title: "Quito TelefériQo and a Pichincha hike",
+    description:
+      "Quito TelefériQo and a Pichincha hike: cable-car listings from the city, Cruz Loma, and why Rucu is not a first-day walk.",
+    eyebrow: "Above the city",
+    dek: "The gondola to Cruz Loma. The summit is extra.",
+    hero: "teleferiqo",
+    intro:
+      "The Quito TelefériQo is a gondola from the edge of the city up Pichincha to Cruz Loma. A hike toward Rucu is a further choice, and a higher one. These are listings we could open. The price is on the partner’s page.",
+    strip: "TelefériQo",
+    transfer: true,
+    guide: { href: "/visit/quito/", label: "The Quito chapter" },
+    reads: [
+      { href: "/visit/quito-altitude-sickness/", label: "Quito altitude" },
+      { href: "/do/hiking/", label: "Hiking the Avenue of the Volcanoes" },
+      { href: "/book/quito-city-and-mitad-del-mundo-tours/", label: "Quito and Mitad del Mundo" },
+    ],
+    picks: [
+      {
+        title: "Cable car and the old town",
+        suits: "The gondola plus the historic center, in one private day.",
+        included:
+          "The listing rides the TelefériQo to about 4,100 m, then the Basílica, the historic center, El Panecillo, Mitad del Mundo, Intiñan, and the Pululahua viewpoint. Private transport, a bilingual guide, hotel pickup, and entrance tickets are included.",
+        href: getYourGuideUrl("quito-l504/quito-full-day-teleferico-old-town-middle-of-the-world-t1330730"),
+        partner: "GetYourGuide",
+        photo: "quito-basilica",
+      },
+      {
+        title: "Cable car, with a hike if you want it",
+        suits: "The gondola as the point, and Rucu only as an option.",
+        included:
+          "A private guide and vehicle to the TelefériQo, then Cruz Loma. The listing offers an optional trek of about 4 hours toward Pichincha, or a horseback ride. Food is not included. The meeting point it names is Plaza Foch.",
+        href: viatorUrl("tours/Quito/Teleferico-Volcan-Pichincha/d735-101734P3"),
+        partner: "Viator",
+        photo: "teleferiqo-gondolas",
+      },
+      {
+        title: "Cable car and the equator",
+        suits: "The view first, then the monument north of the city.",
+        included:
+          "The TelefériQo, which this listing puts above 4,000 m, and the Intiñan museum at the equator line. A guide rides with you. Volcanoes on a clear day are named as Cotopaxi, Cayambe, Antisana, and Pichincha.",
+        href: getYourGuideUrl("quito-l504/quito-cable-car-middle-of-the-world-t1411818"),
+        partner: "GetYourGuide",
+        photo: "mitad",
+      },
+    ],
+    know: [
+      "Wikipedia puts the lift from 3,117 m to 3,945 m, about twenty minutes, over 2,237 m of line. One tour page says about 4,100 m. The altitude chapter quotes the FCDO at 4,050 m for Cruz Loma. Treat every figure as a high station, not a sea-level viewpoint.",
+      "Rucu Pichincha is 4,698 m. Guagua Pichincha, the active peak, is 4,784 m. The optional trek is not a stroll at the station.",
+      "The FCDO notes deaths from hypothermia on the way toward Rucu. The altitude chapter is why this is not a first-night plan.",
+    ],
+    faqs: [
+      {
+        q: "How do you visit the Quito TelefériQo?",
+        a: "On these listings, with a guide and a car from the city. One pairs the gondola with the old town and the equator. One is the cable car itself, with an optional hike. One pairs it with Intiñan. Tickets bought on your own are a different errand. This page does not invent a walk-up fare.",
+      },
+      {
+        q: "Can you hike Pichincha from the top of the cable car?",
+        a: "The Viator listing offers an optional trek of about 4 hours toward Pichincha after the ride to Cruz Loma. Rucu is 4,698 m. That is a high walk, in weather that changes, and the FCDO has warned of hypothermia on that route.",
+      },
+      {
+        q: "How high is the upper station?",
+        a: "Wikipedia says 3,945 m, up from 3,117 m. A tour page says about 4,100 m. The FCDO figure in the altitude chapter is 4,050 m at Cruz Loma. The ride is short. The air is not.",
+      },
+      {
+        q: "Is this a plan for the day you land?",
+        a: "No. Quito is already about 2,850 m. The station is far above that. The altitude chapter says to leave the cable car for a later day, and to skip alcohol and heavy exercise for at least 48 hours after you arrive.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito", "The lower station", "Cruz Loma", "Optional trail toward Rucu"],
+      routeNote:
+        "The lift climbs the east side of Pichincha from the edge of the city. The old-town and equator stops, on two of these listings, are a separate loop in the same day. They are not on the mountain.",
+      when:
+        "After you have slept in Quito. A clear morning is when Cotopaxi and Cayambe show up. Cloud is the more common story. Do not start the optional hike late.",
+      weather:
+        "Wind and a fast drop in temperature at the station. Hypothermia is the FCDO’s warning on the trail toward Rucu, not a blog’s color. Turn around when cloud or cold arrives.",
+      stops:
+        "Cruz Loma for the view. The Basílica, El Panecillo, and the equator only if you booked the city combination. The optional 4-hour trek is the hike. Horseback, on that same listing, is the other extra.",
+      altitude:
+        "Lower station 3,117 m, upper station 3,945 m on Wikipedia. Rucu 4,698 m. Bring a warm layer even if the hotel felt mild, water, and sun protection. Go down if a headache starts. The city is the cure, not another viewpoint.",
+      sources: [
+        { name: "Wikipedia, TelefériQo", href: "https://en.wikipedia.org/wiki/Telef%C3%A9riQo" },
+        { name: "Wikipedia, Pichincha", href: "https://en.wikipedia.org/wiki/Pichincha_(volcano)" },
+        {
+          name: "FCDO, safety and security",
+          href: "https://www.gov.uk/foreign-travel-advice/ecuador/safety-and-security",
+        },
+      ],
+    },
+  },
+  {
+    slug: "cuicocha-peguche-day-trip",
+    title: "Cuicocha and Peguche day trip from Quito",
+    description:
+      "Cuicocha and Peguche day trip from Quito: a crater-lake day, a waterfall day, and a two-day that does both. The market is the Saturday context.",
+    eyebrow: "Imbabura",
+    dek: "The crater lake, and the waterfall in the forest.",
+    hero: "cuicocha",
+    intro:
+      "A Cuicocha and Peguche day trip from Quito is the northern valley without making the market the whole point. One listing is the lake. One is the waterfall. A third takes two days to do both. The price is on the partner’s page.",
+    strip: "Cuicocha & Peguche",
+    transfer: true,
+    guide: { href: "/visit/otavalo/", label: "The Otavalo chapter" },
+    reads: [
+      { href: "/do/hiking/", label: "Hiking the Avenue of the Volcanoes" },
+      { href: "/book/otavalo-tours-from-quito/", label: "Otavalo market day trips" },
+      { href: "/visit/quito/", label: "Quito" },
+    ],
+    picks: [
+      {
+        title: "Market and Cuicocha",
+        suits: "The crater on the way back from the Saturday square.",
+        included:
+          "A day from Quito through the Otavalo market, with Cuicocha on the return and an optional stop in Cotacachi. The listing describes the lake as a crater of Cotacachi volcano. Open it for the day’s length.",
+        href: getYourGuideUrl("cayambe-l2257/otavalo-market-cuicocha-day-tour-from-quito-t524327"),
+        partner: "GetYourGuide",
+        photo: "cuicocha",
+      },
+      {
+        title: "Peguche waterfall",
+        suits: "The forest and the fall, with the market as a stop rather than the subject.",
+        duration: "Listing duration: 8 hours",
+        included:
+          "Pickup in Quito, the Cayambe bizcocho stop, the Miralago viewpoint, the Otavalo market, Peguche waterfall, and Ñanda Mañachi. The listing gives the waterfall walk about an hour.",
+        href: getYourGuideUrl("cayambe-l2257/from-quito-to-otavalo-bizcocho-and-peguche-waterfall-t769532"),
+        partner: "GetYourGuide",
+        photo: "peguche",
+      },
+      {
+        title: "Both, with a night",
+        suits: "When the lake and the waterfall will not fit before dark.",
+        duration: "Listing duration: 2 days",
+        included:
+          "Day one is the market and a night at Hacienda Pinsaqui. Day two is Peguche, a boat on Cuicocha, and Cotacachi, then Quito. The listing puts Cuicocha at 3,068 m and the fall at 18 m, inside the Peguche protected forest.",
+        href: getYourGuideUrl("otavalo-l2259/otavalo-cuicocha-lagoon-relax-2-days-1-night-t832172"),
+        partner: "GetYourGuide",
+        photo: "otavalo",
+      },
+    ],
+    know: [
+      "Cuicocha is a crater lake about 3 km wide, at the foot of Cotacachi. The two-day listing puts it at 3,068 m.",
+      "Peguche is a short way north of Otavalo. One day listing gives the walk about an hour. The fall on the two-day listing is 18 m.",
+      "Saturday is the full market. The Otavalo day-trip page is the longer note on that square. This page is the lake and the waterfall.",
+    ],
+    faqs: [
+      {
+        q: "Can you see Cuicocha and Peguche in one day from Quito?",
+        a: "The single-day listings here split them. One is the market and Cuicocha. One is Peguche, in 8 hours, with the market as a stop. The listing that does the waterfall and a boat on Cuicocha takes two days and a night.",
+      },
+      {
+        q: "How high is Cuicocha?",
+        a: "The two-day listing says 3,068 m. Otavalo town, on the Otavalo page, is near 2,532 m. The lake is higher than the town, and a little higher than Quito. It is windy on the rim. It is not Cotopaxi.",
+      },
+      {
+        q: "How far is the valley from Quito?",
+        a: "Otavalo is about 95 km north on the E35. The Otavalo page’s published drives run from 1.5–2 hours to about 2–2.5 hours. Peguche is a short hop north of town. Cuicocha is west, toward Cotacachi.",
+      },
+      {
+        q: "Is this the same as an Otavalo market tour?",
+        a: "The market appears on all three listings, because it is on the way. The point of this page is the crater and the waterfall. If Saturday’s square is the reason for the trip, use the Otavalo day-trip page.",
+      },
+    ],
+    tripTips: {
+      route: ["Quito", "E35 north", "Otavalo", "Peguche", "Cuicocha"],
+      routeNote:
+        "The highway runs north through the Cayambe valley. Peguche is just north of Otavalo, in a protected forest. Cuicocha is west, in the crater of Cotacachi, with Imbabura across the view from the other side of the valley.",
+      when:
+        "Saturday if the market matters. The waterfall and the lake do not require it. Leave time to be back in Quito before dark if you are not taking the overnight listing.",
+      weather:
+        "Highland sun and a cold wind on the crater rim. The forest at Peguche is wetter than the square. A light jacket covers both. The rim walk is the exposed part.",
+      stops:
+        "Peguche waterfall, the Cuicocha rim or the boat the two-day listing includes, and Cotacachi if the day names the leather town. Ask before you photograph people. The market’s bargaining belongs with crafts, not with the lake.",
+      altitude:
+        "Cuicocha at 3,068 m on the two-day listing. Otavalo town is lower, near 2,532 m on that same page. You are still in the highlands. Water, and a slower first hour if Quito has not felt easy yet.",
+      sources: [
+        { name: "Wikipedia, Cuicocha", href: "https://en.wikipedia.org/wiki/Cuicocha" },
+        {
+          name: "GetYourGuide, Peguche day",
+          href: "https://www.getyourguide.com/cayambe-l2257/from-quito-to-otavalo-bizcocho-and-peguche-waterfall-t769532/",
+        },
+        {
+          name: "GetYourGuide, two days with Cuicocha",
+          href: "https://www.getyourguide.com/otavalo-l2259/otavalo-cuicocha-lagoon-relax-2-days-1-night-t832172/",
+        },
+      ],
+    },
+  },
+
 ];
 
 export function findBook(slug: string | undefined): BookPage | undefined {

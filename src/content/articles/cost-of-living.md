@@ -20,7 +20,7 @@ Ecuador has used the US dollar since 2000. There is no exchange rate to manage. 
 <div class="compare cols-2">
 <article>
 <h3>Quito</h3>
-<p>The capital, near 2,850 meters. Direct flights, the widest range of hospitals and restaurants, and traffic as a daily fact. Neighborhoods are not interchangeable: the historic center, La Floresta, the streets around Parque La Carolina, and Cumbayá in the valley to the east. A modern flat in the north is a different rent from a quieter valley town. The <a href="/visit/quito/">Quito chapter</a> is the walk. The <a href="/retire/best-cities/">cities chapter</a> is the choice.</p>
+<p>The capital, near 2,850 meters. Direct flights, the widest range of hospitals and restaurants, and traffic as a daily fact. Neighborhoods are not interchangeable: the historic center, La Floresta, the streets around Parque La Carolina, and Cumbayá in the valley to the east. A modern flat in the north is a different rent from a quieter valley town. The ride from the airport to the neighborhood you chose can be booked ahead with <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a>, the owner’s own airport-transfer company. The <a href="/visit/quito/">Quito chapter</a> is the walk. The <a href="/retire/best-cities/">cities chapter</a> is the choice.</p>
 </article>
 <article>
 <h3>Cuenca</h3>
