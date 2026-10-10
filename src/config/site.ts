@@ -24,9 +24,9 @@ export const sections = {
   eat: {
     title: "Eat & Stay",
     description:
-      "Ecuadorian food, restaurant guides for Quito, Cuenca, Guayaquil, and Baños, and rooms worth knowing.",
-    dek: "The table, four cities, and a few rooms with a reputation.",
-    hero: "llapingachos",
+      "Ecuadorian food, top tables in Quito, Cuenca, Guayaquil, and Cumbayá, and rooms worth knowing.",
+    dek: "The table, four dining cities, and a few rooms with a reputation.",
+    hero: "quito-panecillo",
   },
   do: {
     title: "Do",

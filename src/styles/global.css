@@ -991,8 +991,10 @@ figure.card-portrait {
 
 .page-hero img {
   width: 100%;
+  min-height: 38vh;
   max-height: 68vh;
   object-fit: cover;
+  object-position: center;
 }
 
 .page-hero figcaption {

@@ -62,6 +62,22 @@ import banosChurch from "../assets/photos/banos-church.jpg";
 import banosTermas from "../assets/photos/banos-termas.jpg";
 import banosStreet from "../assets/photos/banos-street.jpg";
 import banosPark from "../assets/photos/banos-park.jpg";
+import quitoPanecillo from "../assets/photos/quito-panecillo.jpg";
+import quitoHill from "../assets/photos/quito-hill.jpg";
+import guayaquilSkyline from "../assets/photos/guayaquil-skyline.jpg";
+import nigiri from "../assets/photos/nigiri.jpg";
+import pastaAmatriciana from "../assets/photos/pasta-amatriciana.jpg";
+import tunaFoie from "../assets/photos/tuna-foie.jpg";
+import duckFoie from "../assets/photos/duck-foie.jpg";
+import foiePras from "../assets/photos/foie-pras.jpg";
+import magret from "../assets/photos/magret.jpg";
+import cevichePeru from "../assets/photos/ceviche-peru.jpg";
+import sushiPlatter from "../assets/photos/sushi-platter.jpg";
+import oystersIce from "../assets/photos/oysters-ice.jpg";
+import carpaccioDanieli from "../assets/photos/carpaccio-danieli.jpg";
+import carpaccioSonoma from "../assets/photos/carpaccio-sonoma.jpg";
+import tiramisu from "../assets/photos/tiramisu.jpg";
+import duckConfit from "../assets/photos/duck-confit.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -132,6 +148,22 @@ const files = {
   "banos-termas": banosTermas,
   "banos-street": banosStreet,
   "banos-park": banosPark,
+  "quito-panecillo": quitoPanecillo,
+  "quito-hill": quitoHill,
+  "guayaquil-skyline": guayaquilSkyline,
+  nigiri,
+  "pasta-amatriciana": pastaAmatriciana,
+  "tuna-foie": tunaFoie,
+  "duck-foie": duckFoie,
+  "foie-pras": foiePras,
+  magret,
+  "ceviche-peru": cevichePeru,
+  "sushi-platter": sushiPlatter,
+  "oysters-ice": oystersIce,
+  "carpaccio-danieli": carpaccioDanieli,
+  "carpaccio-sonoma": carpaccioSonoma,
+  tiramisu,
+  "duck-confit": duckConfit,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -196,6 +228,22 @@ const alts: Record<PhotoId, string> = {
   "banos-termas": "The thermal baths of the Virgen in Baños",
   "banos-street": "A downtown street in Baños de Agua Santa",
   "banos-park": "Parque Central in Baños de Agua Santa",
+  "quito-panecillo": "Quito seen from El Panecillo, with the historic center and the Basilica in the haze",
+  "quito-hill": "The Virgen del Panecillo above Quito, with the city spread out below",
+  "guayaquil-skyline": "The Guayaquil skyline across the Guayas River",
+  nigiri: "Nigiri sushi on a wooden board",
+  "pasta-amatriciana": "Tagliatelle all’amatriciana in a restaurant pan",
+  "tuna-foie": "A plated tuna course with seared foie gras",
+  "duck-foie": "A composed duck foie gras course",
+  "foie-pras": "Foie gras in a potato robe, with cabbage and a truffle-scented broth",
+  magret: "Duck breast with greens on a white plate",
+  "ceviche-peru": "A bowl of ceviche with red onion and sweet potato",
+  "sushi-platter": "An assorted sushi platter",
+  "oysters-ice": "Oysters on ice",
+  "carpaccio-danieli": "Beef carpaccio dressed with olive oil and cheese",
+  "carpaccio-sonoma": "Beef carpaccio on a dark plate, with greens and shaved cheese",
+  tiramisu: "A slice of tiramisu",
+  "duck-confit": "Duck confit with roasted vegetables and a dark sauce",
 };
 
 export type PhotoId = keyof typeof files;
