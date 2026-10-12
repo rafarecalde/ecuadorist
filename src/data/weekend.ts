@@ -87,9 +87,69 @@ export const weekends = {
       },
     ],
   },
+  "2026-10-17": {
+    id: "2026-10-17",
+    range: "Oct 17–18",
+    name: "Concert weekend",
+    items: [
+      {
+        headline: "Los Mirlos",
+        when: "Sat, Oct 17 · 8:00 p.m.",
+        place: "BASE Distrito Creativo, Quito",
+        line: "Amazonian cumbia, tickets from about $45.",
+        photo: "amazonas-mariscal",
+        partner: "gyg-quito",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/los-mirlos-2026-quito",
+      },
+      {
+        headline: "Una Noche de Leyendas",
+        when: "Sat, Oct 17 · 7:00 p.m.",
+        place: "Teatro Scala, Quito",
+        line: "Martín Torres and Larry Salgado’s big band play Sinatra-era standards from $30, and again Sunday at 6:00 p.m.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "El Teatro",
+        sourceUrl:
+          "https://tickets.elteatro.com.ec/event/una-noche-de-leyendas-sabado-17-octubre-19-00-smiw5d",
+      },
+      {
+        headline: "Sucre Viajero",
+        when: "Sun, Oct 18 · from 5:00 p.m.",
+        place: "Plaza Foch, Quito",
+        line: "Free outdoor music and theatre from Fundación Teatro Nacional Sucre.",
+        photo: "plaza-foch",
+        partner: "gyg-quito",
+        sourceName: "Clapzy",
+        sourceUrl: "https://www.clapzy.app/event/sucre-viajero-2026-plaza-foch",
+      },
+      {
+        headline: "Pasillo Sinfónico",
+        when: "Sun, Oct 18 · 5:00 p.m.",
+        place: "Teatro San Gabriel, Quito",
+        line: "Filarmónica Ecuador Sinfónico plays pasillo, tickets about $25–35.",
+        photo: "quito-basilica",
+        partner: "gyg-quito",
+        sourceName: "Teatro San Gabriel",
+        sourceUrl:
+          "https://tickets.teatrosangabriel.com/tc-events/pasillo-sinfonico-18-de-octubre-17h00",
+      },
+      {
+        headline: "ROCKLATAM",
+        when: "Sat, Oct 17 · 8:00 p.m.",
+        place: "Estadio Modelo, Guayaquil",
+        line: "Los Auténticos Decadentes, Vilma Palma e Vampiros, and Los Prisioneros with Miguel Tapia.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/rocklatam2026gye",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-10-12";
+export const currentWeekendId = "2026-10-17";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];
