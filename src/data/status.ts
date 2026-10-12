@@ -9,7 +9,7 @@ export const travelStatus = {
     level: "Level 2",
     label: "Exercise increased caution",
     /** Date printed on the State Department page, not a guessed refresh. */
-    asOf: "October 14, 2025",
+    asOf: "August 18, 2026",
     href: "https://travel.state.gov/en/international-travel/travel-advisories/ecuador.html",
   },
   volcanoes: {
@@ -17,8 +17,8 @@ export const travelStatus = {
     href: "https://volcano.si.edu/reports_weekly.cfm",
   },
   longWeekend: {
-    dates: "Oct 9–11",
-    name: "Guayaquil Independence",
+    dates: "Oct 31–Nov 3",
+    name: "Day of the Dead / Cuenca",
   },
   currency: "US dollar",
 } as const;
