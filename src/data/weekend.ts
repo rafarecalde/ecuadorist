@@ -147,9 +147,68 @@ export const weekends = {
       },
     ],
   },
+  "2026-10-19": {
+    id: "2026-10-19",
+    range: "Oct 23–25",
+    name: "Design weekend",
+    items: [
+      {
+        headline: "Distrito Quito Design Week",
+        when: "Fri–Sun, Oct 23–25 · 9:00 a.m.–6:00 p.m.",
+        place: "Palacio de Cristal, Itchimbía, Quito",
+        line: "Free with registration: a market of furniture, objects, textiles, and fashion.",
+        photo: "quito-hill",
+        partner: "gyg-quito",
+        sourceName: "Luma",
+        sourceUrl: "https://luma.com/f22ypqgo",
+      },
+      {
+        headline: "De verde a maduro",
+        when: "Sat, Oct 24 · from 10:00 a.m.",
+        place: "Plaza El Quinde, La Mariscal, Quito",
+        line: "Free, with twenty restaurants, a bolón contest, and live music through Salsa en el Solar.",
+        photo: "plaza-foch",
+        partner: "gyg-quito",
+        sourceName: "Quito Informa",
+        sourceUrl:
+          "https://quitoinforma.quito.gob.ec/2026/10/08/la-musica-en-vivo-sera-parte-del-festival-de-verde-a-maduro-en-la-mariscal/",
+      },
+      {
+        headline: "Gypsy jazz",
+        when: "Sat, Oct 24 · 6:30 p.m.",
+        place: "Teatro Centro de Arte, Guayaquil",
+        line: "Die Drahtzieher with Sepia Jazz Band, $15 or two for $25.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Teatro Centro de Arte",
+        sourceUrl: "https://www.teatrocentrodearte.org/evento/1586-gypsy-jazz-concert-die-drahtzieher",
+      },
+      {
+        headline: "Driving Miss Daisy",
+        when: "Fri–Sun, Oct 23–25 · 3:00 p.m.",
+        place: "Antonio Vega Muñoz 14-46, Cuenca",
+        line: "In English, and the run continues through November 1.",
+        photo: "cuenca",
+        partner: "gyg-cuenca",
+        sourceName: "CuencaHighLife",
+        sourceUrl: "https://cuencahighlife.com/veteran-cast-brings-acts-driving-miss-daisy-to-life/",
+      },
+      {
+        headline: "Otavalo’s Saturday market",
+        when: "Sat, Oct 24 · morning",
+        place: "From Quito",
+        line: "Plaza de los Ponchos, the textile market, fills on Saturday.",
+        photo: "otavalo",
+        partner: "gyg-otavalo",
+        sourceName: "Ecuadorist",
+        sourceUrl: "/visit/otavalo/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-10-17";
+export const currentWeekendId = "2026-10-19";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];

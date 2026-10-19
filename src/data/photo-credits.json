@@ -922,5 +922,29 @@
     "width": 1800,
     "height": 1350,
     "bytes": 370946
+  },
+  "mazar": {
+    "file": "mazar.jpg",
+    "commonsTitle": "File:Embalse Mazar 3.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Embalse_Mazar_3.jpg",
+    "author": "Jfbeltranr",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "The reservoir formed by the Mazar dam, part of the Paute Integral hydroelectric complex, in northeastern Azuay, Ecuador",
+    "width": 1008,
+    "height": 708,
+    "bytes": 161851
+  },
+  "tortuga-bay": {
+    "file": "tortuga-bay.jpg",
+    "commonsTitle": "File:Bahía Tortuga, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-26, DD 27.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bah%C3%ADa_Tortuga,_isla_Santa_Cruz,_islas_Gal%C3%A1pagos,_Ecuador,_2015-07-26,_DD_27.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Tortuga Bay, Santa Cruz island, Galápagos islands, Ecuador",
+    "width": 1800,
+    "height": 736,
+    "bytes": 141403
   }
 }
