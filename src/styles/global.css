@@ -455,7 +455,17 @@ h2, h3 {
   .feature-grid {
     grid-template-columns: 1.4fr 1fr;
     gap: 3rem 2rem;
-    align-items: end;
+    align-items: stretch;
+  }
+
+  .feature-grid > .card-feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-grid > .card-feature figure {
+    flex: 1 1 auto;
+    min-height: 18rem;
   }
 
   .feature-grid .stack {
@@ -1231,13 +1241,28 @@ figure.card-portrait {
 .weekend-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(12, 18, 14, 0.82), rgba(12, 18, 14, 0.05) 58%);
+  background: linear-gradient(
+    to top,
+    rgba(12, 18, 14, 0.92) 0%,
+    rgba(12, 18, 14, 0.78) 34%,
+    rgba(12, 18, 14, 0.42) 62%,
+    rgba(12, 18, 14, 0) 100%
+  );
 }
 
 .weekend-copy {
   position: relative;
   z-index: 1;
   padding: 1.2rem 1.15rem 1rem;
+}
+
+.weekend-copy .eyebrow {
+  color: #f7f3ea;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-shadow:
+    0 1px 2px rgba(12, 18, 14, 0.9),
+    0 0 14px rgba(12, 18, 14, 0.65);
 }
 
 .weekend-copy h3 {
@@ -1505,7 +1530,7 @@ figure.card-portrait {
 @media (min-width: 800px) {
   .weekend-grid {
     grid-template-columns: 1.35fr 1fr 1fr;
-    grid-template-rows: 22rem 22rem;
+    grid-template-rows: minmax(22rem, auto) minmax(22rem, auto);
   }
 
   .weekend-card:first-child {
