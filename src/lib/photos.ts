@@ -78,6 +78,8 @@ import carpaccioDanieli from "../assets/photos/carpaccio-danieli.jpg";
 import carpaccioSonoma from "../assets/photos/carpaccio-sonoma.jpg";
 import tiramisu from "../assets/photos/tiramisu.jpg";
 import duckConfit from "../assets/photos/duck-confit.jpg";
+import mazar from "../assets/photos/mazar.jpg";
+import tortugaBay from "../assets/photos/tortuga-bay.jpg";
 
 type Credit = {
   sourceUrl: string;
@@ -164,6 +166,8 @@ const files = {
   "carpaccio-sonoma": carpaccioSonoma,
   tiramisu,
   "duck-confit": duckConfit,
+  mazar,
+  "tortuga-bay": tortugaBay,
 } as const;
 
 const alts: Record<PhotoId, string> = {
@@ -244,6 +248,8 @@ const alts: Record<PhotoId, string> = {
   "carpaccio-sonoma": "Beef carpaccio on a dark plate, with greens and shaved cheese",
   tiramisu: "A slice of tiramisu",
   "duck-confit": "Duck confit with roasted vegetables and a dark sauce",
+  mazar: "The Mazar reservoir in the Paute hydroelectric complex, northeastern Azuay",
+  "tortuga-bay": "Tortuga Bay on Santa Cruz Island in the Galápagos",
 };
 
 export type PhotoId = keyof typeof files;
