@@ -206,9 +206,70 @@ export const weekends = {
       },
     ],
   },
+  "2026-10-26": {
+    id: "2026-10-26",
+    range: "Oct 30–Nov 3",
+    name: "Day of the Dead",
+    items: [
+      {
+        headline: "The independence pregón",
+        when: "Fri, Oct 30 · 6:00 p.m.",
+        place: "Parque Curiquingue, Cuenca",
+        line: "Los Búfalos and Banda Rumbae open the independence festivities.",
+        photo: "cuenca",
+        partner: "gyg-cuenca",
+        sourceName: "El Universo",
+        sourceUrl:
+          "https://www.eluniverso.com/comunidad/ecuador/fiestas-de-cuenca-2026-agenda-de-eventos-y-conciertos-nota/",
+      },
+      {
+        headline: "San Diego after dark",
+        when: "Sat–Mon, Oct 31–Nov 2 · 7:00 p.m.",
+        place: "Cementerio de San Diego, Quito",
+        line: "A two-hour theatrical walk with Quito Eterno, adults $15 or $20 with colada morada and a guagua de pan.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "RedTickets",
+        sourceUrl:
+          "https://redtickets.ec/evento/CEMENTERIO-DE-SAN-DIEGO-LA-CIUDAD-DE-LA-MUERTE-Higienismo-y-urbanidad/1818/",
+      },
+      {
+        headline: "Film scores, live",
+        when: "Fri, Oct 30 · 7:00 p.m.",
+        place: "Teatro Centro de Arte, Guayaquil",
+        line: "More than 70 musicians play film and anime scores on the vía a la Costa, from $25.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Teatro Centro de Arte",
+        sourceUrl: "https://www.teatrocentrodearte.org/evento/1594-kinema-sinfnico-horror-family-night",
+      },
+      {
+        headline: "Colada in Conocoto",
+        when: "Fri, Oct 30 · 9:00 a.m.",
+        place: "Mercado de Conocoto, Los Chillos",
+        line: "Market vendors serve colada morada and local food, a short ride south of Quito.",
+        photo: "guaguas",
+        sourceName: "Quito Informa",
+        sourceUrl:
+          "https://quitoinforma.quito.gob.ec/2026/10/23/los-chillos-se-llena-de-sabor-tradicion-y-cultura-antes-del-dia-de-los-difuntos/",
+      },
+      {
+        headline: "Lanterns at dusk",
+        when: "Sun, Nov 1 · 6:30 p.m.",
+        place: "Cementerio Patrimonial, Cuenca",
+        line: "A Mass at 7:30, a serenade at 8:30, and a projection at 9:30 follow the lanterns.",
+        photo: "cuenca-cathedral",
+        partner: "viator-cuenca",
+        sourceName: "El Mercurio",
+        sourceUrl:
+          "https://elmercurio.com.ec/ultimas-noticias/2026/10/13/agenda-actividad-dia-difuntos-2026-cementerio-cuenca/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-10-19";
+export const currentWeekendId = "2026-10-26";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];

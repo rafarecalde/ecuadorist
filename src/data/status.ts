@@ -13,7 +13,7 @@ export const travelStatus = {
     href: "https://travel.state.gov/en/international-travel/travel-advisories/ecuador.html",
   },
   volcanoes: {
-    label: "Sangay (yellow) and Reventador (orange) erupting, far from main routes",
+    label: "Sangay (yellow) and Reventador (orange) erupting, off the tourist roads",
     href: "https://volcano.si.edu/reports_weekly.cfm",
   },
   longWeekend: {
