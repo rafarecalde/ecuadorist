@@ -267,9 +267,69 @@ export const weekends = {
       },
     ],
   },
+  "2026-11-02": {
+    id: "2026-11-02",
+    range: "Nov 6–8",
+    name: "Friday and Saturday nights",
+    items: [
+      {
+        headline: "Cultura Profética and Gondwana",
+        when: "Fri, Nov 6 · 5:00 or 7:00 p.m.",
+        place: "Plaza de Toros, Quito",
+        line: "The header says 5:00 p.m. and the description says 7:00 p.m., and neither says which is doors, for Cultura Profética, Gondwana, and Quique Neira, ages 12 and up, tickets $30, $55 plus tax, or $90 plus tax.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/gondwana-y-cultura-profetica-2026",
+      },
+      {
+        headline: "Alex Alvear, Antología",
+        when: "Sat, Nov 7 · 7:30 p.m.",
+        place: "Teatro Prometeo, Quito",
+        line: "Songs from his whole career, including Promesas Temporales, Mango Blue, and Wañukta Tonic, across from the Ejido metro stop, $15 general, half off for seniors and people with disabilities.",
+        photo: "quito-basilica",
+        partner: "gyg-quito",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/AlexAlvearAntologia",
+      },
+      {
+        headline: "Noche Retro",
+        when: "Fri, Nov 6 · 7:30 p.m.",
+        place: "Parque del Ferrocarril, Cuenca",
+        line: "A free night of music from cassette to MP3, still inside the independence program.",
+        photo: "puente-roto",
+        partner: "gyg-cuenca",
+        sourceName: "Fiestas de Cuenca agenda",
+        sourceUrl:
+          "https://elmercurio.com.ec/wp-content/uploads/2026/10/agenda_fiestas_Cuenca_2026.pdf",
+      },
+      {
+        headline: "Retreta on Calle Larga",
+        when: "Fri, Nov 6 · 7:15 p.m.",
+        place: "Plazoleta de La Merced, Cuenca",
+        line: "The Guardia Ciudadana band plays a small plaza where Calle Larga meets Presidente Borrero.",
+        photo: "calle-larga",
+        partner: "viator-cuenca",
+        sourceName: "Fiestas de Cuenca agenda",
+        sourceUrl:
+          "https://elmercurio.com.ec/wp-content/uploads/2026/10/agenda_fiestas_Cuenca_2026.pdf",
+      },
+      {
+        headline: "Ruta de Fantasmas",
+        when: "Sat, Nov 7 · 7:00 p.m.",
+        place: "Museo de las Madres Conceptas, Cuenca",
+        line: "An evening route of legends at the convent museum on Hermano Miguel, and the agenda gives no price.",
+        photo: "cuenca-cathedral",
+        partner: "gyg-cuenca",
+        sourceName: "Fiestas de Cuenca agenda",
+        sourceUrl:
+          "https://elmercurio.com.ec/wp-content/uploads/2026/10/agenda_fiestas_Cuenca_2026.pdf",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-10-26";
+export const currentWeekendId = "2026-11-02";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];

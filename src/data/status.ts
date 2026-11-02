@@ -13,12 +13,13 @@ export const travelStatus = {
     href: "https://travel.state.gov/en/international-travel/travel-advisories/ecuador.html",
   },
   volcanoes: {
-    label: "Sangay (yellow) and Reventador (orange) erupting, off the tourist roads",
-    href: "https://volcano.si.edu/reports_weekly.cfm",
+    /** Nov 1, 2026 IG-EPN dailies for Reventador and Sangay; Cotopaxi from the Oct 21 field report. The Smithsonian weekly was stale. */
+    label: "Reventador high, orange alert; Sangay moderate; Cotopaxi low",
+    href: "https://t.me/s/sismosvolcanesigepn",
   },
   longWeekend: {
-    dates: "Oct 31–Nov 3",
-    name: "Day of the Dead / Cuenca",
+    dates: "Dec 25–27",
+    name: "Christmas",
   },
   currency: "US dollar",
 } as const;
