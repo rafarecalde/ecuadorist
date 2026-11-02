@@ -23,6 +23,7 @@ import vilcabamba from "../assets/photos/vilcabamba.jpg";
 import yasuni from "../assets/photos/yasuni.jpg";
 import uioAirport from "../assets/photos/uio-airport.jpg";
 import sangay from "../assets/photos/sangay.jpg";
+import reventador from "../assets/photos/reventador.jpg";
 import santoDomingo from "../assets/photos/santo-domingo.jpg";
 import puenteRoto from "../assets/photos/puente-roto.jpg";
 import quitoNight from "../assets/photos/quito-night.jpg";
@@ -111,6 +112,7 @@ const files = {
   yasuni,
   "uio-airport": uioAirport,
   sangay,
+  reventador,
   "santo-domingo": santoDomingo,
   "puente-roto": puenteRoto,
   "quito-night": quitoNight,
@@ -193,6 +195,7 @@ const alts: Record<PhotoId, string> = {
   yasuni: "A blue-throated piping guan in Yasuní National Park",
   "uio-airport": "The terminal at Mariscal Sucre International Airport, Quito",
   sangay: "Sangay volcano seen from Macas",
+  reventador: "El Reventador volcano seen from the foot of the cone",
   "santo-domingo": "The Church of Santo Domingo in Quito’s old town",
   "puente-roto": "Puente Roto over the Tomebamba in Cuenca, seen from above",
   "quito-night": "San Francisco church and the historic center of Quito at night",
