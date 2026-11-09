@@ -743,10 +743,190 @@ figure.card-portrait {
   font-size: 0.92rem;
 }
 
+.network-band {
+  padding: 0.4rem var(--pad) 2.6rem;
+}
+
+.network-band-inner {
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.network-slot {
+  margin-top: 1.4rem;
+  max-width: 58rem;
+}
+
+.network-promo {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+}
+
+.network-promo.feature {
+  display: grid;
+}
+
+.network-photo {
+  margin: 0;
+  background: var(--forest-deep);
+  min-height: 13rem;
+}
+
+.network-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.network-body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "mark copy"
+    "actions actions";
+  column-gap: 0.85rem;
+  row-gap: 0.35rem;
+  align-items: center;
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.network-promo .eyebrow {
+  grid-area: eyebrow;
+}
+
+.network-mark {
+  grid-area: mark;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  align-self: start;
+  margin-top: 0.15rem;
+}
+
+.network-mark.is-blend {
+  width: 4.25rem;
+  height: 4.25rem;
+  mix-blend-mode: multiply;
+}
+
+.network-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.network-promo h3 {
+  margin: 0;
+  font-size: 1.85rem;
+}
+
+.network-copy p,
+.network-actions {
+  margin: 0;
+}
+
+.network-copy p {
+  color: var(--ink-soft);
+}
+
+.network-actions {
+  grid-area: actions;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.2rem;
+  align-items: baseline;
+  margin-top: 0.35rem;
+}
+
+.network-more {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 0.12rem;
+}
+
+.network-more:hover {
+  color: var(--terra);
+  border-color: var(--terra);
+}
+
+.network-strip {
+  background: var(--ivory-deep);
+  color: var(--ink);
+  padding: 1.25rem var(--pad) 1.35rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.network-duo {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.network-promo.compact .network-body {
+  padding: 0.85rem 1rem 0.95rem;
+}
+
+.network-promo.compact h3 {
+  font-size: 1.55rem;
+}
+
+@media (min-width: 800px) {
+  .network-promo.feature {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .network-photo img {
+    aspect-ratio: auto;
+    min-height: 16.5rem;
+  }
+
+  .network-duo {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
 .footer {
   background: var(--forest);
   color: #efe8da;
+  padding: 0;
+}
+
+.footer-main {
   padding: 3.5rem var(--pad) 2rem;
+}
+
+.footer .network-strip a {
+  color: var(--ink);
+}
+
+.footer .network-strip a:hover {
+  color: var(--terra);
+}
+
+.footer .network-strip p {
+  max-width: none;
+  margin: 0;
+}
+
+.footer .network-strip .eyebrow {
+  color: var(--gold);
+}
+
+.footer .network-strip .network-copy p {
+  color: var(--ink-soft);
 }
 
 .footer a {

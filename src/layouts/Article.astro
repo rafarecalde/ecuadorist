@@ -5,6 +5,8 @@ import ArticleCard from "../components/ArticleCard.astro";
 import PhotoCredit from "../components/PhotoCredit.astro";
 import ExpatBand from "../components/ExpatBand.astro";
 import PlanYourTrip from "../components/PlanYourTrip.astro";
+import NetworkPromo from "../components/NetworkPromo.astro";
+import { networkForArticle } from "../config/network";
 import { sections, site } from "../config/site";
 import {
   articlePath,
@@ -31,7 +33,9 @@ const sectionMeta = sections[section];
 const photo = getPhoto(article.data.hero);
 const minutes = readingMinutes(article.body);
 const related = relatedArticles(articles, article);
-const trips = tripIds(article);
+const promos = networkForArticle(article.id);
+const shown = new Set<string>(promos);
+const trips = tripIds(article).filter((id) => !shown.has(id));
 const toc = headings.filter((heading) => heading.depth === 2);
 const url = new URL(articlePath(article), site.url).href;
 
@@ -178,6 +182,17 @@ const crumbs = {
     </div>
   </div>
   {article.data.restaurants.length > 0 && <RestaurantCards places={article.data.restaurants} />}
+  {
+    promos.length > 0 && (
+      <section class="network-band" aria-label="From our network">
+        <div class="network-band-inner">
+          {promos.map((id) => (
+            <NetworkPromo id={id} variant="feature" />
+          ))}
+        </div>
+      </section>
+    )
+  }
   {
     article.data.expat.length > 0 || article.data.expatAffiliate.length > 0 ? (
       <ExpatBand

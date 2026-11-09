@@ -1,5 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getAffiliate } from "../config/affiliates";
+
+const uio = getAffiliate("uio");
+const farm = getAffiliate("ecuafarmex");
 
 const description =
   "Ecuadorist is an independent English-language guide to Ecuador for travelers, digital nomads, and retirees.";
@@ -20,9 +24,9 @@ const description =
     <p>
       Ecuadorist is not a law firm, a clinic, a bank, or a travel agency. The visa chapter is an overview, written so you know which door to open. It is not advice for your situation.
     </p>
-    <h2>A note on the airport</h2>
+    <h2>From our network</h2>
     <p>
-      Links to <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a> go to the site owner’s own airport-transfer company in Quito. Those links are not third-party advertisements. Other partner links are explained on the <a href="/affiliate-disclosure/">affiliate disclosure</a>.
+      Links to <a href={uio.href} target="_blank" rel="noopener">UIO Transfers</a> go to the site owner’s own airport-transfer company in Quito. Links to <a href={farm.href} target="_blank" rel="noopener">EcuaFarmEx</a> go to the owner’s agricultural marketplace, on the English importer guide. Those links are not third-party advertisements. Other partner links are explained on the <a href="/affiliate-disclosure/">affiliate disclosure</a>.
     </p>
     <h2>Photographs</h2>
     <p>

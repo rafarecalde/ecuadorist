@@ -1,0 +1,91 @@
+---
+import { getAffiliate, linkRel, type OwnerNetworkId } from "../config/affiliates";
+
+interface Props {
+  id: OwnerNetworkId;
+  /** compact = footer strip; feature = in-article / book placement */
+  variant?: "compact" | "feature";
+}
+
+const copy = {
+  uio: {
+    eyebrow: "From our network",
+    blurb: "Prepaid private SUV from Quito’s Mariscal Sucre Airport. Book before you land.",
+    cta: "Book a transfer",
+    mark: "/network/uiotransfers-mark.svg",
+    photo: "/network/uiotransfers-og.jpg",
+    photoAlt: "The terminal at Mariscal Sucre airport in Quito",
+    blend: false,
+    more: null,
+  },
+  ecuafarmex: {
+    eyebrow: "From our network",
+    blurb: "Roses, cacao, coffee, and more, direct from Ecuador farms. English guides for importers.",
+    cta: "Browse farms & guides",
+    mark: "/network/ecuafarmex-mark.jpg",
+    photo: "/network/ecuafarmex-card.jpg",
+    photoAlt: "Dried cacao pods from Ecuador",
+    blend: true,
+    more: {
+      href: "https://ecuafarmex.com/en/guides",
+      label: "All guides",
+    },
+  },
+} as const;
+
+const { id, variant = "feature" } = Astro.props;
+const link = getAffiliate(id);
+const item = copy[id];
+const rel = linkRel(link);
+---
+
+<article class:list={["network-promo", variant]} data-network={id}>
+  {
+    variant === "feature" && (
+      <figure class="network-photo">
+        <img src={item.photo} alt={item.photoAlt} loading="lazy" decoding="async" width="1200" height="900" />
+      </figure>
+    )
+  }
+  <div class="network-body">
+    <p class="eyebrow">{item.eyebrow}</p>
+    <img
+      class:list={["network-mark", item.blend && "is-blend"]}
+      src={item.mark}
+      alt=""
+      width="64"
+      height="64"
+    />
+    <div class="network-copy">
+      <h3>{link.name}</h3>
+      <p>{item.blurb}</p>
+    </div>
+    <div class="network-actions">
+      <a class="partner-go" href={link.href} target="_blank" rel={rel}>
+        {item.cta}
+        <span class="sr-only">, opens in a new tab</span>
+      </a>
+      {
+        variant === "feature" && item.more && (
+          <a class="network-more" href={item.more.href} target="_blank" rel={rel}>
+            {item.more.label}
+            <span class="sr-only">, opens in a new tab</span>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>

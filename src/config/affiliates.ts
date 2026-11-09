@@ -9,6 +9,8 @@
  * Viator links append pid, mcid, and medium. Quito is a destination page;
  * other places are searches. Never guess a Viator product code.
  * UIO Transfers is the site owner's airport company and is not a sponsored link.
+ * EcuaFarmEx is the site owner's agricultural marketplace and is not a sponsored link.
+ * Both are labeled “From our network.”
  */
 
 export type Affiliate = {
@@ -141,8 +143,18 @@ export const affiliates = {
     sponsored: false,
     placeholder: false,
     category: "Quito airport",
-    label: "The owner’s company",
-    blurb: "A private car from Mariscal Sucre Airport. Not a third-party ad.",
+    label: "From our network",
+    blurb: "A private car from Mariscal Sucre Airport. The owner’s company, not a third-party ad.",
+  },
+  ecuafarmex: {
+    id: "ecuafarmex",
+    name: "EcuaFarmEx",
+    href: "https://ecuafarmex.com/en/guides/buying-from-ecuador-importer-guide",
+    sponsored: false,
+    placeholder: false,
+    category: "Farms",
+    label: "From our network",
+    blurb: "The owner’s agricultural marketplace. English guides for buying from Ecuador farms.",
   },
   getyourguide: {
     id: "getyourguide",
@@ -442,7 +454,16 @@ export function getAffiliate(id: AffiliateId): Affiliate {
   return affiliates[id];
 }
 
-/** Affiliate (tracked) links only. Placeholders and UIO Transfers stay unsponsored. */
+/** The owner’s own sites. Ordinary links, never rel="sponsored". */
+export const ownerNetworkIds = ["uio", "ecuafarmex"] as const;
+
+export type OwnerNetworkId = (typeof ownerNetworkIds)[number];
+
+export function isOwnerNetwork(id: string): id is OwnerNetworkId {
+  return (ownerNetworkIds as readonly string[]).includes(id);
+}
+
+/** Affiliate (tracked) links only. Placeholders and the owner’s network stay unsponsored. */
 export function linkRel(link: Affiliate): "sponsored noopener" | "noopener" {
   return link.sponsored ? "sponsored noopener" : "noopener";
 }
