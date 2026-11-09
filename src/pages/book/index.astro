@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import PhotoCredit from "../../components/PhotoCredit.astro";
+import NetworkPromo from "../../components/NetworkPromo.astro";
 import Base from "../../layouts/Base.astro";
 import { bookPages, bookPath } from "../../data/book";
 import { getPhoto } from "../../lib/photos";
@@ -46,5 +47,10 @@ const description =
         })
       }
     </ul>
+  </section>
+  <section class="network-band" aria-label="From our network">
+    <div class="network-band-inner">
+      <NetworkPromo id="uio" variant="feature" />
+    </div>
   </section>
 </Base>

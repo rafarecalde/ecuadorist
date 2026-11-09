@@ -1,13 +1,14 @@
 ---
 import Base from "../layouts/Base.astro";
-import { affiliates, linkRel } from "../config/affiliates";
+import { affiliates, isOwnerNetwork, linkRel } from "../config/affiliates";
 import { expatPartners, expatRel } from "../config/expatPartners";
 
 const description =
   "How Ecuadorist handles partner links, including which ones are sponsored and which are plain brand links.";
 
 const tracked = Object.values(affiliates).filter((item) => item.sponsored);
-const plain = Object.values(affiliates).filter((item) => !item.sponsored && item.id !== "uio");
+const network = Object.values(affiliates).filter((item) => isOwnerNetwork(item.id));
+const plain = Object.values(affiliates).filter((item) => !item.sponsored && !isOwnerNetwork(item.id));
 ---
 
 <Base title="Affiliate disclosure" description={description}>
@@ -33,10 +34,22 @@ const plain = Object.values(affiliates).filter((item) => !item.sponsored && item
         ))
       }
     </ul>
-    <h2>The owner’s company</h2>
+    <h2>From our network</h2>
     <p>
-      <a href="https://uiotransfers.com" target="_blank" rel="noopener">UIO Transfers</a> is the site owner’s airport-transfer business in Quito. Links to it are ordinary links. They are not sponsored placements and they are not labeled as a partner.
+      Two sites belong to the owner of Ecuadorist. Cards for them are labeled “From our network.” The links are ordinary <code>rel="noopener"</code> links. They are not sponsored placements, and they are not paid third-party ads.
     </p>
+    <ul>
+      {
+        network.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel={linkRel(item)}>
+              {item.name}
+            </a>
+            <span> — {item.blurb}</span>
+          </li>
+        ))
+      }
+    </ul>
     <h2>Retiring in Ecuador</h2>
     <p>
       The retire chapters use a separate list. A tracked link in that list opens with <code>rel="sponsored noopener"</code> and the chapter says so. SafetyWing is tracked. Its rule allows these links in articles and does not allow them as paid ads. Every other name in that list is still the company’s own homepage, with no sponsorship mark, until a tracked address exists.
