@@ -327,9 +327,72 @@ export const weekends = {
       },
     ],
   },
+  "2026-11-09": {
+    id: "2026-11-09",
+    range: "Nov 14–15",
+    name: "Saturday night",
+    items: [
+      {
+        headline: "Martin Garrix",
+        when: "Sat, Nov 14 · 8:00 p.m.",
+        place: "Estadio Alejandro Serrano Aguilar, Cuenca",
+        line: "The Américas Tour. Tickets from $69 and $99, plus tax and a service fee.",
+        photo: "cuenca",
+        partner: "gyg-cuenca",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Rubén Blades",
+        when: "Sat, Nov 14 · 8:00 p.m.",
+        place: "Coliseo Voltaire Paladines Polo, Guayaquil",
+        line: "Fotografías Tour with Roberto Delgado’s big band. General admission is $45 before a $4.50 fee and tax.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "TicketShow",
+        sourceUrl:
+          "https://www.ticketshow.com.ec/evento/RUBEN-BLADES-FOTOGRAFIAS-TOUR-GUAYAQUIL--2026",
+      },
+      {
+        headline: "Quiteñadas",
+        when: "Sat, Nov 14 · 7:30 p.m.",
+        place: "Casa de la Música, Quito",
+        line: "A Quito tribute with 25 orchestra musicians, student singers, and dancers. Low seats $40, high seats $30, plus a $1.75 fee, with a senior discount.",
+        photo: "quito-basilica",
+        partner: "gyg-quito",
+        sourceName: "Casa de la Música",
+        sourceUrl: "https://www.casadelamusica.ec/programacion/segunda-funcin-quitenadas",
+      },
+      {
+        headline: "Soy Luna",
+        when: "Sat, Nov 14 · 8:00 p.m.",
+        place: "Coliseo General Rumiñahui, Quito",
+        line: "The last tour. Tickets from $45 to $190, plus tax and fees.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Caracol y colibrí",
+        when: "Sun, Nov 15 · 11:00 a.m. and 4:00 p.m.",
+        place: "Sala Zaruma, Samborondón",
+        line: "A children’s play at Teatro Sánchez Aguilar. Children $8, adults $15.",
+        photo: "santa-ana",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-11-02";
+export const currentWeekendId = "2026-11-09";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];

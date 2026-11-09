@@ -13,13 +13,14 @@ export const travelStatus = {
     href: "https://travel.state.gov/en/international-travel/travel-advisories/ecuador.html",
   },
   volcanoes: {
-    /** Nov 1, 2026 IG-EPN dailies for Reventador and Sangay; Cotopaxi from the Oct 21 field report. The Smithsonian weekly was stale. */
-    label: "Reventador high, orange alert; Sangay moderate; Cotopaxi low",
+    /** Nov 8, 2026 IG-EPN dailies: Reventador surface moderate (high on the Nov 5 daily), internal moderate; Sangay surface moderate, internal low. Cotopaxi from the Oct 21 field report. The Smithsonian week of Oct 29–Nov 4 did not list Ecuador. */
+    label: "Reventador moderate; Sangay moderate; Cotopaxi low",
     href: "https://t.me/s/sismosvolcanesigepn",
   },
   longWeekend: {
-    dates: "Dec 25–27",
-    name: "Christmas",
+    /** Decree 507 suspends the workday nationwide on Friday, Nov 20, 2026, for the Loja arts festival (Nov 12–22). Airports, banks, and other essential services stay open. */
+    dates: "Nov 20–22",
+    name: "Loja arts",
   },
   currency: "US dollar",
 } as const;
