@@ -13,12 +13,12 @@ export const travelStatus = {
     href: "https://travel.state.gov/en/international-travel/travel-advisories/ecuador.html",
   },
   volcanoes: {
-    /** Nov 8, 2026 IG-EPN dailies: Reventador surface moderate (high on the Nov 5 daily), internal moderate; Sangay surface moderate, internal low. Cotopaxi from the Oct 21 field report. The Smithsonian week of Oct 29–Nov 4 did not list Ecuador. */
+    /** Nov 15, 2026 IG-EPN dailies: Reventador surface moderate, internal moderate, both unchanged; Sangay surface moderate, internal low, both unchanged. Cotopaxi monthly of Nov 11: surface low and internal low, both trends ascending. Smithsonian week of Nov 5–11 calls that week high at Reventador (Orange) and continuing at Sangay (Yellow). */
     label: "Reventador moderate; Sangay moderate; Cotopaxi low",
     href: "https://t.me/s/sismosvolcanesigepn",
   },
   longWeekend: {
-    /** Decree 507 suspends the workday nationwide on Friday, Nov 20, 2026, for the Loja arts festival (Nov 12–22). Airports, banks, and other essential services stay open. */
+    /** Kept: Friday Nov 20, 2026 has not passed. Decree 507 suspends the workday nationwide that day for the Loja arts festival (Nov 12–22). Airports, banks, and other essential services stay open. The next national rest after it is Christmas, Friday Dec 25, which already makes Fri–Sun; Quito’s local rest is Monday Dec 7. */
     dates: "Nov 20–22",
     name: "Loja arts",
   },

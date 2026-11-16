@@ -390,9 +390,71 @@ export const weekends = {
       },
     ],
   },
+  "2026-11-16": {
+    id: "2026-11-16",
+    range: "Nov 20–22",
+    name: "Loja bridge",
+    items: [
+      {
+        headline: "Fito Páez Sinfónico",
+        when: "Fri–Sat, Nov 20–21 · 8:00 p.m.",
+        place: "Teatro Carlos Cueva Tamariz, Cuenca",
+        line: "The university orchestra and choir. General admission is $12, and university students pay $6.",
+        photo: "cuenca",
+        partner: "gyg-cuenca",
+        sourceName: "El Mercurio",
+        sourceUrl:
+          "https://elmercurio.com.ec/ultimas-noticias/2026/11/10/fito-paez-sinfonico-en-cuenca-definidas-las-dos-fechas-de-tributos/",
+      },
+      {
+        headline: "Hot Chip",
+        when: "Fri, Nov 20 · 8:00 p.m.",
+        place: "SoundGarden, Quito",
+        line: "Adults only. General admission is listed at $37.50.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/hot-chip-2026-quito",
+      },
+      {
+        headline: "Elefante",
+        when: "Fri, Nov 20 · 8:00 p.m. · Sat, Nov 21 · 8:00 p.m.",
+        place: "Quito, then Guayaquil",
+        line: "Friday at the Medio Coliseo Rumiñahui in Quito, Saturday at Sports Garden in Guayaquil. Tickets are listed from $36.50 to $121.50.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "PP El Verdadero",
+        sourceUrl:
+          "https://www.ppelverdadero.com.ec/2026/11/conciertos-ecuador-noviembre-2026-artistas-fechas-precios.html",
+      },
+      {
+        headline: "Galy Galiano",
+        when: "Sat, Nov 21 · 8:00 p.m.",
+        place: "Coliseo Voltaire Paladines Polo, Guayaquil",
+        line: "La última y nos vamos, with Dayanara. Tickets are listed from $35.88 to $181.50.",
+        photo: "santa-ana",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "PP El Verdadero",
+        sourceUrl:
+          "https://www.ppelverdadero.com.ec/2026/11/conciertos-ecuador-noviembre-2026-artistas-fechas-precios.html",
+      },
+      {
+        headline: "Cotopaxi for the day",
+        when: "Sat or Sun · a full day",
+        place: "From Quito",
+        line: "Laguna Limpiopungo when the cloud lifts. The Friday bridge makes it three days, not a summit.",
+        photo: "cotopaxi",
+        partner: "gyg-cotopaxi",
+        sourceName: "Ecuadorist",
+        sourceUrl: "/book/cotopaxi-tours-from-quito/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-11-09";
+export const currentWeekendId = "2026-11-16";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];
