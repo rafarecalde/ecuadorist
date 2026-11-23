@@ -390,9 +390,133 @@ export const weekends = {
       },
     ],
   },
+  "2026-11-16": {
+    id: "2026-11-16",
+    range: "Nov 20–22",
+    name: "Loja bridge",
+    items: [
+      {
+        headline: "Fito Páez Sinfónico",
+        when: "Fri–Sat, Nov 20–21 · 8:00 p.m.",
+        place: "Teatro Carlos Cueva Tamariz, Cuenca",
+        line: "The university orchestra and choir. General admission is $12, and university students pay $6.",
+        photo: "cuenca",
+        partner: "gyg-cuenca",
+        sourceName: "El Mercurio",
+        sourceUrl:
+          "https://elmercurio.com.ec/ultimas-noticias/2026/11/10/fito-paez-sinfonico-en-cuenca-definidas-las-dos-fechas-de-tributos/",
+      },
+      {
+        headline: "Hot Chip",
+        when: "Fri, Nov 20 · 8:00 p.m.",
+        place: "SoundGarden, Quito",
+        line: "Adults only. General admission is listed at $37.50.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "Buen Plan",
+        sourceUrl: "https://www.buenplan.com.ec/event/hot-chip-2026-quito",
+      },
+      {
+        headline: "Elefante",
+        when: "Fri, Nov 20 · 8:00 p.m. · Sat, Nov 21 · 8:00 p.m.",
+        place: "Quito, then Guayaquil",
+        line: "Friday at the Medio Coliseo Rumiñahui in Quito, Saturday at Sports Garden in Guayaquil. Tickets are listed from $36.50 to $121.50.",
+        photo: "guayaquil-skyline",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "PP El Verdadero",
+        sourceUrl:
+          "https://www.ppelverdadero.com.ec/2026/11/conciertos-ecuador-noviembre-2026-artistas-fechas-precios.html",
+      },
+      {
+        headline: "Galy Galiano",
+        when: "Sat, Nov 21 · 8:00 p.m.",
+        place: "Coliseo Voltaire Paladines Polo, Guayaquil",
+        line: "La última y nos vamos, with Dayanara. Tickets are listed from $35.88 to $181.50.",
+        photo: "santa-ana",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "PP El Verdadero",
+        sourceUrl:
+          "https://www.ppelverdadero.com.ec/2026/11/conciertos-ecuador-noviembre-2026-artistas-fechas-precios.html",
+      },
+      {
+        headline: "Cotopaxi for the day",
+        when: "Sat or Sun · a full day",
+        place: "From Quito",
+        line: "Laguna Limpiopungo when the cloud lifts. The Friday bridge makes it three days, not a summit.",
+        photo: "cotopaxi",
+        partner: "gyg-cotopaxi",
+        sourceName: "Ecuadorist",
+        sourceUrl: "/book/cotopaxi-tours-from-quito/",
+      },
+    ],
+  },
+  "2026-11-23": {
+    id: "2026-11-23",
+    range: "Nov 27–29",
+    name: "Election weekend",
+    items: [
+      {
+        headline: "Kapo, Afro Rosa",
+        when: "Sat, Nov 28 · 8:00 p.m.",
+        place: "Coliseo General Rumiñahui, Quito",
+        line: "Tickets are listed from $35 to $130, plus VAT and fees. The dry law is already in force.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "El Universo",
+        sourceUrl:
+          "https://www.eluniverso.com/entretenimiento/musica/que-hacer-en-ecuador-eventos-del-martes-24-de-noviembre-al-domingo-29-de-noviembre-de-2026-nota/",
+      },
+      {
+        headline: "Beethoven’s Ninth",
+        when: "Fri, Nov 27 · 8:00 p.m.",
+        place: "Teatro Sánchez Aguilar, Samborondón",
+        line: "The Guayaquil symphony orchestra. Tickets are $10.",
+        photo: "santa-ana",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Lights On",
+        when: "Fri–Sun, Nov 27–29 · 10:00 a.m.–8:00 p.m.",
+        place: "Paseo San Francisco, Cumbayá",
+        line: "A free Christmas market of 90 Ecuadorian stalls.",
+        photo: "quito-plaza",
+        partner: "gyg-quito",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Mañana Flor",
+        when: "Fri–Sat, Nov 27–28 · 7:00 p.m. · Sun, Nov 29 · 6:00 p.m.",
+        place: "Teatro Casa Malayerba, Quito",
+        line: "Tickets are $12, or $10 in the advance sale at the theater.",
+        photo: "quito-basilica",
+        partner: "gyg-quito",
+        sourceName: "El Universo",
+        sourceUrl:
+          "https://www.eluniverso.com/entretenimiento/musica/que-hacer-en-ecuador-eventos-del-martes-24-de-noviembre-al-domingo-29-de-noviembre-de-2026-nota/",
+      },
+      {
+        headline: "Quilotoa for the day",
+        when: "Sat, Nov 28 · a full day",
+        place: "From Quito",
+        line: "The crater lake when the cloud lifts. Sunday is election day.",
+        photo: "quilotoa",
+        partner: "gyg-quilotoa",
+        sourceName: "Ecuadorist",
+        sourceUrl: "/book/quilotoa-tours-from-quito/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-11-09";
+export const currentWeekendId = "2026-11-23";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];
