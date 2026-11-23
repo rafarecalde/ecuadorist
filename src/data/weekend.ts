@@ -452,9 +452,71 @@ export const weekends = {
       },
     ],
   },
+  "2026-11-23": {
+    id: "2026-11-23",
+    range: "Nov 27–29",
+    name: "Election weekend",
+    items: [
+      {
+        headline: "Kapo, Afro Rosa",
+        when: "Sat, Nov 28 · 8:00 p.m.",
+        place: "Coliseo General Rumiñahui, Quito",
+        line: "Tickets are listed from $35 to $130, plus VAT and fees. The dry law is already in force.",
+        photo: "quito-night",
+        partner: "gyg-quito",
+        sourceName: "El Universo",
+        sourceUrl:
+          "https://www.eluniverso.com/entretenimiento/musica/que-hacer-en-ecuador-eventos-del-martes-24-de-noviembre-al-domingo-29-de-noviembre-de-2026-nota/",
+      },
+      {
+        headline: "Beethoven’s Ninth",
+        when: "Fri, Nov 27 · 8:00 p.m.",
+        place: "Teatro Sánchez Aguilar, Samborondón",
+        line: "The Guayaquil symphony orchestra. Tickets are $10.",
+        photo: "santa-ana",
+        partnerHref: viatorUrl("searchResults/all", { text: "Guayaquil" }),
+        partnerLabel: "Guayaquil on Viator",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Lights On",
+        when: "Fri–Sun, Nov 27–29 · 10:00 a.m.–8:00 p.m.",
+        place: "Paseo San Francisco, Cumbayá",
+        line: "A free Christmas market of 90 Ecuadorian stalls.",
+        photo: "quito-plaza",
+        partner: "gyg-quito",
+        sourceName: "Primicias",
+        sourceUrl:
+          "https://www.primicias.ec/entretenimiento/musica/conciertos-luna-martin-garrix-ruben-blades-strokes-quito-guayaquil-cuenca-ecuador-noviembre2026-136019/",
+      },
+      {
+        headline: "Mañana Flor",
+        when: "Fri–Sat, Nov 27–28 · 7:00 p.m. · Sun, Nov 29 · 6:00 p.m.",
+        place: "Teatro Casa Malayerba, Quito",
+        line: "Tickets are $12, or $10 in the advance sale at the theater.",
+        photo: "quito-basilica",
+        partner: "gyg-quito",
+        sourceName: "El Universo",
+        sourceUrl:
+          "https://www.eluniverso.com/entretenimiento/musica/que-hacer-en-ecuador-eventos-del-martes-24-de-noviembre-al-domingo-29-de-noviembre-de-2026-nota/",
+      },
+      {
+        headline: "Quilotoa for the day",
+        when: "Sat, Nov 28 · a full day",
+        place: "From Quito",
+        line: "The crater lake when the cloud lifts. Sunday is election day.",
+        photo: "quilotoa",
+        partner: "gyg-quilotoa",
+        sourceName: "Ecuadorist",
+        sourceUrl: "/book/quilotoa-tours-from-quito/",
+      },
+    ],
+  },
 } as const satisfies Record<string, Weekend>;
 
-export const currentWeekendId = "2026-11-16";
+export const currentWeekendId = "2026-11-23";
 
 export function weekendFor(id: string): Weekend | undefined {
   return weekends[id as keyof typeof weekends];
